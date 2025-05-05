@@ -33,12 +33,32 @@ $ng-web-site-ti-company-theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($ng-web-site-ti-company-theme);
 
+
 body {
-    // font-family: 'Open Sans', sans-serif;
-    color: #003366;
-    background-color: #FFFFFF;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
 }
 
+h2.section-title {
+  font-weight: 600;
+  border-bottom: 2px solid #0dcaf0;
+  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  color: #002147;
+  text-align: center;
+}
+.snackbar-success {
+    // background-color: #198754;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .snackbar-warning {
+    // background-color: #dc3545;
+    color: #fff;
+    font-weight: bold;
+  }
 header {
     background-color: #003366;
     color: #FFFFFF;

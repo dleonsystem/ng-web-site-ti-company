@@ -1,0 +1,41 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-services',
+  templateUrl: './services.component.html',
+  styleUrls: ['./services.component.scss']
+})
+export class ServicesComponent {
+  servicios = [
+    {
+      icono: 'code',
+      nombre: 'Desarrollo de Software',
+      descripcion: 'Creamos aplicaciones web, móviles y de escritorio modernas, escalables y a la medida.'
+    },
+    {
+      icono: 'cloud_queue',
+      nombre: 'Soluciones en la Nube',
+      descripcion: 'Diseñamos y migramos arquitecturas cloud seguras y eficientes en AWS, Azure y GCP.'
+    },
+    {
+      icono: 'security',
+      nombre: 'Ciberseguridad',
+      descripcion: 'Implementamos medidas de protección avanzadas: firewalls, MFA, SOC, análisis de vulnerabilidades.'
+    },
+    {
+      icono: 'memory',
+      nombre: 'Inteligencia Artificial',
+      descripcion: 'Automatizamos decisiones mediante machine learning, procesamiento de lenguaje natural y visión artificial.'
+    },
+    {
+      icono: 'integration_instructions',
+      nombre: 'Integración de Sistemas',
+      descripcion: 'Conectamos plataformas internas y externas vía APIs seguras y estándares modernos.'
+    },
+    {
+      icono: 'support_agent',
+      nombre: 'Soporte y Mantenimiento',
+      descripcion: 'Brindamos soporte técnico, correctivo y evolutivo con SLA definidos y monitoreo proactivo.'
+    }
+  ];
+}

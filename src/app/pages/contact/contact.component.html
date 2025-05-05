@@ -1,0 +1,39 @@
+<section class="contact-section py-5">
+    <div class="container">
+      <h2>Contáctanos</h2>
+      <p>¿Tienes una idea, proyecto o necesitas asesoría? Escríbenos.</p>
+  
+      <form #form="ngForm" (ngSubmit)="enviarFormulario()" novalidate>
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <mat-form-field appearance="fill">
+              <mat-label>Nombre*</mat-label>
+              <input matInput name="nombre" [(ngModel)]="contacto.nombre" required placeholder="Ingresa tu nombre" />
+              <mat-error *ngIf="form.submitted && !contacto.nombre">Campo requerido</mat-error>
+            </mat-form-field>
+          </div>
+  
+          <div class="col-md-6 form-group">
+            <mat-form-field appearance="fill">
+              <mat-label>Correo electrónico*</mat-label>
+              <input matInput name="correo" [(ngModel)]="contacto.correo" type="email" required email placeholder="Ingresa tu correo electrónico" />
+              <mat-error *ngIf="form.submitted && !contacto.correo">Campo requerido</mat-error>
+            </mat-form-field>
+          </div>
+  
+          <div class="col-md-12 form-group">
+            <mat-form-field appearance="fill">
+              <mat-label>Mensaje*</mat-label>
+              <textarea matInput name="mensaje" rows="4" [(ngModel)]="contacto.mensaje" placeholder="¿En qué podemos ayudarte?" required></textarea>
+              <mat-error *ngIf="form.submitted && !contacto.mensaje">Campo requerido</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+  
+        <div class="text-center mt-4">
+          <button mat-raised-button type="submit">Enviar mensaje</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  
