@@ -1,0 +1,40 @@
+{
+    "navbar": {
+      "home": "Home",
+      "services": "Services",
+      "about": "About Us",
+      "contact": "Contact"
+    },
+    "home": {
+      "welcome": "Welcome to Lion Systems"
+    },
+    "about": {
+      "title": "About Us",
+      "description": "We are a company dedicated to developing technological solutions, artificial intelligence, cybersecurity, and cloud services. Our team works passionately to transform ideas into robust and scalable digital products."
+    },
+    "services": {
+      "title": "Our Services",
+      "description": "We provide high-quality services to enhance your business processes.",
+      "list": {
+        "software": "Custom Software Development",
+        "ai": "Artificial Intelligence Solutions",
+        "cyber": "Cybersecurity Consulting",
+        "cloud": "Cloud Infrastructure"
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Do you have an idea, a project or need advice? Write to us.",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "placeholderMessage": "How can we help you?",
+      "submit": "Send Message",
+      "required": "Required field"
+    },
+    "footer": {
+      "rights": "© 2025 Lion Systems. All rights reserved.",
+      "privacy": "Privacy Notice"
+    }
+  }
+  
