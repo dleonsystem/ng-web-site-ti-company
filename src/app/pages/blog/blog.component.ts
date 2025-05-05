@@ -1,26 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {
+  trigger,
+  transition,
+  style,
+  animate,
+  query,
+  stagger
+} from '@angular/animations';
+import { BlogService } from 'src/app/services/blog.service';
+import { Post } from 'src/app/models/post.model';
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss']
+  styleUrls: ['./blog.component.scss'],
+  animations: [
+    trigger('cardAnimation', [
+      transition(':enter', [
+        query('.card', [
+          style({ opacity: 0, transform: 'translateY(20px)' }),
+          stagger(100, [
+            animate('500ms ease-out', style({ opacity: 1, transform: 'none' }))
+          ])
+        ])
+      ])
+    ])
+  ]
 })
-export class BlogComponent {
-  posts = [
-    {
-      title: 'Soluciones de IA en Ciberseguridad',
-      excerpt: 'Descubre cómo la inteligencia artificial fortalece la seguridad digital.',
-      image: 'assets/images/blog/cyber-ai.jpg'
-    },
-    {
-      title: 'Migración a la Nube sin Riesgos',
-      excerpt: 'Guía práctica para mover tu infraestructura de forma segura.',
-      image: 'assets/images/blog/cloud-migration.jpg'
-    },
-    {
-      title: 'Ventajas del Software a la Medida',
-      excerpt: 'Personaliza tus soluciones para escalar con agilidad.',
-      image: 'assets/images/blog/software-custom.jpg'
-    }
-  ];
+export class BlogComponent implements OnInit {
+  posts: Post[] = [];
+
+  constructor(private blogService: BlogService) { }
+
+  ngOnInit(): void {
+    this.posts = this.blogService.getPosts();
+  }
 }

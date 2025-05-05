@@ -1,5 +1,5 @@
 export const environment = {
-    production: false,
-    version: '1.1.0'
-  };
-  
+  production: false,
+  version: '0.0.4',
+  emailJsPublicKey: '1n4HalUHTYL22tCyx'
+};

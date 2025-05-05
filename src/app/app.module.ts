@@ -17,6 +17,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { BlogComponent } from './pages/blog/blog.component';
+import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Crea el loader para cargar archivos JSON
 export function HttpLoaderFactory(http: HttpClient) {
@@ -29,7 +31,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AboutComponent,
     ServicesComponent,
     ContactComponent,
-    BlogComponent
+    BlogComponent,
+    BlogDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
     AppRoutingModule,
     MaterialModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     SharedModule, // ✅ Aquí debe estar
     FormsModule, 

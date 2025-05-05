@@ -33,7 +33,9 @@
     "message": "Message",
     "placeholderMessage": "How can we help you?",
     "submit": "Send Message",
-    "required": "Required field"
+    "required": "Required field",
+    "invalid": "Invalid format or minimum not reached"
+
   },
   "blog": {
   "title": "Our Blog"

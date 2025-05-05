@@ -4,7 +4,22 @@ Todas las versiones siguen la convención de versionado semántico (semver.org).
 
 ---
 
-## [1.1.0] - 2025-05-05
+## [0.0.4] - 2025-05-05
+### Added
+- Envío de mensajes desde el formulario de contacto vía EmailJS
+- Validaciones de campos de nombre, correo y mensaje
+- Indicadores visuales con `MatProgressSpinner` y `MatSnackBar`
+- Integración completa de `ngx-translate` en formulario de contacto
+
+### Fixed
+- Error 422 de EmailJS por campo `email` ausente en `templateParams`
+
+### Changed
+- Migración de etiquetas `i18n` a `ngx-translate` en `contact.component.html`
+
+---
+
+## [0.0.2] - 2025-05-05
 
 ### ✨ Added
 - Soporte completo de internacionalización (i18n) usando `@ngx-translate/core`.
@@ -16,7 +31,7 @@ Todas las versiones siguen la convención de versionado semántico (semver.org).
 
 ---
 
-## [1.0.0] - 2025-05-01
+## [0.0.1] - 2025-05-01
 
 ### 🚀 Added
 - Estructura inicial del sitio en Angular 17 con Angular Material y Bootstrap.
@@ -24,3 +39,4 @@ Todas las versiones siguen la convención de versionado semántico (semver.org).
 - Formulario funcional de contacto con validaciones.
 - Estilo empresarial personalizado (navbar, secciones, tipografía).
 - Soporte de despliegue automático en Netlify con `netlify.toml` y reglas de redirección SPA.
+
