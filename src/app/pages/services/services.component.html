@@ -1,9 +1,8 @@
 <section class="services-section py-5">
     <div class="container">
-      <h2 class="section-title text-center">Nuestros Servicios</h2>
+      <h2 class="section-title text-center">{{ 'services.title' | translate }}</h2>
       <p class="lead text-center text-muted mb-5">
-        Proveemos soluciones integrales para impulsar la transformación digital de tu empresa.
-      </p>
+        {{ 'services.description' | translate }}      </p>
   
       <div class="row">
         <div class="col-md-6 col-lg-4 mb-4" *ngFor="let s of servicios">
