@@ -1,27 +1,118 @@
-# NgWebSiteTiCompany
+# 🌐 Lion Systems - Corporate Website (Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
+Este es el sitio web empresarial de **Lion Systems**, desarrollado en Angular. Ofrece información sobre los servicios de la compañía en desarrollo de software, inteligencia artificial, ciberseguridad y soluciones en la nube.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Características principales
 
-## Code scaffolding
+- Diseño profesional y moderno con Angular + Angular Material + Bootstrap.
+- Navegación SPA (Single Page Application).
+- Traducción automática basada en el idioma del navegador.
+- Soporte completo para **español** e **inglés**.
+- Formulario de contacto funcional con validaciones.
+- Preparado para despliegue en **Netlify**.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 📁 Estructura del proyecto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+src/
+├── app/
+│   ├── components/
+│   ├── pages/
+│   ├── shared/
+│   └── app.module.ts
+├── assets/
+│   └── i18n/
+│       ├── en.json
+│       └── es.json
+├── environments/
+└── index.html
+```
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🌍 Internacionalización (i18n)
 
-## Running end-to-end tests
+Este proyecto incluye soporte para múltiples idiomas usando [`@ngx-translate/core`](https://github.com/ngx-translate/core).
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Idiomas disponibles
 
-## Further help
+- Español (`es`)
+- Inglés (`en`)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Detección automática
+
+Al cargar el sitio, se detecta automáticamente el idioma preferido del navegador y la región geográfica:
+
+- Si el navegador está en **español** o la región es **México**, se muestra la interfaz en **español**.
+- En cualquier otro caso, se presenta la versión en **inglés**.
+
+### Estructura de archivos de traducción
+
+Los archivos de traducción se encuentran en:
+
+```
+/src/assets/i18n/es.json
+/src/assets/i18n/en.json
+```
+
+Cada archivo contiene las claves y valores utilizados por el sistema de traducción, organizados por secciones de la interfaz (navbar, home, about, contact, etc.).
+
+### Uso en componentes
+
+Para traducir textos, se usa el pipe `translate`:
+
+```html
+<h1>{{ 'home.title' | translate }}</h1>
+```
+
+O bien desde TypeScript:
+
+```ts
+this.translateService.get('navbar.contact').subscribe((text) => {
+  console.log(text); // "Contacto" o "Contact"
+});
+```
+
+---
+
+## 📦 Despliegue en Netlify
+
+1. El proyecto se despliega automáticamente con cada `push` a la rama principal (`master` o `main`).
+2. Asegúrate de tener este archivo en la raíz:
+
+```
+netlify.toml
+```
+
+Con el contenido:
+
+```toml
+[build]
+  command = "npm run build"
+  publish = "dist/ng-web-site-ti-company"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+```
+
+---
+
+## 🛠️ Scripts útiles
+
+```bash
+npm install          # Instala dependencias
+ng serve             # Servidor local en http://localhost:4200
+ng build --prod      # Compila para producción
+```
+
+---
+
+## 📄 Licencia
+
+Desarrollado para Lion Systems © 2025.
