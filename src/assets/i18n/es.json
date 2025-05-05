@@ -1,42 +1,45 @@
 {
-    "navbar": {
-      "home": "Inicio",
-      "services": "Servicios",
-      "about": "Nosotros",
-      "contact": "Contacto"
-    },
-    "home": {
-      "welcome": "Bienvenidos a Lion Systems",
-       "title": "Bienvenido a Lion Systems",
-      "description": "Ofrecemos soluciones en la nube, software, ciberseguridad e inteligencia artificial."
-    },
-    "about": {
-      "title": "Nosotros",
-      "description": "Somos una empresa dedicada al desarrollo de soluciones tecnológicas, inteligencia artificial, ciberseguridad y servicios en la nube. Nuestro equipo trabaja con pasión para transformar ideas en productos digitales robustos y escalables."
-    },
-    "services": {
-      "title": "Nuestros Servicios",
-      "description": "Proveemos soluciones integrales para impulsar la transformación digital de tu empresa.",
-      "list": {
-        "software": "Desarrollo de Software a la Medida",
-        "ai": "Soluciones de Inteligencia Artificial",
-        "cyber": "Consultoría en Ciberseguridad",
-        "cloud": "Infraestructura en la Nube"
-      }
-    },
-    "contact": {
-      "title": "Contáctanos",
-      "description": "¿Tienes una idea, proyecto o necesitas asesoría? Escríbenos.",
-      "name": "Nombre",
-      "email": "Correo electrónico",
-      "message": "Mensaje",
-      "placeholderMessage": "¿En qué podemos ayudarte?",
-      "submit": "Enviar mensaje",
-      "required": "Campo requerido"
-    },
-    "footer": {
-      "rights": "© 2025 Lion Systems. Todos los derechos reservados.",
-      "privacy": "Aviso de privacidad"
+  "navbar": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "blog": "Blog"
+  },
+  "home": {
+    "welcome": "Bienvenidos a Lion Systems",
+    "title": "Bienvenido a Lion Systems",
+    "description": "Ofrecemos soluciones en la nube, software, ciberseguridad e inteligencia artificial."
+  },
+  "about": {
+    "title": "Nosotros",
+    "description": "Somos una empresa dedicada al desarrollo de soluciones tecnológicas, inteligencia artificial, ciberseguridad y servicios en la nube. Nuestro equipo trabaja con pasión para transformar ideas en productos digitales robustos y escalables."
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "description": "Proveemos soluciones integrales para impulsar la transformación digital de tu empresa.",
+    "list": {
+      "software": "Desarrollo de Software a la Medida",
+      "ai": "Soluciones de Inteligencia Artificial",
+      "cyber": "Consultoría en Ciberseguridad",
+      "cloud": "Infraestructura en la Nube"
     }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "description": "¿Tienes una idea, proyecto o necesitas asesoría? Escríbenos.",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "message": "Mensaje",
+    "placeholderMessage": "¿En qué podemos ayudarte?",
+    "submit": "Enviar mensaje",
+    "required": "Campo requerido"
+  },
+  "blog": {
+    "title": "Nuestro Blog"
+  },
+  "footer": {
+    "rights": "© 2025 Lion Systems. Todos los derechos reservados.",
+    "privacy": "Aviso de privacidad"
   }
-  
+}

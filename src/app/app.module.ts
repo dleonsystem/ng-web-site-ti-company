@@ -16,6 +16,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { BlogComponent } from './pages/blog/blog.component';
 
 // Crea el loader para cargar archivos JSON
 export function HttpLoaderFactory(http: HttpClient) {
@@ -27,7 +28,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     AboutComponent,
     ServicesComponent,
-    ContactComponent
+    ContactComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
