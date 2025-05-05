@@ -4,6 +4,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+import { TranslateModule } from '@ngx-translate/core';
+
 
 @NgModule({
   declarations: [
@@ -13,11 +15,15 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [
     CommonModule,
     RouterModule,
-    MatIconModule
+    MatIconModule,
+    TranslateModule // 👈 importante
+
   ],
   exports: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    TranslateModule // 👈 exportar si otros módulos lo usan
+
   ]
 })
 export class SharedModule {}

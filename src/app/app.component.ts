@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-web-site-ti-company';
+  constructor(private translate: TranslateService) {
+    const browserLang = this.translate.getBrowserLang() || 'en';
+    const isMexico = navigator.language?.toLowerCase().includes('es-mx');
+  
+    const langToUse = isMexico ? 'es' : (browserLang.match(/en|es/) ? browserLang : 'en');
+    this.translate.use(langToUse);
+  }
+  
+  
 }
