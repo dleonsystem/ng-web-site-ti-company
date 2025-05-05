@@ -6,7 +6,9 @@
       "contact": "Contacto"
     },
     "home": {
-      "welcome": "Bienvenidos a Lion Systems"
+      "welcome": "Bienvenidos a Lion Systems",
+       "title": "Bienvenido a Lion Systems",
+      "description": "Ofrecemos soluciones en la nube, software, ciberseguridad e inteligencia artificial."
     },
     "about": {
       "title": "Nosotros",
