@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BlogService } from 'src/app/services/blog.service';
 import { Post } from 'src/app/models/post.model';
+import { BlogService } from 'src/app/services/blog.service';
 
 @Component({
   selector: 'app-blog-detail',
-  templateUrl: './blog-detail.component.html',
-  styleUrls: ['./blog-detail.component.scss']
+  templateUrl: './blog-detail.component.html'
 })
 export class BlogDetailComponent implements OnInit {
-  post: Post | undefined;
+  post!: Post | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -17,7 +16,9 @@ export class BlogDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.post = this.blogService.getPostById(id);
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.blogService.getPostById(id).subscribe(post => this.post = post);
+    }
   }
 }

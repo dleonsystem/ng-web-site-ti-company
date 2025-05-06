@@ -22,7 +22,7 @@ import { Post } from 'src/app/models/post.model';
           stagger(100, [
             animate('500ms ease-out', style({ opacity: 1, transform: 'none' }))
           ])
-        ])
+        ], { optional: true })
       ])
     ])
   ]
@@ -30,9 +30,9 @@ import { Post } from 'src/app/models/post.model';
 export class BlogComponent implements OnInit {
   posts: Post[] = [];
 
-  constructor(private blogService: BlogService) { }
+  constructor(private blogService: BlogService) {}
 
   ngOnInit(): void {
-    this.posts = this.blogService.getPosts();
+    this.blogService.getPosts().subscribe(data => this.posts = data);
   }
 }
