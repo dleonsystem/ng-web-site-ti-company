@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { CASOS_EXITO } from './casos-exito.data';
-
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
 export class CasosExitoService {
-  obtenerCasos(): Observable<typeof CASOS_EXITO> {
-    return of(CASOS_EXITO);
+
+  private dataUrl = 'assets/data/succesCases.data.json';
+
+  constructor(private http: HttpClient) { }
+
+  obtenerCasos(): Observable<any[]> {
+    return this.http.get<any[]>(this.dataUrl);
   }
 }
