@@ -39,6 +39,41 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #f8f9fa;
 }
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  margin-bottom: 0.75rem;
+}
+
+mat-icon {
+  font-size: 48px;
+}
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: 100%;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  transition: box-shadow 0.3s ease;
+  
+  mat-icon {
+    font-size: 56px;
+    height: 56px;
+    width: 56px;
+    color: #0077b6; // azul institucional
+    margin-bottom: 1rem;
+  }
+
+  &:hover {
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 119, 182, 0.2);
+  }
+}
+
 .text-primary {
   color: #002147 !important;
   font-size: 2.5rem !important;

@@ -27,10 +27,18 @@
     color: #002147;
   }
   
-  .service-card {
+  
+  .service-card mat-icon {
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    margin-bottom: 0.5rem;
     transition: transform 0.3s ease;
+    min-width: 250px;
     &:hover {
       transform: translateY(-6px);
     }
-  }
   
+  }
