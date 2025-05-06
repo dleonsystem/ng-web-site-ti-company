@@ -19,6 +19,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { BlogComponent } from './pages/blog/blog.component';
 import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CasosExitoComponent } from './pages/casos-exito/casos-exito.component';
+import { AvisoPrivacidadComponent } from './pages/aviso-privacidad/aviso-privacidad.component';
 
 // Crea el loader para cargar archivos JSON
 export function HttpLoaderFactory(http: HttpClient) {
@@ -32,7 +34,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     ServicesComponent,
     ContactComponent,
     BlogComponent,
-    BlogDetailComponent
+    BlogDetailComponent,
+    CasosExitoComponent,
+    AvisoPrivacidadComponent
   ],
   imports: [
     BrowserModule,

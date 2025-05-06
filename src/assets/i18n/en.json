@@ -2,9 +2,11 @@
   "navbar": {
     "home": "Home",
     "services": "Services",
+    "successCases": "Success Cases",
     "about": "About Us",
     "contact": "Contact",
-    "blog": "Blog"
+    "blog": "Blog", 
+    "privacy": "Privacy Notice"
   },
   "home": {
     "welcome": "Welcome to Lion Systems",

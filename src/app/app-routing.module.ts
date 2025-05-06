@@ -6,10 +6,13 @@ import { ServicesComponent } from './pages/services/services.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
+import { CasosExitoComponent } from './pages/casos-exito/casos-exito.component';
+import { AvisoPrivacidadComponent } from './pages/aviso-privacidad/aviso-privacidad.component';
 
 const routes: Routes = [
   {
-    path: '', component: HomeComponent,
+    path: '',
+    component: HomeComponent,
     title: 'Inicio | Lion Systems',
   },
   {
@@ -37,6 +40,16 @@ const routes: Routes = [
     component: BlogDetailComponent,
     title: 'Detalle del Blog | Lion Systems',
   },
+  {
+    path: 'casos-exito',
+    component: CasosExitoComponent,
+    title: 'Casos de Éxito | Lion Systems',
+  },
+  {
+    path: 'aviso-privacidad',
+    component: AvisoPrivacidadComponent,
+    title: 'Aviso de Privacidad | Lion Systems',
+  },
   { path: '**', redirectTo: '' },
 ];
 
@@ -44,4 +57,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -2,6 +2,20 @@
 
 Todas las versiones siguen la convención de versionado semántico (semver.org).
 
+## [0.0.5] - 2025-05-05
+
+### ✨ Added
+- Componente `Casos de Éxito` con datos cargados desde servicio en formato JSON.
+- Diseño adaptado con badges, íconos y estructura compatible con estilo de página principal.
+- Modelo `CasoExito` en archivo separado para mantener estructura modular.
+- Página de `Aviso de Privacidad` con contenido institucional y estructura legal básica.
+- Ruta `/aviso-privacidad` integrada a `AppRoutingModule`.
+- Entrada `Aviso de Privacidad` añadida al `navbar` con traducción en `es.json` y `en.json`.
+
+### 🎨 Improved
+- Estilos SCSS de `casos-exito.component` integrados con paleta institucional (azul, turquesa, sombras suaves).
+- Diseño responsive y coherente con secciones como `home` y `servicios`.
+
 ---
 
 ## [0.0.4] - 2025-05-05
@@ -14,15 +28,11 @@ Todas las versiones siguen la convención de versionado semántico (semver.org).
 ### Fixed
 - Error 422 de EmailJS por campo `email` ausente en `templateParams`
 
-### Changed
-- Migración de etiquetas `i18n` a `ngx-translate` en `contact.component.html`
-
 ---
 
 ## [0.0.2] - 2025-05-05
 
 ### ✨ Added
-- Soporte completo de internacionalización (i18n) usando `@ngx-translate/core`.
 - Archivos de traducción `en.json` y `es.json` organizados por sección.
 - Detección automática del idioma del navegador y región (`es-MX`) para mostrar inglés o español.
 - Uso del pipe `translate` en componentes como navbar, home, servicios y contacto.

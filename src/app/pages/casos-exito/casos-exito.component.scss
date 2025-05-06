@@ -1,0 +1,76 @@
+.texto-informativo {
+    color: #002147;
+  }
+.success-section {
+  background-color: #f5f9fc;
+
+  h1 {
+    font-size: 2.5rem;
+    color: #002147;
+    border-bottom: 3px solid #00bcd4;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+  }
+  .texto-informativo {
+    color: #002147;
+  }
+  .card {
+    border-radius: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #e3e9ef;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(0, 188, 212, 0.15);
+    }
+
+    .material-icons {
+      font-size: 1.3rem;
+      vertical-align: middle;
+      color: #00acc1;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      padding: 0.4em 0.6em;
+      border-radius: 0.5rem;
+      background-color: #e1f5fe;
+      color: #002147;
+      margin-bottom: 0.25rem;
+    }
+
+    strong {
+      color: #1c1c1c;
+    }
+
+    p {
+      font-size: 0.92rem;
+    }
+  }
+}
+.success-card {
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(13, 202, 240, 0.15);
+    }
+  
+    .badge {
+      font-size: 0.75rem;
+      padding: 0.4em 0.6em;
+      border-radius: 0.5rem;
+    }
+  
+    h5 {
+      font-size: 1.1rem;
+    }
+  
+    strong {
+      font-weight: 600;
+    }
+  }
+  
