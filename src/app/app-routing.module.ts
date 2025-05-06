@@ -8,6 +8,7 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
 import { CasosExitoComponent } from './pages/casos-exito/casos-exito.component';
 import { AvisoPrivacidadComponent } from './pages/aviso-privacidad/aviso-privacidad.component';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 
 const routes: Routes = [
   {
@@ -50,6 +51,7 @@ const routes: Routes = [
     component: AvisoPrivacidadComponent,
     title: 'Aviso de Privacidad | Lion Systems',
   },
+  { path: 'portafolio', component: PortfolioComponent, title: 'Portafolio | Lion Systems' },
   { path: '**', redirectTo: '' },
 ];
 
@@ -57,4 +59,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

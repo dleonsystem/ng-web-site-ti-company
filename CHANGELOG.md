@@ -2,6 +2,22 @@
 
 Todas las versiones siguen la convención de versionado semántico (semver.org).
 
+## [0.0.6] - 2025-05-06
+
+### Agregado
+- Sección de Portafolio / Proyectos integrada con estructura desacoplada usando servicio y JSON.
+- Imágenes generadas con IA para representar visualmente cada sistema (resolución 1500x1000 px, estilo profesional).
+- Servicio `proyectos.service.ts` para consumo de datos de portafolio.
+- Vista del componente portafolio con diseño responsivo y tarjetas con íconos centrados.
+
+### Corregido
+- Problema de alineación de íconos en componentes `home`, `services`, y `about`.
+
+### Mejorado
+- Separación de datos y presentación en componentes.
+- Estilos unificados para tarjetas de servicios.
+
+
 ## [0.0.5] - 2025-05-05
 
 ### ✨ Added

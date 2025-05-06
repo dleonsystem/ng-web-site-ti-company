@@ -1,0 +1,21 @@
+.portfolio-section {
+    background-color: #f9fafb;
+  
+    .card {
+      border-radius: 1rem;
+  
+      img {
+        object-fit: cover;
+        height: 180px;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+      }
+  
+      .tech-list {
+        span {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+  
