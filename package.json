@@ -1,6 +1,6 @@
 {
   "name": "ng-web-site-ti-company",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
     "prebuild": "ts-node scripts/set-version.ts",
     "ng": "ng",

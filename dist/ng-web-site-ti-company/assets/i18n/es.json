@@ -2,9 +2,11 @@
   "navbar": {
     "home": "Inicio",
     "services": "Servicios",
+    "successCases": "Casos de Éxito",
     "about": "Nosotros",
     "contact": "Contacto",
-    "blog": "Blog"
+    "blog": "Blog",
+    "privacy": "Aviso de Privacidad"
   },
   "home": {
     "welcome": "Bienvenidos a Lion Systems",
@@ -33,7 +35,9 @@
     "message": "Mensaje",
     "placeholderMessage": "¿En qué podemos ayudarte?",
     "submit": "Enviar mensaje",
-    "required": "Campo requerido"
+    "required": "Campo requerido",
+      "invalid": "Formato inválido o mínimo no alcanzado"
+  
   },
   "blog": {
     "title": "Nuestro Blog"
