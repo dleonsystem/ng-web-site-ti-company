@@ -1,0 +1,69 @@
+{
+    // Configuración para un tema oscuro estilo "Matrix" para facilitar la lectura
+    "workbench.colorTheme": "Monokai", // Puedes instalar un tema similar a Matrix desde el marketplace
+    "workbench.iconTheme": "material-icon-theme", // Opcional, para íconos más claros
+    "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace", // Fuente legible
+    "editor.fontLigatures": true, // Habilitar ligaduras para mejorar la lectura
+    "editor.fontSize": 14, // Tamaño de fuente adecuado para largas sesiones
+    "editor.lineHeight": 22, // Espaciado entre líneas para mayor claridad
+    "editor.cursorBlinking": "smooth", // Cursor más visible
+    "editor.cursorStyle": "line", // Cursor estilo línea
+    "editor.renderWhitespace": "all", // Mostrar espacios en blanco
+    "editor.minimap.enabled": false, // Desactivar minimapa para reducir distracciones
+    "editor.wordWrap": "on", // Ajuste de línea para evitar desplazamiento horizontal
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": ["comment"],
+                "settings": {
+                    "foreground": "#00FF00", // Verde estilo Matrix para comentarios
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": ["string"],
+                "settings": {
+                    "foreground": "#00FF00" // Verde estilo Matrix para cadenas
+                }
+            },
+            {
+                "scope": ["keyword"],
+                "settings": {
+                    "foreground": "#FF00FF" // Magenta para palabras clave
+                }
+            }
+        ]
+    },
+    "workbench.colorCustomizations": {
+        "editor.background": "#000000", // Fondo negro puro
+        "editor.foreground": "#00FF00", // Texto verde estilo Matrix
+        "editorLineNumber.foreground": "#008000", // Números de línea en verde oscuro
+        "editorCursor.foreground": "#00FF00", // Cursor verde
+        "editor.selectionBackground": "#003300", // Fondo de selección verde oscuro
+        "editorBracketMatch.background": "#003300", // Fondo para corchetes coincidentes
+        "editorBracketMatch.border": "#00FF00", // Borde para corchetes coincidentes
+
+        // Personalización de ventanas, menús y barras laterales
+        "sideBar.background": "#000000", // Fondo de la barra lateral
+        "sideBar.foreground": "#00FF00", // Texto de la barra lateral
+        "sideBarSectionHeader.background": "#003300", // Fondo de encabezados en la barra lateral
+        "sideBarSectionHeader.foreground": "#00FF00", // Texto de encabezados en la barra lateral
+        "activityBar.background": "#000000", // Fondo de la barra de actividad
+        "activityBar.foreground": "#00FF00", // Iconos de la barra de actividad
+        "activityBarBadge.background": "#003300", // Fondo de insignias en la barra de actividad
+        "activityBarBadge.foreground": "#00FF00", // Texto de insignias en la barra de actividad
+        "titleBar.activeBackground": "#000000", // Fondo de la barra de título activa
+        "titleBar.activeForeground": "#00FF00", // Texto de la barra de título activa
+        "titleBar.inactiveBackground": "#000000", // Fondo de la barra de título inactiva
+        "titleBar.inactiveForeground": "#008000", // Texto de la barra de título inactiva
+        "statusBar.background": "#000000", // Fondo de la barra de estado
+        "statusBar.foreground": "#00FF00", // Texto de la barra de estado
+        "statusBar.debuggingBackground": "#003300", // Fondo de la barra de estado en modo depuración
+        "statusBar.debuggingForeground": "#00FF00", // Texto de la barra de estado en modo depuración
+        "menu.background": "#000000", // Fondo de menús
+        "menu.foreground": "#00FF00", // Texto de menús
+        "menu.selectionBackground": "#003300", // Fondo de selección en menús
+        "menu.selectionForeground": "#00FF00", // Texto de selección en menús
+        "menu.separatorBackground": "#00FF00" // Separadores en menús
+    }
+}

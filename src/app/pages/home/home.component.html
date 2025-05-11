@@ -1,12 +1,15 @@
-<section class="hero-section text-center container">
 
-    <img src="assets/images/lion-banner-2.webp" alt="Lion Systems" class="hero-image mb-4">
-
-    <h1 class="display-5 fw-bold">{{ 'home.title' | translate }}</h1>
-    <p class="lead text-muted">
-        {{ 'home.description' | translate }}
+<section class="hero-section d-flex align-items-center">
+  <div class="background-image"></div>
+  <div class="container text-center position-relative">
+    <h1 class="display-5 fw-bold mb-3 text-white text-shadow">{{ 'home.title' | translate }}</h1>
+    <p class="lead text-light text-shadow">
+      {{ 'home.description' | translate }}
     </p>
+    <a mat-raised-button color="primary"  routerLink="/contacto" class="btn btn-primary btn-lg mt-3">Solicita una consultoría gratuita</a>
+  </div>
 </section>
+
 <section class="services-section">
     <div class="container">
       <h2 class="section-title text-center">{{ 'services.title' | translate }}</h2>
@@ -30,4 +33,37 @@
       </div>
     </div>
   </section>
-  
+  <section class="trust-section py-5 bg-white text-center">
+    <div class="container">
+      <h2 class="mb-4">Confían en nosotros</h2>
+      <div class="row justify-content-center align-items-center">
+        <div class="col-4 col-md-2 mb-3">
+          <img src="assets/images/logos/sep.png" class="img-fluid" alt="SEP">
+        </div>
+        <div class="col-4 col-md-2 mb-3">
+          <img src="assets/images/logos/morena.png" class="img-fluid" alt="Morena">
+        </div>
+        <div class="col-4 col-md-2 mb-3">
+          <img src="assets/images/logos/diputados.png" class="img-fluid" alt="Cámara de Diputados">
+        </div>
+        <div class="col-4 col-md-2 mb-3">
+          <img src="assets/images/logos/axa.png" class="img-fluid" alt="Axa">
+        </div>
+        <div class="col-4 col-md-2 mb-3">
+          <img src="assets/images/logos/bbva.png" class="img-fluid" alt="BBVA">
+        </div>
+        <div class="col-4 col-md-2 mb-3">
+          <img src="assets/images/logos/digipro.png" class="img-fluid" alt="Digipro">
+        </div>
+        <div class="col-4 col-md-2 mb-3">
+          <img src="assets/images/logos/santander.png" class="img-fluid" alt="Santander">
+        </div>
+        <div class="col-4 col-md-2 mb-3">
+          <img src="assets/images/logos/Kodit.png" class="img-fluid" alt="Kodit">
+        </div>
+        <div class="col-4 col-md-2 mb-3">
+          <img src="assets/images/logos/invex.png" class="img-fluid" alt="invex">
+        </div>
+      </div>
+    </div>
+  </section>
