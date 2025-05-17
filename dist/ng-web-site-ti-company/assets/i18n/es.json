@@ -6,11 +6,12 @@
     "about": "Nosotros",
     "contact": "Contacto",
     "blog": "Blog",
-    "privacy": "Aviso de Privacidad"
+    "privacy": "Aviso de Privacidad",
+    "portfolio": "Portafolio"
   },
   "home": {
     "welcome": "Bienvenidos a Lion Systems",
-    "title": "Bienvenido a Lion Systems",
+    "title": "Bienvenido a Lion Systems, soluciones tecnológicas para instituciones y empresas",
     "description": "Ofrecemos soluciones en la nube, software, ciberseguridad e inteligencia artificial."
   },
   "about": {
