@@ -1,37 +1,41 @@
 #!/bin/bash
 
-# ========================
-# Configuración inicial
-# ========================
-USER="dleon5555"
-HOST="34.51.52.179"
+# ✅ Variables de entorno
+HOST="dleon5555@34.51.45.102"
 APP_DIR="/home/dleon5555/ng-web-site-ti-company"
-BRANCH="master"
 
-# ========================
-# Inicio del despliegue
-# ========================
-echo "🚀 Iniciando despliegue a producción en $HOST..."
+# 🚀 Inicia despliegue
+echo "🔧 Iniciando despliegue a producción en $HOST..."
 
-ssh "$USER@$HOST" << EOF
-  set -e  # Detener en caso de error
+ssh "$HOST" << EOF
+set -e
+echo "📂 Accediendo al proyecto..."
+cd "$APP_DIR"
 
-  echo "📁 Accediendo al directorio del proyecto..."
-  cd "$APP_DIR"
+echo "🔄 Recuperando últimos cambios de 'master'..."
+git pull origin master
 
-  echo "🔄 Recuperando últimos cambios de '$BRANCH'..."
-  git fetch origin
-  git checkout $BRANCH
-  git pull origin $BRANCH
+echo "📦 Instalando dependencias necesarias..."
+rm -rf node_modules package-lock.json
+npm install
 
-  echo "📦 Instalando dependencias necesarias..."
-  npm install --omit=dev
+# ⛏️ Verifica que Angular CLI esté disponible
+if ! command -v ng &> /dev/null; then
+  echo "⚠️ Angular CLI no está instalado. Instalando..."
+  sudo npm install -g @angular/cli
+fi
 
-  echo "🏗️ Compilando aplicación Angular..."
-  npm run build --prod
+# 🧱 Verifica si el builder falta y lo instala si es necesario
+if [ ! -d "node_modules/@angular-devkit/build-angular" ]; then
+  echo "🔧 Instalando '@angular-devkit/build-angular'..."
+  npm install --save-dev @angular-devkit/build-angular
+fi
 
-  echo "🔁 Reiniciando servicios con PM2..."
-  pm2 restart all || pm2 start server.js --name lionsite
+echo "🏗️ Compilando proyecto Angular..."
+ng build --configuration production
 
-  echo "✅ Despliegue completo sin errores."
+echo "🔄 Reiniciando servicios con PM2..."
+pm2 restart all
+
+echo "✅ Despliegue exitoso"
 EOF
