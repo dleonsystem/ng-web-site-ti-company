@@ -24,15 +24,27 @@
     text-shadow: 0 2px 4px rgba(0,0,0,0.6);
   }
 }
-
+.section-subtitle
+{
+  font-size: 1.2rem;
+  color: black;
+  margin-bottom: 1rem;
+}
 .trust-section {
   background-color: #ffffff;
+  
+  h1 {
+    color: #002147;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
 
   h2 {
     color: #002147;
     font-weight: 600;
     margin-bottom: 2rem;
   }
+
 
   img {
     max-height: 60px;
@@ -45,3 +57,23 @@
     opacity: 1;
   }
 }
+.cta-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.cta-subtext {
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto 1rem;
+}
+
+.btn-primary {
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+

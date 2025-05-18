@@ -1,0 +1,49 @@
+.
+├── .angular
+│   └── cache
+│       └── 16.2.16
+├── angular.json
+├── CHANGELOG.md
+├── deploy.sh
+├── .editorconfig
+├── estructura_proyecto.txt
+├── .gitignore
+├── netlify.toml
+├── package.json
+├── package-lock.json
+├── README.md
+├── scripts
+│   └── set-version.ts
+├── server.js
+├── src
+│   ├── app
+│   │   ├── app.component.html
+│   │   ├── app.component.scss
+│   │   ├── app.component.spec.ts
+│   │   ├── app.component.ts
+│   │   ├── app.module.ts
+│   │   ├── app-routing.module.ts
+│   │   ├── material
+│   │   ├── models
+│   │   ├── pages
+│   │   ├── services
+│   │   └── shared
+│   ├── assets
+│   │   ├── data
+│   │   ├── .gitkeep
+│   │   ├── i18n
+│   │   └── images
+│   ├── environments
+│   │   ├── environment.prod.ts
+│   │   ├── environment.ts
+│   │   └── version.ts
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── main.ts
+│   └── styles.scss
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.spec.json
+└── VERSION.txt
+
+17 directories, 30 files

@@ -12,7 +12,12 @@
   "home": {
     "welcome": "Bienvenidos a Lion Systems",
     "title": "Bienvenido a Lion Systems, soluciones tecnológicas para instituciones y empresas",
-    "description": "Ofrecemos soluciones en la nube, software, ciberseguridad e inteligencia artificial."
+    "description": "Ofrecemos soluciones en la nube, software, ciberseguridad e inteligencia artificial.",
+    "cta": {
+      "button": "Solicita una consultoría gratuita",
+      "heading": "¿Necesitas ayuda tecnológica segura y escalable?",
+      "subtext": "Conversemos sobre tu proyecto y cómo ayudarte a resolverlo rápidamente."
+    }
   },
   "about": {
     "title": "Nosotros",
@@ -37,8 +42,7 @@
     "placeholderMessage": "¿En qué podemos ayudarte?",
     "submit": "Enviar mensaje",
     "required": "Campo requerido",
-      "invalid": "Formato inválido o mínimo no alcanzado"
-  
+    "invalid": "Formato inválido o mínimo no alcanzado"
   },
   "blog": {
     "title": "Nuestro Blog"

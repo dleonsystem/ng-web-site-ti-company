@@ -6,6 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+  logCTA(): void {
+  console.log('CTA clickeado');
+  // Aquí podrías integrar Google Analytics o Matomo en el futuro
+}
+
   servicios = [
     {
       icono: 'code',
