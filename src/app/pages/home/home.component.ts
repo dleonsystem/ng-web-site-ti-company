@@ -9,6 +9,13 @@ export class HomeComponent {
 
   logCTA(): void {
   console.log('CTA clickeado');
+  if ((<any>window).gtag) {
+    (<any>window).gtag('event', 'click', {
+      event_category: 'CTA',
+      event_label: 'Consultoría Gratuita',
+      value: 1
+    });
+  }
   // Aquí podrías integrar Google Analytics o Matomo en el futuro
 }
 
