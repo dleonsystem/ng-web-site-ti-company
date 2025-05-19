@@ -12,41 +12,14 @@
   "home": {
     "welcome": "Welcome to Lion Systems",
     "title": "Welcome to Lion Systems",
-    "description": "Software, AI, cybersecurity, and cloud solutions for your company.",
-    "cta": {
-      "button": "Request a free consultation",
-      "heading": "Do you need secure and scalable technology help?",
-      "subtext": "Let's talk about your project and how we can help you solve it quickly."
-    }
-  },
-  "about": {
-    "title": "About Us",
-    "description": "We are a company dedicated to developing technological solutions, artificial intelligence, cybersecurity, and cloud services. Our team works passionately to transform ideas into robust and scalable digital products."
-  },
-  "services": {
-    "title": "Our Services",
-    "description": "We provide high-quality services to enhance your business processes.",
-    "list": {
-      "software": "Custom Software Development",
-      "ai": "Artificial Intelligence Solutions",
-      "cyber": "Cybersecurity Consulting",
-      "cloud": "Cloud Infrastructure"
-    }
-  },
-  "contact": {
-    "title": "Contact Us",
-    "description": "Do you have an idea, a project or need advice? Write to us.",
-    "name": "Name",
-    "email": "Email",
-    "message": "Message",
-    "placeholderMessage": "How can we help you?",
-    "submit": "Send Message",
-    "required": "Required field",
-    "invalid": "Invalid format or minimum not reached"
-
-  },
-  "blog": {
-  "title": "Our Blog"
+"description": "We drive your company's digital transformation with comprehensive solutions in custom software development, cloud services, artificial intelligence, and cybersecurity. Our team of experts combines innovation, experience, and cutting-edge technology to optimize processes, protect your information, and boost the sustainable growth of your organization.",
+"cta": {
+  "button": "Request a free consultation",
+  "heading": "Do you need secure and scalable technology help?",
+  "subtext": "Let's talk about your project and how we can help you solve it quickly.",
+  "quote": "Request a quote",
+  "quotePortfolio": "Request something similar"
+}
 },
   "footer": {
     "rights": "© 2025 Lion Systems. All rights reserved.",

@@ -12,6 +12,31 @@
     padding: 20px;
     text-align: center;
 }
+.btn-contacto-flotante {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 50%;
+  padding: 16px;
+  font-size: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: #084298;
+    text-decoration: none;
+  }
+
+  mat-icon {
+    font-size: 28px;
+  }
+}
 
 #contacto h2 {
     color: #009688;

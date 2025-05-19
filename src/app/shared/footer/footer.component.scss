@@ -5,4 +5,33 @@
       color: #0dcaf0;
     }
   }
-  
+  .freelance-links {
+  font-size: 0.95rem;
+  margin-top: 1rem;
+
+  a {
+    margin: 0 8px;
+    display: inline-block;
+    vertical-align: middle;
+
+    img.freelance-icon {
+      width: 32px;
+      height: auto;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.freelance-icon {
+  width: 32px;
+  height: auto;
+  margin: 0 8px;
+  transition: transform 0.2s ease;
+}
+
+.freelance-icon:hover {
+  transform: scale(1.1);
+}

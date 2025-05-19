@@ -1,15 +1,28 @@
 <div class="container py-5">
-    <h2 class="text-center mb-4">Portafolio de Proyectos</h2>
-    <div class="row">
-      <div class="col-md-4 mb-4" *ngFor="let proyecto of proyectos">
-        <div class="card h-100">
-          <img [src]="proyecto.imagen" class="card-img-top" alt="{{ proyecto.titulo }}">
-          <div class="card-body">
-            <h5 class="card-title">{{ proyecto.titulo }}</h5>
-            <p class="card-text">{{ proyecto.descripcion }}</p>
-          </div>
+  <h2 class="text-center mb-4">Portafolio de Proyectos</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let proyecto of proyectos">
+      <div class="card h-100">
+        <img
+          [src]="proyecto.imagen"
+          class="card-img-top"
+          alt="{{ proyecto.titulo }}"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ proyecto.titulo }}</h5>
+          <p class="card-text">{{ proyecto.descripcion }}</p>
+          <a
+            mat-raised-button
+            color="primary"
+            class="btn btn-outline-primary btn-sm mt-2"
+            [routerLink]="'/contacto'"
+            [queryParams]="{ proyecto: proyecto.titulo }"
+            (click)="trackPortafolioCTA(proyecto.titulo)"
+          >
+            {{ "home.cta.quotePortfolio" | translate }}
+          </a>
         </div>
       </div>
     </div>
   </div>
-  
+</div>

@@ -2,7 +2,53 @@
 
 Todas las versiones siguen la convención de versionado semántico (semver.org).
 
-## [0.0.6] - 2025-05-06
+## [v0.0.6] - 2025-05-18
+
+### Added
+- Se agregó un botón de contacto flotante (sticky FAB) visible en todo el sitio
+  - Estilizado con Angular Material (`mat-icon`) y diseño responsivo
+  - Ubicado en la esquina inferior derecha
+  - Redirige a `/contacto`
+  - Incluye soporte de accesibilidad (`aria-label="Contacto"`)
+
+### Modified
+- Archivos modificados: `app.component.html`, `app.component.scss`
+
+### Validated
+- Validado en escritorio y móvil
+- Confirmado en navegación real de usuario
+- Cumple criterios de usabilidad, accesibilidad y visibilidad
+### Added
+- Reestructuración completa de la sección “Nuestros Servicios” con enfoque en monetización.
+  - Se agregaron tarjetas por servicio: API GraphQL, Apps móviles, Dashboards, Migración cloud, etc.
+  - Cada tarjeta incluye ícono, descripción, precio base y botón “Solicitar cotización”
+  - Se implementó navegación a `/contacto?servicio=...` desde cada botón
+  - Se agregó tracking personalizado de clics por servicio usando Google Analytics 4
+
+### Modified
+- Archivos afectados: `home.component.html`, `home.component.ts`, `es.json`, `home.component.scss`
+- Se refactorizó función `trackCotizacion()` para manejar navegación y eventos
+
+### Validated
+- Validado en entorno local y producción
+- Confirmado seguimiento en GA4 por evento `click` con categoría `Cotización`
+- Navegación verificada sin errores
+### Added
+- Se agregó un **Call To Action (CTA)** comercial y visible en la sección principal (`hero`) de la página de inicio.
+  - Mensaje de valor visible: “¿Necesitas ayuda tecnológica segura y escalable?”
+  - Botón de acción: “Solicita una consultoría gratuita”
+  - Enlace funcional al formulario de contacto (`/contacto`)
+  - Implementación de tracking de evento personalizado usando Google Analytics 4 (GA4)
+
+### Modified
+- Archivos afectados: `home.component.html`, `home.component.ts`, `home.component.scss`, `es.json`, `index.html`
+- Se mejoró la semántica de encabezados y accesibilidad visual del CTA
+- Se internacionalizó el texto del CTA para soporte multilenguaje
+
+### Validated
+- Validación en entorno de producción completada
+- Confirmación de detección del evento personalizado en consola de Google Analytics
+- Verificado en navegadores de escritorio y móviles
 
 ### Agregado
 - Sección de Portafolio / Proyectos integrada con estructura desacoplada usando servicio y JSON.
