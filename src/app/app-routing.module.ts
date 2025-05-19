@@ -10,7 +10,6 @@ import { CasosExitoComponent } from './pages/casos-exito/casos-exito.component';
 import { AvisoPrivacidadComponent } from './pages/aviso-privacidad/aviso-privacidad.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { DetalleCasoComponent } from './pages/casos-exito/detalle-caso/detalle-caso.component';
-import { DemoComponent } from './demo/demo.component';
 
 const routes: Routes = [
   {
@@ -55,7 +54,6 @@ const routes: Routes = [
     component: AvisoPrivacidadComponent,
     title: 'Aviso de Privacidad | Lion Systems',
   },
-  { path: 'demo/:id', component: DemoComponent, title: 'Demo | Lion Systems' },
 
   { path: 'portafolio', component: PortfolioComponent, title: 'Portafolio | Lion Systems' },
   { path: '**', redirectTo: '' },

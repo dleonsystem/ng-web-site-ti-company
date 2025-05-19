@@ -12,9 +12,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatChipsModule } from '@angular/material/chips';
+
 @NgModule({
   declarations: [],
   imports: [
+    CommonModule,
     MatButtonModule,
     MatIconModule,
     MatCardModule,
@@ -26,9 +28,10 @@ import { MatChipsModule } from '@angular/material/chips';
     MatSnackBarModule,
     MatProgressSpinnerModule,
     MatButtonToggleModule,
-    MatChipsModule
+    MatChipsModule,
   ], 
   exports: [
+    CommonModule,
     MatButtonModule,
     MatIconModule,
     MatCardModule,

@@ -1,14 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { MatChipsModule } from '@angular/material/chips';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+import { MaterialModule } from 'src/app/material/material.module';
 import { CasosExitoService } from 'src/app/services/casos-exito.service';
 
 @Component({
+  standalone: true,
   selector: 'app-detalle-caso',
   templateUrl: './detalle-caso.component.html',
-  styleUrls: ['./detalle-caso.component.scss']
+  styleUrls: ['./detalle-caso.component.scss'], 
+  imports: [MatChipsModule, MaterialModule, RouterModule]
 })
 export class DetalleCasoComponent implements OnInit {
-  caso: any;
+  caso: any= {};
 
   constructor(private route: ActivatedRoute, private casosService: CasosExitoService) {}
 
