@@ -22,6 +22,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CasosExitoComponent } from './pages/casos-exito/casos-exito.component';
 import { AvisoPrivacidadComponent } from './pages/aviso-privacidad/aviso-privacidad.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
+import { DemoComponent } from './demo/demo.component';
+import { DetalleCasoComponent } from './pages/casos-exito/detalle-caso/detalle-caso.component';
 
 // Crea el loader para cargar archivos JSON
 export function HttpLoaderFactory(http: HttpClient) {
@@ -38,7 +40,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     BlogDetailComponent,
     CasosExitoComponent,
     AvisoPrivacidadComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    DemoComponent,
+    DetalleCasoComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,9 @@ import { CasoExito } from '../../models/caso-exito.model';
 })
 export class CasosExitoComponent implements OnInit {
   casos: CasoExito[] = [];
+  sectores: string[] = ['Todos', 'Gobierno', 'Educación', 'Privado', 'Banca'];
+sectorSeleccionado: string = 'Todos';
+
 
   constructor(private casosService: CasosExitoService) {}
 
@@ -17,4 +20,12 @@ export class CasosExitoComponent implements OnInit {
       this.casos = data;
     });
   }
+  get casosFiltrados() {
+  if (this.sectorSeleccionado === 'Todos') {
+    console.log('Todos los casos');
+    return this.casos;
+  }
+  return this.casos.filter(c => c.sector === this.sectorSeleccionado);
+}
+
 }

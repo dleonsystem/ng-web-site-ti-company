@@ -68,6 +68,29 @@
     </div>
   </div>
 </section>
+<section class="testimonios py-5">
+  <div class="container">
+    <h2 class="section-title  text-center mb-4">Lo que opinan nuestros clientes</h2>
+    <div class="d-flex flex-wrap justify-content-center gap-4">
+      <div *ngFor="let t of testimonios" class="card shadow-sm p-3" style="max-width: 300px;">
+        <div class="d-flex align-items-center mb-2">
+          <img *ngIf="t.avatar" [src]="t.avatar" class="avatar me-2" [attr.alt]="t.nombre ? t.nombre : 'Avatar'" >
+          <div>
+            <strong>{{ t.nombre }}</strong><br>
+            <small class="text-muted">{{ t.proyecto }}</small>
+          </div>
+        </div>
+        <p class="fst-italic">“{{ t.comentario }}”</p>
+        <div class="stars text-warning">
+          <ng-container *ngFor="let s of [1,2,3,4,5]">
+            <mat-icon>{{ s <= t.estrellas ? 'star' : 'star_border' }}</mat-icon>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="trust-section py-5 bg-white text-center">
   <div class="container">
     <h2 class="section-title mb-4">Confían en nosotros</h2>

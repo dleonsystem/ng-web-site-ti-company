@@ -1,5 +1,7 @@
 [
   {
+    "id": 1,
+    "clave": "matricula-unica",
     "nombre": "Sistema de Matrícula Única",
     "cliente": "SEP – Subsecretaría de Educación Media Superior",
     "periodo": "2025",
@@ -7,9 +9,12 @@
     "stack": ["Node.js", "PostgreSQL", "GraphQL", "Docker", "GCP", "Debezium"],
     "resultados": "Interoperabilidad con 32 subsistemas, CURP como clave unificada, control de duplicados",
     "usuariosImpactados": "5.2 millones de estudiantes de educación media superior",
-    "integraciones": ["CURP", "Debezium", "SIGED", "API REST", "GraphQL"]
+    "integraciones": ["CURP", "Debezium", "SIGED", "API REST", "GraphQL"],
+    "sector":"Educación"
   },
   {
+    "id": 2,
+    "clave": "infraestructura-escolar",
     "nombre": "App de Infraestructura Escolar",
     "cliente": "INIFED",
     "periodo": "Febrero – Abril 2024",
@@ -17,9 +22,12 @@
     "stack": ["Ionic (Android)", "Angular", "PostgreSQL", "Leaflet", "Capacitor"],
     "resultados": "Captura de GPS, fotos y firmas en modo offline, sincronización y trazabilidad",
     "usuariosImpactados": "10,000+ planteles escolares potenciales",
-    "integraciones": ["Mapa Leaflet", "SIGED", "validación georreferenciada"]
+    "integraciones": ["Mapa Leaflet", "SIGED", "validación georreferenciada"],
+    "sector":"Educación"
   },
   {
+    "id": 3,
+    "clave": "sistema-encuestas",
     "nombre": "Plataforma Interna de Morena (Encuestas y Elecciones)",
     "cliente": "Morena – Comité Ejecutivo Nacional",
     "periodo": "2021 – 2024",
@@ -27,9 +35,12 @@
     "stack": ["Angular", "Node.js", "GraphQL", "PostgreSQL", "Docker", "JWT"],
     "resultados": "Procesos electorales automatizados, encuestas por región, roles y MFA",
     "usuariosImpactados": "300,000 militantes",
-    "integraciones": ["QR", "API de padrones", "MFA", "roles"]
+    "integraciones": ["QR", "API de padrones", "MFA", "roles"],
+    "sector":"Político"
   },
   {
+    "id": 5,
+    "clave": "sistema-credenciales",
     "nombre": "Sistema de Credenciales de Afiliados",
     "cliente": "Morena",
     "periodo": "2023",
@@ -37,9 +48,12 @@
     "stack": ["Node.js", "PostgreSQL", "Angular", "Ionic", "GraphQL"],
     "resultados": "Generación de credenciales digitales con QR, fotografía y validación móvil",
     "usuariosImpactados": "100,000+ registros iniciales",
-    "integraciones": ["CURP", "cámara móvil", "firma digital", "QR dinámico", "PDFMake"]
+    "integraciones": ["CURP", "cámara móvil", "firma digital", "QR dinámico", "PDFMake"],
+    "sector":"Privado"
   },
   {
+    "id": 6,
+    "clave": "sistema-votacion-legislativa",
     "nombre": "Sistema de Votación Legislativa",
     "cliente": "Cámara de Diputados – México",
     "periodo": "2020 – 2021",
@@ -47,9 +61,12 @@
     "stack": ["Node.js", "Angular", "PostgreSQL", "GraphQL", "JWT"],
     "resultados": "Automatización de votaciones y control de asistencia electrónica",
     "usuariosImpactados": "500+ diputados y operadores parlamentarios",
-    "integraciones": ["Micrositios públicos", "firma digital", "sistema de sesiones"]
+    "integraciones": ["Micrositios públicos", "firma digital", "sistema de sesiones"],
+    "sector":"Gobierno"
   },
   {
+    "id": 7,
+    "clave": "sistema-archivo-documental",
     "nombre": "Sistema de Archivo Documental",
     "cliente": "Cámara de Diputados / Morena",
     "periodo": "2021 – 2022",
@@ -57,9 +74,12 @@
     "stack": [".NET", "Angular", "PostgreSQL", "GraphQL"],
     "resultados": "Digitalización y gestión del archivo histórico y activo",
     "usuariosImpactados": "1,000+ funcionarios y enlaces administrativos",
-    "integraciones": ["Escaneo", "clasificador documental", "perfiles institucionales"]
+    "integraciones": ["Escaneo", "clasificador documental", "perfiles institucionales"],
+    "sector":"Gobierno"
   },
   {
+    "id": 8,
+    "clave": "sistema-eventos-internos",
     "nombre": "Sistema de Eventos Internos",
     "cliente": "Cámara de Diputados",
     "periodo": "2022",
@@ -67,9 +87,12 @@
     "stack": ["Angular", "PostgreSQL", "GraphQL", "PDFMake"],
     "resultados": "Automatización del registro a eventos y emisión de constancias",
     "usuariosImpactados": "1,500+ participantes por evento",
-    "integraciones": ["QR Scanner", "PDFs", "filtros por sede y tipo de evento"]
+    "integraciones": ["QR Scanner", "PDFs", "filtros por sede y tipo de evento"],
+    "sector":"Gobierno"
   },
   {
+    "id": 9,
+    "clave": "sistema-encuestas-morena",
     "nombre": "CRM para Sector Financiero",
     "cliente": "Infosyst / BBVA / Compartamos Banco",
     "periodo": "2018 – 2020",
@@ -77,6 +100,7 @@
     "stack": [".NET", "DevExpress", "PostgreSQL"],
     "resultados": "Seguimiento de clientes, reportes y control de actividades comerciales",
     "usuariosImpactados": "2,000+ asesores financieros en sucursales nacionales",
-    "integraciones": ["Reportes ejecutivos", "CRM bancario", "multirrol", "dashboards"]
+    "integraciones": ["Reportes ejecutivos", "CRM bancario", "multirrol", "dashboards"],
+    "sector":"Banca"
   }
 ]

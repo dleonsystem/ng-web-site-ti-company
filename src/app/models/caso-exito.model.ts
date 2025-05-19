@@ -1,4 +1,5 @@
 export interface CasoExito {
+    sector: string;
     nombre: string;
     cliente: string;
     periodo: string;
@@ -7,5 +8,8 @@ export interface CasoExito {
     resultados: string;
     usuariosImpactados: string;
     integraciones: string[];
+    id: number;
+    clave: string;
+
   }
   

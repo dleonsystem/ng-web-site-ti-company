@@ -8,4 +8,6 @@ import { appVersion } from '../../../environments/version';
 })
 export class FooterComponent {
   appVersion = appVersion;
+  public currentYear: number = new Date().getFullYear();
+
 }

@@ -20,18 +20,56 @@
       transition: transform 0.2s ease;
 
       &:hover {
-        transform: scale(1.1);
+  transform: scale(1.1);
       }
+
     }
   }
 }
+
 .freelance-icon {
   width: 32px;
   height: auto;
-  margin: 0 8px;
+    margin: 0 8px;
   transition: transform 0.2s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
-.freelance-icon:hover {
-  transform: scale(1.1);
+
+.footer-expanded {
+  background-color: #222;
+  color: #ccc;
+
+  h6 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.75rem;
+  }
+
+  p, li, a {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+
+  a:hover {
+    color: #fff;
+  }
+
+  .freelance-icon {
+    width: 36px;
+    height: auto;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+.version {
+  font-size: 0.8rem !important;
+  color: #ccc  !important; ;
+  margin-top: 1rem !important;
 }

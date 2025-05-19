@@ -5,6 +5,65 @@ Todas las versiones siguen la convención de versionado semántico (semver.org).
 ## [v0.0.6] - 2025-05-18
 
 ### Added
+- Se agregó soporte visual para mostrar capturas de pantalla por proyecto en el portafolio.
+- Se habilitó la funcionalidad opcional de enlace a demo o evidencia externa (“Ver demo”) en cada tarjeta.
+- Cada proyecto puede contener las nuevas propiedades:
+  - `imagen`: ruta local (`assets/portfolio/xyz.png`)
+  - `enlaceDemo`: URL externa (PDF, GitHub, web demo)
+
+### Modified
+- Archivos modificados:
+  - `portfolio.component.html`
+  - `portfolio.component.ts`
+  - `portfolio.component.scss`
+  - `portfolio.data.json`
+
+### Validated
+- Capturas se visualizan correctamente
+- Botones de demo aparecen solo cuando hay enlace
+- Comportamiento responsive verificado en escritorio
+
+### Added
+- Se implementó sistema de **filtros interactivos** para el portafolio de proyectos:
+  - Filtros por sector (Ej. Educación, Gobierno, Banca, Privado)
+  - Visualización dinámica con botones para selección
+  - Compatible con nuevos sectores o filtros adicionales
+  - Estado activo resaltado y funcionalidad responsive
+  - Mejora UX para facilitar descubrimiento de casos de éxito relevantes
+
+### Modified
+- Archivos modificados:
+  - `portfolio.component.ts`
+  - `portfolio.component.html`
+  - `portfolio.component.scss`
+  - Datos del portafolio (`portfolio.data.json`) adaptados a incluir el campo `sector`
+
+### Validated
+- Funcionalidad validada en navegador y visual confirmada
+- Criterios de filtrado aplicados correctamente
+- Responsive en escritorio y móvil
+### Added
+- Se integraron accesos directos a perfiles freelance en el footer del sitio:
+  - Fiverr: https://www.fiverr.com/tu_usuario
+  - Upwork: https://www.upwork.com/freelancers/~tu_id
+  - Enlaces visibles con íconos oficiales en formato `.svg`
+  - Apertura en nueva pestaña (`target="_blank"`)
+  - Compatibles con accesibilidad (`alt`, `aria-label`)
+
+### Modified
+- Archivos modificados:
+  - `footer.component.html`
+  - `footer.component.scss`
+  - `src/assets/icons/upwork.svg`
+  - `src/assets/icons/fiverr.svg`
+
+### Validated
+- Íconos correctamente visibles en producción
+- Navegación funcional hacia perfiles
+- Alineado visualmente con identidad del sitio
+- Confirmado en resoluciones móviles y escritorio
+
+### Added
 - Se agregó un botón de contacto flotante (sticky FAB) visible en todo el sitio
   - Estilizado con Angular Material (`mat-icon`) y diseño responsivo
   - Ubicado en la esquina inferior derecha

@@ -1,11 +1,18 @@
 <section class="container text-center py-5">
     <h1 class="display-5 fw-bold">Casos de Éxito</h1>
     <p class="lead text-muted">Proyectos con impacto real en tecnología, educación y gobierno.</p>
+    <mat-button-toggle-group
+  class="my-4 d-flex flex-wrap justify-content-center gap-2"
+  [value]="sectorSeleccionado"
+  (change)="sectorSeleccionado = $event.value"
+  appearance="legacy">
+  <mat-button-toggle *ngFor="let s of sectores" [value]="s">{{ s }}</mat-button-toggle>
+</mat-button-toggle-group>
   </section>
   
   <section class="container mb-5">
     <div class="row g-4">
-      <div class="col-md-6 col-lg-4" *ngFor="let caso of casos">
+      <div class="col-md-6 col-lg-4" *ngFor="let caso of casosFiltrados">
         <div class="card h-100 p-4 shadow-sm success-card">
           <h5 class="fw-semibold mb-1 texto-informativo">
             <mat-icon style="font-size: 18px; color: #198754;" class="me-1 align-middle">check_circle</mat-icon>
@@ -18,11 +25,21 @@
           <div class="mb-2">
             <span class="badge text-bg-light border me-1 mb-1" *ngFor="let tech of caso.stack">{{ tech }}</span>
           </div>
+          <br>
   
           <p><strong class="text-dark">Resultados:</strong> {{ caso.resultados }}</p>
           <p><strong class="text-dark">Usuarios Impactados:</strong> {{ caso.usuariosImpactados }}</p>
-          
-          <p><strong class="text-dark">Integraciones:</strong></p>
+
+
+<a mat-raised-button color="primary"  [routerLink]="['/casos-exito', caso.clave]"
+ class="btn btn-outline-primary btn-sm mt-3">
+  Ver demo
+</a>
+
+
+
+          <p>
+            <br><strong class="text-dark">Integraciones:</strong></p>
           <div>
             <span class="badge bg-info text-dark me-1 mb-1" *ngFor="let int of caso.integraciones">{{ int }}</span>
           </div>

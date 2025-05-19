@@ -43,3 +43,24 @@
       color: #555;
     }
   }
+  .sobre-mi {
+  mat-card-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  mat-list-item {
+    font-size: 0.95rem;
+    align-items: center;
+  }
+
+  mat-icon {
+    vertical-align: middle;
+  }
+
+  button {
+    font-weight: 500;
+    padding: 6px 20px;
+  }
+}

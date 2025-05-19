@@ -73,4 +73,15 @@
       font-weight: 600;
     }
   }
-  
+  mat-button-toggle-group {
+  button.mat-button-toggle {
+    border-radius: 20px;
+    padding: 4px 16px;
+    font-size: 0.9rem;
+  }
+
+  .mat-button-toggle-checked {
+    background-color: #198754;
+    color: #fff;
+  }
+}

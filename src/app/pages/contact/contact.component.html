@@ -1,23 +1,28 @@
 <section class="contact-section py-5">
   <div class="container">
-    <h2 class="text-center">{{ 'contact.title' | translate }}</h2>
-    <p class="text-center">{{ 'contact.description' | translate }}</p>
+    <h2 class="text-center">{{ "contact.title" | translate }}</h2>
+    <p class="text-center">{{ "contact.description" | translate }}</p>
 
     <form #form="ngForm" (ngSubmit)="enviarFormulario()" novalidate>
       <div class="row">
         <!-- Nombre -->
         <div class="col-md-6 form-group">
           <mat-form-field appearance="fill" class="w-100">
-            <mat-label>{{ 'contact.name' | translate }}*</mat-label>
+            <mat-label>{{ "contact.name" | translate }}</mat-label>
             <input
               matInput
               name="nombre"
               [(ngModel)]="contacto.nombre"
               required
+              minlength="3"
+              #nombre="ngModel"
               placeholder="Ingresa tu nombre"
             />
             <mat-error *ngIf="form.submitted && !contacto.nombre">
-              {{ 'contact.required' | translate }}
+              {{ "contact.required" | translate }}
+            </mat-error>
+            <mat-error *ngIf="form.submitted && nombre.errors?.['minlength']">
+              Mínimo 3 caracteres
             </mat-error>
           </mat-form-field>
         </div>
@@ -25,41 +30,53 @@
         <!-- Correo -->
         <div class="col-md-6 form-group">
           <mat-form-field appearance="fill" class="w-100">
-            <mat-label>{{ 'contact.email' | translate }}*</mat-label>
+            <mat-label>{{ "contact.email" | translate }}</mat-label>
             <input
               matInput
               name="correo"
               [(ngModel)]="contacto.correo"
               type="email"
               required
+              #correo="ngModel"
               email
               placeholder="Ingresa tu correo electrónico"
             />
             <mat-error *ngIf="form.submitted && !contacto.correo">
-              {{ 'contact.required' | translate }}
+              {{ "contact.required" | translate }}
             </mat-error>
+            
           </mat-form-field>
         </div>
 
         <!-- Mensaje -->
         <div class="col-md-12 form-group">
           <mat-form-field appearance="fill" class="w-100">
-            <mat-label>{{ 'contact.message' | translate }}*</mat-label>
+            <mat-label>{{ "contact.message" | translate }}</mat-label>
             <textarea
               matInput
               name="mensaje"
               rows="4"
               [(ngModel)]="contacto.mensaje"
-              required
+              required minlength="10"
+                     #mensaje="ngModel"
               placeholder="¿En qué podemos ayudarte?"
             ></textarea>
             <mat-error *ngIf="form.submitted && !contacto.mensaje">
-              {{ 'contact.required' | translate }}
+              {{ "contact.required" | translate }}
             </mat-error>
           </mat-form-field>
         </div>
       </div>
 
+      <!-- Campo oculto si llega ?proyecto -->
+      <input type="hidden" name="proyecto" [(ngModel)]="contacto.proyecto">
+      
+   <!-- Confirmación -->
+      <div class="text-center" *ngIf="formEnviado">
+        <div class="alert alert-success mt-3">
+          ¡Gracias! Tu mensaje fue enviado correctamente.
+        </div>
+      </div>
       <!-- Botón enviar -->
       <div class="text-center mt-4">
         <button
@@ -75,7 +92,7 @@
             color="accent"
           ></mat-progress-spinner>
           <span *ngIf="!isSubmitting">
-            {{ 'contact.submit' | translate }}
+            {{ "contact.submit" | translate }}
           </span>
         </button>
       </div>

@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class HomeComponent {
 
   constructor(private router: Router) {}
+  
 
   trackCotizacion(servicio: string, destino: string): void {
       this.router.navigateByUrl(destino);
@@ -31,6 +32,22 @@ export class HomeComponent {
     }
     // Aquí podrías integrar Google Analytics o Matomo en el futuro
   }
+testimonios = [
+  {
+    nombre: 'Jesús Covarrubias',
+    proyecto: 'Sistema de Credencialización',
+    comentario: 'Un trabajo profesional, seguro y rápido. Superó nuestras expectativas.',
+    estrellas: 5,
+    avatar: 'assets/images/avatar.png'
+  },
+  {
+    nombre: 'Carlos Rivas',
+    proyecto: 'Cámara de Diputados',
+    comentario: 'Con Lion Systems migramos nuestros sistemas sin interrupciones.',
+    estrellas: 5,
+    avatar: 'assets/images/avatar.png'
+  }
+];
 
   servicios = [
     {

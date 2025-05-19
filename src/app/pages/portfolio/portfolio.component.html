@@ -1,7 +1,17 @@
 <div class="container py-5">
   <h2 class="text-center mb-4">Portafolio de Proyectos</h2>
   <div class="row">
-    <div class="col-md-4 mb-4" *ngFor="let proyecto of proyectos">
+   <div class="filtro-portafolio d-flex flex-wrap gap-2 mb-3">
+  <button mat-raised-button color="{{ filtroActivo === '' ? 'primary' : 'default' }}"
+          (click)="filtrar('')">Todos</button>
+  <button mat-raised-button *ngFor="let filtro of filtros"
+          color="{{ filtroActivo === filtro ? 'primary' : 'default' }}"
+          (click)="filtrar(filtro)">
+    {{ filtro }}
+  </button>
+</div>
+ 
+    <div class="col-md-4 mb-4" *ngFor="let proyecto of proyectosVisibles">
       <div class="card h-100">
         <img
           [src]="proyecto.imagen"
@@ -11,6 +21,11 @@
         <div class="card-body">
           <h5 class="card-title">{{ proyecto.titulo }}</h5>
           <p class="card-text">{{ proyecto.descripcion }}</p>
+          <a mat-raised-button color="secundary" *ngIf="proyecto.enlaceDemo"
+       class="btn btn-outline-success btn-sm"
+       href="{{ proyecto.enlaceDemo }}" target="_blank">
+      {{"home.cta.demo" | translate}}
+    </a>
           <a
             mat-raised-button
             color="primary"

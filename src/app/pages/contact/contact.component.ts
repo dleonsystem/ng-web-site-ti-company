@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import emailjs from '@emailjs/browser';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { environment } from 'src/environments/environment';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -10,17 +11,30 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  contacto = {
-    nombre: '',
-    correo: '',
-    mensaje: ''
+  contacto: any = {
+   
   };
 
-  isSubmitting = false;
+  isSubmitting = false; // Control del botón
+  formEnviado = false; // Para mostrar mensaje de éxito
 
-  constructor(private snackBar: MatSnackBar) {}
+  constructor(private snackBar: MatSnackBar, private route: ActivatedRoute) {}
+   ngOnInit(): void {
+    // Captura parámetro ?proyecto de la URL si existe
+    this.contacto = {
+      nombre: '',
+      correo: '',
+      mensaje: '',
+      proyecto: this.route.snapshot.queryParamMap.get('proyecto') || ''
+    };
+  }
 
   enviarFormulario(): void {
+    // Validación básica manual
+    if (!this.contacto.nombre || this.contacto.nombre.length < 3 ||
+        !this.contacto.correo || !this.contacto.mensaje || this.contacto.mensaje.length < 10) {
+      return;
+    }
     if (this.isSubmitting) return;
 
     this.isSubmitting = true;
@@ -37,6 +51,7 @@ export class ContactComponent {
       templateParams,
       environment.emailJsPublicKey // Reemplaza con tu public_key de EmailJS
     ).then(() => {
+            this.formEnviado = true;
       this.snackBar.open('Mensaje enviado correctamente ✅', 'Cerrar', {
         duration: 4000
       });

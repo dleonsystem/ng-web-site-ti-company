@@ -1,13 +1,134 @@
-<footer class="text-center py-3">
-    <p>{{ 'footer.rights' | translate }}</p>
-    <small class="text-muted">v{{ appVersion }}</small>
-<div class="freelance-links text-center mt-3">
-  <span>También puedes contratarme en:</span>
-  <a href="https://www.upwork.com/freelancers/~01cd067b94d2f0bd1d" target="_blank" rel="noopener" aria-label="Upwork">
-    <img src="assets/images/icons/upwork.svg" alt="Upwork" class="freelance-icon">
-  </a>
-  <a href="https://www.fiverr.com/dleon55" target="_blank" rel="noopener" aria-label="Fiverr">
-    <img src="assets/images/icons/fiverr.svg" alt="Fiverr" class="freelance-icon">
-  </a>
-</div>
-  </footer>
+<footer class="footer-expanded py-4 mt-5 text-light">
+  <div class="container">
+    <div class="row">
+      <!-- Columna: Sobre Lion Systems -->
+      <div class="col-md-3 mb-3">
+        <h6 class="text-uppercase">Sobre Lion Systems</h6>
+        <p>
+          Desarrollamos soluciones tecnológicas seguras, escalables y enfocadas
+          en resultados para instituciones, empresas y organizaciones.
+        </p>
+      </div>
+
+      <!-- Columna: Enlaces rápidos -->
+      <div class="col-md-3 mb-3">
+        <h6 class="text-uppercase">Enlaces rápidos</h6>
+        <ul class="list-unstyled">
+          <li>
+            <a routerLink="/servicios" class="text-light text-decoration-none"
+              >Servicios</a
+            >
+          </li>
+          <li>
+            <a routerLink="/portafolio" class="text-light text-decoration-none"
+              >Portafolio</a
+            >
+          </li>
+          <li>
+            <a routerLink="/nosotros" class="text-light text-decoration-none"
+              >Nosotros</a
+            >
+          </li>
+          <li>
+            <a routerLink="/contacto" class="text-light text-decoration-none"
+              >Contacto</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/aviso-privacidad"
+              class="text-light text-decoration-none"
+              >Aviso de privacidad</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Columna: Contrátame en -->
+      <div class="col-md-3 mb-3">
+        <h6 class="text-uppercase">Contrátame en</h6>
+        <div class="freelance-links d-flex gap-3">
+          <a
+            href="https://www.upwork.com/freelancers/~01cd067b94d2f0bd1d"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="assets/images/icons/upwork.svg"
+              alt="Upwork"
+              class="freelance-icon"
+            />
+          </a>
+          <a
+            href="https://www.fiverr.com/dleon55"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="assets/images/icons/fiverr.svg"
+              alt="Fiverr"
+              class="freelance-icon"
+            />
+          </a>
+          <a
+            href="https://x.com/dleon55"
+            target="_blank"
+            rel="noopener"
+            aria-label="X"
+          >
+            <img
+              src="assets/images/icons/x.png"
+              alt="X"
+              class="freelance-icon"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- Columna: Contacto directo -->
+      <div class="col-md-3 mb-3">
+        <h6 class="text-uppercase">Contacto</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-2">
+            <strong>Teléfono:</strong>
+            <a
+              href="tel:+525530312699"
+              class="text-light text-decoration-none d-block"
+            >
+              55 3031 2699
+            </a>
+          </li>
+          <li class="mb-2">
+            <strong>WhatsApp:</strong>
+            <a
+              href="https://wa.me/qr/MUB3JCZFWRFHD1"
+              target="_blank"
+              rel="noopener"
+              class="text-light text-decoration-none d-block"
+            >
+              Enviar mensaje
+            </a>
+          </li>
+          <li>
+            <strong>Email:</strong>
+            <a
+              href="mailto:dleon5555@gmail.com"
+              class="text-light text-decoration-none d-block"
+            >
+              dleon5555&#64;gmail.com
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="border-top border-light my-3" />
+
+    <div class="text-center small">
+      <p class="mb-0">
+        © {{ currentYear }} Lion Systems. Todos los derechos reservados.
+      </p>
+      <small class="text-muted">v{{ appVersion }}</small>
+    </div>
+  </div>
+</footer>

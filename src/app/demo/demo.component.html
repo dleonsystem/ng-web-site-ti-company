@@ -1,0 +1,18 @@
+<section class="container py-5" *ngIf="caso">
+  <h1 class="mb-3">{{ caso.nombre }}</h1>
+  <p class="text-muted mb-2"><strong>Cliente:</strong> {{ caso.cliente }} ({{ caso.periodo }})</p>
+  <p><strong>Rol:</strong> {{ caso.rol }}</p>
+  <p><strong>Stack:</strong></p>
+  <div class="mb-3">
+    <span class="badge text-bg-light border me-1" *ngFor="let t of caso.stack">{{ t }}</span>
+  </div>
+  <p><strong>Resultados:</strong> {{ caso.resultados }}</p>
+  <p><strong>Usuarios Impactados:</strong> {{ caso.usuariosImpactados }}</p>
+  <p><strong>Integraciones:</strong></p>
+  <div>
+    <span class="badge bg-info text-dark me-1" *ngFor="let i of caso.integraciones">{{ i }}</span>
+  </div>
+  <div class="mt-4">
+    <a routerLink="/contacto" class="btn btn-primary">Solicita algo similar</a>
+  </div>
+</section>
