@@ -1,3 +1,13 @@
+// styles.scss
+// Variables de color
+$primary-color: #002147; // Azul oscuro institucional
+$secondary-color: #0077b6; // Azul institucional
+$accent-color: #0dcaf0; // Turquesa/Cyan para acentos
+$text-color-dark: #212121;
+$text-color-light: #555;
+$background-light: #f5f8fa;
+$background-card: #ffffff;
+
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use "@angular/material" as mat;
@@ -42,7 +52,49 @@ $ng-web-site-ti-company-theme: mat.define-light-theme(
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
-  background-color: #f8f9fa;
+  // background-color: #f8f9fa;
+  color: $text-color-dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-color;
+  font-weight: 700;
+}
+
+// Unificar títulos de sección
+.section-title {
+  font-weight: 700;
+  border-bottom: 2px solid $accent-color;
+  margin-bottom: 1.5rem; // Aumentar margen para más espacio
+  padding-bottom: 0.75rem;
+  color: $primary-color;
+  text-align: center;
+}
+.section-subtitle {
+  font-size: 1.2rem;
+  color: $text-color-light;
+  margin-bottom: 2.5rem; // Aumentar margen inferior para más espacio
+  text-align: center;
+}
+// Estilos para tarjetas generales (mat-card, .card)
+.mat-card, .card {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); // Sombra unificada
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+// Botones de Angular Material (primario)
+.mat-raised-button.mat-primary {
+  background-color: $secondary-color !important;
+  color: white !important;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%) !important;
+  }
 }
 .icon-container {
   display: flex;

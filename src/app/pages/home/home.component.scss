@@ -1,29 +1,55 @@
 .hero-section {
-  position: relative;
+   position: relative;
   min-height: 80vh;
   overflow: hidden;
-  background-color: #001f3f;
+  background-color: #001f3f; // Fallback color
 
   .background-image {
-    position: absolute;
-    top: 0; left: 0;
+     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-image: url('/assets/images/lion-banner.webp');
     background-size: cover;
     background-position: center;
-    filter: brightness(0.4) blur(3px);
+    // Mantener el blur, ajustar brillo si se desea
+    filter: blur(3px); // Solo desenfoque
+    z-index: 0;
+  }
+
+   // Nueva superposición para opacidad y oscuridad
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); // Capa negra semi-transparente
     z-index: 0;
   }
 
   .container {
+   position: relative; // Asegura que el contenido esté por encima de la capa
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
 
-  .text-shadow {
+ h2, p {
+    color: white; // Asegura que el texto sea blanco para contrastar con el fondo oscuro
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+    .text-shadow {
     text-shadow: 0 2px 4px rgba(0,0,0,0.6);
   }
 }
+
+
 .section-subtitle
 {
   font-size: 1.2rem;
