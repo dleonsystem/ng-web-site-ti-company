@@ -1,16 +1,27 @@
 .footer {
-    font-size: 0.9rem;
-  
-    a:hover {
-      color: #0dcaf0;
-    }
+  font-size: 0.9rem;
+
+  a:hover {
+    color: #0dcaf0;
   }
-  .freelance-links {
+}
+
+.freelance-links {
   font-size: 0.95rem;
   margin-top: 1rem;
+  display: flex; /* Asegura flexbox */
+  flex-wrap: wrap; /* Permite que los elementos salten de línea */
+  justify-content: center; /* Centra los iconos en móviles */
+  gap: 1rem; /* Espacio entre los iconos */
+
+  @media (max-width: 767.98px) {
+    /* Para pantallas extra-pequeñas y pequeñas (hasta 767.98px) */
+    justify-content: center; /* Asegura el centrado en móviles */
+    gap: 0.75rem; /* Reduce el espacio entre iconos en móviles */
+    margin-top: 0.75rem;
+  }
 
   a {
-    margin: 0 8px;
     display: inline-block;
     vertical-align: middle;
 
@@ -20,9 +31,8 @@
       transition: transform 0.2s ease;
 
       &:hover {
-  transform: scale(1.1);
+        transform: scale(1.1);
       }
-
     }
   }
 }
@@ -30,28 +40,46 @@
 .freelance-icon {
   width: 32px;
   height: auto;
-    margin: 0 8px;
   transition: transform 0.2s ease;
   &:hover {
     transform: scale(1.1);
   }
 }
 
-
 .footer-expanded {
   background-color: #222;
   color: #ccc;
+  padding-top: 2rem; /* Ajustar padding superior */
+  padding-bottom: 2rem; /* Ajustar padding inferior */
 
   h6 {
     font-size: 0.95rem;
     font-weight: 600;
     color: #fff;
     margin-bottom: 0.75rem;
+    text-align: center; /* Centra los títulos en móviles */
+
+    @media (min-width: 768px) {
+      /* Solo para pantallas medianas y mayores, alinea a la izquierda */
+      text-align: left;
+    }
   }
 
-  p, li, a {
+  p,
+  li,
+  a {
     font-size: 0.9rem;
     color: #ccc;
+    text-align: center; /* Centra los textos en móviles */
+
+    @media (min-width: 768px) {
+      /* Solo para pantallas medianas y mayores, alinea a la izquierda */
+      text-align: left;
+    }
+  }
+
+  ul.list-unstyled {
+    padding-left: 0; /* Elimina padding por defecto de la lista */
   }
 
   a:hover {
@@ -67,9 +95,53 @@
       transform: scale(1.1);
     }
   }
+
+  .col-md-3 {
+    margin-bottom: 1.5rem; /* Espacio entre columnas cuando se apilan */
+    &:last-child {
+      margin-bottom: 0; /* Elimina el margen inferior de la última columna */
+    }
+
+    @media (min-width: 768px) {
+      margin-bottom: 0; /* Elimina el margen inferior en pantallas md y mayores */
+    }
+  }
 }
+
 .version {
   font-size: 0.8rem !important;
-  color: #ccc  !important; ;
+  color: #ccc !important;
   margin-top: 1rem !important;
+}
+
+/* Reglas específicas para pantallas pequeñas */
+@media (max-width: 872px) {
+  .footer-expanded {
+    padding-left: 1rem; /* Pequeño padding lateral */
+    padding-right: 1rem; /* Pequeño padding lateral */
+  }
+  .service-card {
+    margin-bottom: 1.5rem; // Espacio entre tarjetas apiladas
+  }
+  .footer-expanded p,
+  .footer-expanded li,
+  .footer-expanded a,
+  .footer-expanded h6 {
+    font-size: 0.8rem; /* Reduce aún más el tamaño de fuente */
+  }
+
+  .freelance-links {
+    flex-direction: row; /* Asegura que sigan en fila si el espacio lo permite */
+    justify-content: center; /* Centra los iconos */
+  }
+
+  .freelance-icon {
+    width: 28px; /* Reduce el tamaño del icono */
+    height: auto;
+  }
+
+  .small strong {
+    display: block; /* Mueve el título a su propia línea */
+    margin-bottom: 0.25rem; /* Pequeño margen inferior */
+  }
 }

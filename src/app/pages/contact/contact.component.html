@@ -72,12 +72,11 @@
       <input type="hidden" name="proyecto" [(ngModel)]="contacto.proyecto">
       
    <!-- Confirmación -->
-      <div class="text-center" *ngIf="formEnviado">
+       <div class="text-center" *ngIf="formEnviado">
         <div class="alert alert-success mt-3">
-          ¡Gracias! Tu mensaje fue enviado correctamente.
+          {{ "contact.successMessage" | translate }}
         </div>
       </div>
-      <!-- Botón enviar -->
       <div class="text-center mt-4">
         <button
           mat-raised-button

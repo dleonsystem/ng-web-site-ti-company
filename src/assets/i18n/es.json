@@ -13,22 +13,67 @@
     "welcome": "Bienvenidos a Lion Systems",
     "title": "Bienvenido a Lion Systems, soluciones tecnológicas para instituciones y empresas",
     "description": "Impulsamos la transformación digital de tu empresa con soluciones integrales en desarrollo de software a la medida, servicios en la nube, inteligencia artificial y ciberseguridad. Nuestro equipo de expertos combina innovación, experiencia y tecnología de vanguardia para optimizar procesos, proteger tu información y potenciar el crecimiento sostenible de tu organización.",
+    "trust": "Confían en nosotros",
     "cta": {
       "button": "Solicita una consultoría gratuita",
       "heading": "¿Necesitas ayuda tecnológica segura y escalable?",
       "subtext": "Conversemos sobre tu proyecto y cómo ayudarte a resolverlo rápidamente.",
-      "quote": "Solicitar una cotización", 
+      "quote": "Solicitar una cotización",
       "quotePortfolio": "Solicita algo similar",
       "demo": "Ver demo"
     }
   },
   "about": {
     "title": "Nosotros",
-    "description": "Somos una empresa dedicada al desarrollo de soluciones tecnológicas, inteligencia artificial, ciberseguridad y servicios en la nube. Nuestro equipo trabaja con pasión para transformar ideas en productos digitales robustos y escalables."
+    "description": "Somos una empresa dedicada al desarrollo de soluciones tecnológicas, inteligencia artificial, ciberseguridad y servicios en la nube. Nuestro equipo trabaja con pasión para transformar ideas en productos digitales robustos y escalables.",
+    "missionTitle": "Misión",
+    "missionText": "Ofrecer soluciones tecnológicas de vanguardia que impulsen el crecimiento, eficiencia y seguridad de nuestros clientes, combinando innovación con experiencia.",
+    "visionTitle": "Visión",
+    "visionText": "Ser reconocidos como líderes globales en transformación digital, destacando por nuestra capacidad de adaptación, excelencia técnica y compromiso con el cliente.",
+    "downloadCvButton": "Descargar CV",
+    "contactButton": "Contactanos",
+    "values": {
+      "team": {
+         "title": "Equipo Multidisciplinario",
+      "text": "Profesionales expertos en ingeniería de software, IA, ciberseguridad y DevOps."
+    },
+    "innovation": {
+      "title": "Innovación Continua",
+      "text": "Nos mantenemos a la vanguardia tecnológica para ofrecer soluciones efectivas y eficientes."
+    },
+    "quality": {
+      "title": "Calidad y Seguridad",
+      "text": "Implementamos estándares internacionales para garantizar la seguridad y calidad de nuestros productos como CMMI, ISO 27001 y buenas prácticas."
+      },
+      "customerFocus": {
+        "title": "Enfoque al Cliente",
+        "text": "Trabajamos de la mano con nuestros clientes para entender sus necesidades y ofrecer soluciones personalizadas."
+      }
+    },
+    "profile": {
+      "title": "Sobre mí",
+      "description1": "Soy David León, arquitecto de software con más de 10 años de experiencia desarrollando soluciones para gobierno, sector educativo y empresas privadas.",
+      "description2": "Especializado en Node.js, Angular, PostgreSQL e infraestructura cloud (GCP, AWS). He liderado proyectos clave como Matrícula Única (SEP), sistemas de votación segura y apps móviles con sincronización offline.",
+      "certifications": "Certificaciones: CMMI, Scrum, ISO 27001",
+      "usersServed": "+300,000 usuarios atendidos",
+      "sectors": "Sectores: educación, gobierno, financiero",
+      "cta": "Trabajemos juntos"
+    }
+  },
+  "successCases": {
+    "title": "Casos de Éxito",
+    "description": "Descubre cómo hemos ayudado a nuestros clientes a alcanzar sus objetivos con nuestras soluciones tecnológicas. Nuestras historias de éxito demuestran nuestro compromiso con la entrega de resultados e impulso a la innovación.",
+    "sectors": {
+      "all": "Todos",
+      "government": "Gobierno",
+      "education": "Educación",
+      "private": "Sector Privado",
+      "finance": "Financiero"
+    }
   },
   "services": {
     "title": "Nuestros Servicios",
-    "description": "Proveemos soluciones integrales para impulsar la transformación digital de tu empresa.",
+    "description": "En Lion Systems ofrecemos una amplia gama de servicios para satisfacer tus necesidades. Nuestro equipo de expertos está listo para ayudarte con todo, desde el desarrollo de software a la medida hasta soluciones en la nube, inteligencia artificial y ciberseguridad. Estamos comprometidos a brindarte las mejores soluciones para impulsar tu negocio.",
     "list": {
       "software": "Desarrollo de Software a la Medida",
       "ai": "Soluciones de Inteligencia Artificial",
@@ -50,8 +95,129 @@
   "blog": {
     "title": "Nuestro Blog"
   },
+  "contact": {
+    "title": "Contáctanos",
+    "description": "¿Tienes una idea, proyecto o necesitas asesoría? Escríbenos.",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "message": "Mensaje",
+    "placeholderMessage": "¿En qué podemos ayudarte?",
+    "submit": "Enviar mensaje",
+    "required": "Campo requerido",
+    "invalid": "Formato inválido o mínimo no alcanzado",
+     "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "sendButton": "Send Message"
+    },
+    "address": {
+      "title": "Address",
+      "location": "Location",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp",
+      "email": "Email"
+    }
+  },
+  "privacyNotice": {
+    "title": "Aviso de Privacidad",
+    "intro": "En Lion Systems, estamos comprometidos con la protección de tus datos personales conforme a lo establecido por la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.",
+    "section1": {
+      "title": "1. Responsable del tratamiento de datos",
+      "text": "Lion Systems, con domicilio en Cuajimalpa de Morelos, Ciudad de México, será responsable del uso, protección y tratamiento de tus datos personales."
+    },
+    "section2": {
+      "title": "2. Finalidades del tratamiento",
+      "purpose1": "Contacto e identificación de usuarios.",
+      "purpose2": "Proveer servicios solicitados.",
+      "purpose3": "Enviar actualizaciones, promociones o comunicaciones relacionadas."
+    },
+    "section3": {
+      "title": "3. Medios para ejercer derechos ARCO",
+      "text": "Puedes ejercer tus derechos de Acceso, Rectificación, Cancelación u Oposición (ARCO) enviando una solicitud al correo electrónico: <strong>dleon55@hotmail.com</strong>."
+    },
+    "section4": {
+      "title": "4. Transferencia de datos",
+      "text": "No se transferirán tus datos personales a terceros sin tu consentimiento, salvo las excepciones previstas por ley."
+    },
+    "section5": {
+      "title": "5. Cambios al aviso de privacidad",
+      "text": "Este aviso puede ser actualizado periódicamente. Cualquier modificación será publicada en este mismo sitio."
+    },
+    "footerDate": "Fecha de última actualización: 24 de mayo de 2025"
+  },
+   "portfolio": {
+    "title": "Portafolio de Proyectos",
+    "description": "Explora nuestros proyectos y descubre cómo hemos ayudado a nuestros clientes a alcanzar sus objetivos con nuestras soluciones tecnológicas. Nuestro portafolio muestra nuestro compromiso de ofrecer resultados e impulsar la innovación.",
+    "filters": {
+      "all": "Todos",
+      "education": "Educación",
+      "government": "Gobierno",
+      "banking": "Banca",
+      "private": "Privado"
+    },
+    "projects": {
+      "certificacion-digital": {
+        "titulo": "Plataforma de Certificación en Línea",
+        "descripcion": "Sistema web para emisión de certificados digitales con firma electrónica y validación por QR."
+      },
+      "app-levantamiento-escolar": {
+        "titulo": "App de Levantamiento Escolar",
+        "descripcion": "Aplicación móvil para encuestas y registro de inmuebles escolares con geolocalización."
+      },
+      "matricula-unica-academica": {
+        "titulo": "Sistema de Matrícula Única Académica",
+        "descripcion": "Plataforma interoperable entre 32 subsistemas estatales, control de duplicados mediante CURP y UUID académico. Procesa datos de más de 5.2 millones de estudiantes."
+      },
+      "plataforma-encuestas-elecciones": {
+        "titulo": "Plataforma Interna de Encuestas y Elecciones",
+        "descripcion": "Sistema de votación digital con MFA y roles por usuario. Automación de procesos internos para más de 300,000 afiliados."
+      },
+      "sistema-votacion-legislativa": {
+        "titulo": "Sistema de Votación Legislativa",
+        "descripcion": "Registro digital de votaciones, autenticación biométrica y control de asistencia de más de 500 legisladores."
+      },
+      "gestion-archivos-documentales": {
+        "titulo": "Sistema de Gestión de Archivos Documentales",
+        "descripcion": "Sistema de archivo digital con búsqueda, clasificación y control por perfil institucional. Usado por más de 1,000 servidores públicos."
+      },
+      "gestion-eventos-automatizado": {
+        "titulo": "Gestión de Eventos con Registro Automatizado",
+        "descripcion": "Registro por QR, control de asistencia y emisión automática de constancias por tipo y región en eventos legislativos."
+      },
+      "crm-sector-financiero": {
+        "titulo": "CRM para Sector Financiero",
+        "descripcion": "CRM nacional para BBVA y Compartamos Banco. Seguimiento a ventas, reportes ejecutivos y segmentación de clientes."
+      },
+      "sistema-gestion-calidad": {
+        "titulo": "Sistema de Gestión de Calidad",
+        "descripcion": "Plataforma para el control de calidad, monitoreo de procesos y gestión de auditorías conforme a la norma ISO 9001."
+      },
+      "plataforma-comercio-electronico": {
+        "titulo": "Plataforma de Comercio Electrónico",
+        "descripcion": "Desarrollo de una plataforma de e-commerce segura y escalable con integración de pasarelas de pago y gestión de inventario."
+      }
+    }
+  },
   "footer": {
     "rights": "© 2025 Lion Systems. Todos los derechos reservados.",
-    "privacy": "Aviso de privacidad"
+    "privacy": "Todos los derechos reservados.",
+    "about": "Sobre nosotros",
+    "aboutDescription": " Desarrollamos soluciones tecnológicas seguras, escalables y enfocadas en resultados para instituciones, empresas y organizaciones. ",
+    "quicklyLinks": "Enlaces rápidos",
+    "quicklyLinksList": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "successCases": "Casos de Éxito",
+      "about": "Nosotros",
+      "contact": "Contacto",
+      "blog": "Blog",
+      "portfolio": "Portafolio"
+    },
+    "hireMe": "Hire Me",
+    "contact": "Contact",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "email": "Email"
   }
 }

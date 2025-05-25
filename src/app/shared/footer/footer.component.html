@@ -3,42 +3,41 @@
     <div class="row">
       <!-- Columna: Sobre Lion Systems -->
       <div class="col-md-3 mb-3">
-        <h6 class="text-uppercase">Sobre Lion Systems</h6>
+        <h6 class="text-uppercase">{{"footer.about"|translate}}</h6>
         <p>
-          Desarrollamos soluciones tecnológicas seguras, escalables y enfocadas
-          en resultados para instituciones, empresas y organizaciones.
+         {{ "footer.aboutDescription" | translate }}
         </p>
       </div>
 
       <!-- Columna: Enlaces rápidos -->
       <div class="col-md-3 mb-3">
-        <h6 class="text-uppercase">Enlaces rápidos</h6>
+        <h6 class="text-uppercase">  {{ "footer.quicklyLinks" | translate }}</h6>
         <ul class="list-unstyled">
           <li>
             <a routerLink="/servicios" class="text-light text-decoration-none"
-              >Servicios</a
+              >{{ "footer.quicklyLinksList.services" | translate }}</a
             >
           </li>
           <li>
             <a routerLink="/portafolio" class="text-light text-decoration-none"
-              >Portafolio</a
+              >{{ "footer.quicklyLinksList.portfolio" | translate }}</a 
             >
           </li>
           <li>
             <a routerLink="/nosotros" class="text-light text-decoration-none"
-              >Nosotros</a
+              >{{ "footer.quicklyLinksList.about" | translate }}</a
             >
           </li>
           <li>
             <a routerLink="/contacto" class="text-light text-decoration-none"
-              >Contacto</a
+              >{{ "footer.quicklyLinksList.contact" | translate }}</a
             >
           </li>
           <li>
             <a
               routerLink="/aviso-privacidad"
               class="text-light text-decoration-none"
-              >Aviso de privacidad</a
+              >{{ "footer.quicklyLinksList.privacy" | translate }}</a
             >
           </li>
         </ul>
@@ -46,7 +45,7 @@
 
       <!-- Columna: Contrátame en -->
       <div class="col-md-3 mb-3">
-        <h6 class="text-uppercase">Contrátame en</h6>
+        <h6 class="text-uppercase">{{ "footer.hireMe" | translate }}</h6>
         <div class="freelance-links d-flex gap-3">
           <a
             href="https://www.upwork.com/freelancers/~01cd067b94d2f0bd1d"
@@ -90,10 +89,10 @@
 
       <!-- Columna: Contacto directo -->
       <div class="col-md-3 mb-3">
-        <h6 class="text-uppercase">Contacto</h6>
+        <h6 class="text-uppercase">{{ "footer.contact" | translate }}</h6>
         <ul class="list-unstyled small">
           <li class="mb-2">
-            <strong>Teléfono:</strong>
+            <strong>{{ "footer.phone" | translate }}:</strong>
             <a
               href="tel:+525530312699"
               class="text-light text-decoration-none d-block"
@@ -102,7 +101,7 @@
             </a>
           </li>
           <li class="mb-2">
-            <strong>WhatsApp:</strong>
+            <strong>{{ "footer.whatsapp" | translate }}:</strong>
             <a
               href="https://wa.me/qr/MUB3JCZFWRFHD1"
               target="_blank"
@@ -113,7 +112,7 @@
             </a>
           </li>
           <li>
-            <strong>Email:</strong>
+            <strong>{{ "footer.email" | translate }}:</strong>
             <a
               href="mailto:dleon5555@gmail.com"
               class="text-light text-decoration-none d-block"
@@ -129,7 +128,7 @@
 
     <div class="text-center small">
       <p class="mb-0">
-        © {{ currentYear }} Lion Systems. Todos los derechos reservados.
+        © {{ currentYear }} Lion Systems. {{ "footer.privacy" | translate }}
       </p>
       <small class="text-muted">v{{ appVersion }}</small>
     </div>

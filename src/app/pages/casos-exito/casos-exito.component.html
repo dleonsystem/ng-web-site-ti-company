@@ -1,14 +1,16 @@
+
+
 <section class="container text-center py-5">
-    <h1 class="display-5 fw-bold">Casos de Éxito</h1>
-    <p class="lead text-muted">Proyectos con impacto real en tecnología, educación y gobierno.</p>
+    <h1 class="display-5 fw-bold">{{ "successCases.title" | translate }}</h1>
+    <p class="lead text-muted">{{ "successCases.description" | translate }}</p>
     <mat-button-toggle-group
-  class="my-4 d-flex flex-wrap justify-content-center gap-2"
-  [value]="sectorSeleccionado"
-  (change)="sectorSeleccionado = $event.value"
-  appearance="legacy">
-  <mat-button-toggle *ngFor="let s of sectores" [value]="s">{{ s }}</mat-button-toggle>
-</mat-button-toggle-group>
-  </section>
+      class="my-4 d-flex flex-wrap justify-content-center gap-2"
+      [value]="sectorSeleccionado"
+      (change)="sectorSeleccionado = $event.value"
+      appearance="legacy">
+      <mat-button-toggle *ngFor="let s of sectoresData" [value]="s.value">{{ s.key | translate }}</mat-button-toggle>
+    </mat-button-toggle-group>
+</section>
   
   <section class="container mb-5">
     <div class="row g-4">

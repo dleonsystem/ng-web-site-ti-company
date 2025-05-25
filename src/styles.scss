@@ -1,7 +1,6 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -13,30 +12,36 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $ng-web-site-ti-company-primary: mat.define-palette(mat.$indigo-palette);
-$ng-web-site-ti-company-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$ng-web-site-ti-company-accent: mat.define-palette(
+  mat.$pink-palette,
+  A200,
+  A100,
+  A400
+);
 
 // The warn palette is optional (defaults to red).
 $ng-web-site-ti-company-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$ng-web-site-ti-company-theme: mat.define-light-theme((
-  color: (
-    primary: $ng-web-site-ti-company-primary,
-    accent: $ng-web-site-ti-company-accent,
-    warn: $ng-web-site-ti-company-warn,
+$ng-web-site-ti-company-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $ng-web-site-ti-company-primary,
+      accent: $ng-web-site-ti-company-accent,
+      warn: $ng-web-site-ti-company-warn,
+    ),
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($ng-web-site-ti-company-theme);
 
-
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #f8f9fa;
 }
 .icon-container {
@@ -55,12 +60,35 @@ mat-icon {
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  height: 100%;
+  // height: 100%;
   padding: 2rem 1rem;
   border-radius: 1rem;
   background-color: #ffffff;
   transition: box-shadow 0.3s ease;
-  
+
+  color: #0077b6; // Azul institucional
+  margin-bottom: 1rem;
+
+  .service-card h3 {
+    // Para el título del servicio
+    color: #002147; // Un azul más oscuro y corporativo
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  .service-card p {
+    // Para la descripción del servicio
+    color: #4a4a4a; // Un gris oscuro para legibilidad
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  border: 1px solid rgba(0, 0, 0, 0.1); // Borde sutil
+  transition: box-shadow 0.3s ease, border-color 0.3s ease; // Agrega transición para border-color
+
+  &:hover {
+    border-color: #0077b6; // El borde se ilumina al pasar el ratón
+      box-shadow: 0 0.75rem 2rem rgba(0, 119, 182, 0.25); // Sombra ligeramente 
+  transform: translateY(-5px); // Se eleva ligeramente
+  }
   mat-icon {
     font-size: 56px;
     height: 56px;
@@ -83,7 +111,7 @@ h1.section-title {
   font-weight: 700;
   border-bottom: 2px solid #0dcaf0;
   margin-bottom: 1rem;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   color: #002147;
   text-align: center;
 }
@@ -92,65 +120,77 @@ h2.section-title {
   font-weight: 600;
   border-bottom: 2px solid #0dcaf0;
   margin-bottom: 1rem;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   color: #002147;
   text-align: center;
 }
 .snackbar-success {
-    // background-color: #198754;
-    color: #fff;
-    font-weight: bold;
-  }
-  
-  .snackbar-warning {
-    // background-color: #dc3545;
-    color: #fff;
-    font-weight: bold;
-  }
+  // background-color: #198754;
+  color: #fff;
+  font-weight: bold;
+}
+
+.snackbar-warning {
+  // background-color: #dc3545;
+  color: #fff;
+  font-weight: bold;
+}
 header {
-    background-color: #003366;
-    color: #FFFFFF;
-    padding: 10px 0;
+  background-color: #003366;
+  color: #ffffff;
+  padding: 10px 0;
 }
 
 header img {
-    width: 150px;
-    /* Ajustar según el logo */
+  width: 150px;
+  /* Ajustar según el logo */
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
+  list-style: none;
+  padding: 0;
+  text-align: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+  display: inline;
+  margin: 0 10px;
 }
 
 nav ul li a {
-    color: #FFFFFF;
-    text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 section {
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  text-align: center;
 }
 
 .servicio {
-    background-color: #D3D3D3;
-    margin-bottom: 20px;
-    padding: 10px;
+  background-color: #d3d3d3;
+  margin-bottom: 20px;
+  padding: 10px;
 }
 
 footer {
-    background-color: #009688;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 10px 0;
+  background-color: #009688;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+@media (max-width: 872px) {
+
+  .service-card {
+    margin-bottom: 1.5rem; // Espacio entre tarjetas apiladas
+  }
+}

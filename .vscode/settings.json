@@ -1,6 +1,6 @@
 {
     // Configuración para un tema oscuro estilo "Matrix" para facilitar la lectura
-    "workbench.colorTheme": "Monokai", // Puedes instalar un tema similar a Matrix desde el marketplace
+    "workbench.colorTheme": "Visual Studio 2019 Dark", // Puedes instalar un tema similar a Matrix desde el marketplace
     "workbench.iconTheme": "material-icon-theme", // Opcional, para íconos más claros
     "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace", // Fuente legible
     "editor.fontLigatures": true, // Habilitar ligaduras para mejorar la lectura
