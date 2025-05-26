@@ -49,11 +49,45 @@ $ng-web-site-ti-company-theme: mat.define-light-theme(
 // that you are using.
 @include mat.all-component-themes($ng-web-site-ti-company-theme);
 
+$primary-blue: #0077b6; // Azul institucional (ejemplo, ajustar según la paleta)
+$secondary-blue: #00b4d8;
+$dark-blue: #002147;
+$light-gray: #f5f8fa;
+$text-muted-color: #555;
+
+// Tipografía
+$font-family-base: 'Roboto', sans-serif; // Ya importado, solo definir variable
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+
+// Espaciado
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
+
+// Sombras
+$box-shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.1);
+$box-shadow-medium: 0 4px 10px rgba(0, 0, 0, 0.3);
+
 body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  // background-color: #f8f9fa;
-  color: $text-color-dark;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $dark-blue; // Color de texto base
+}
+
+.section-title {
+    font-weight: 700;
+    border-bottom: 2px solid $secondary-blue; // Usar variable
+    margin-bottom: $spacing-md; // Usar variable
+    padding-bottom: $spacing-sm; // Usar variable
+    color: $dark-blue; // Usar variable
+    text-align: center;
+}
+
+.text-primary {
+  color: $dark-blue !important; // Usar variable
+  font-size: 2.5rem !important; // Considerar si debe ser una variable de tamaño de fuente
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -61,15 +95,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-// Unificar títulos de sección
-.section-title {
-  font-weight: 700;
-  border-bottom: 2px solid $accent-color;
-  margin-bottom: 1.5rem; // Aumentar margen para más espacio
-  padding-bottom: 0.75rem;
-  color: $primary-color;
-  text-align: center;
-}
 .section-subtitle {
   font-size: 1.2rem;
   color: $text-color-light;

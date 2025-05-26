@@ -6,6 +6,10 @@ export interface Servicio {
   nombre: string;
   descripcion: string;
   icono: string;
+  link: string;
+  eventoGA: string;
+  precio: string;
+  imagen: string;
 }
 
 @Injectable({

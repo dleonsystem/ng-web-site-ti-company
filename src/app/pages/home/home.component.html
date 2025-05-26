@@ -1,71 +1,157 @@
 <section class="hero-section d-flex align-items-center">
-  <div class="background-image"></div>
+  <video autoplay muted loop class="background-video">
+    <source src="assets/videos/doc_2025-05-14_01-52-06.mp4" type="video/mp4">
+    <track kind="subtitles" src="assets/videos/doc_2025-05-14_01-52-06.vtt" srclang="es" label="Español">
+    <track kind="descriptions" src="assets/videos/doc_2025-05-14_01-52-06.desc.vtt" srclang="es"
+      label="Descripción en Español">
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay"></div>
   <div class="container text-center position-relative">
-    <h2 class="display-5 fw-bold mb-3 text-white text-shadow">
+    <h1 class="display-3 fw-bold mb-4 text-white text-shadow animate__animated animate__fadeInDown">
       {{ "home.cta.heading" | translate }}
-    </h2>
-    <p class="lead text-light text-shadow">
+    </h1>
+    <p class="lead text-light mb-5 text-shadow animate__animated animate__fadeInUp animate__delay-1s">
       {{ "home.cta.subtext" | translate }}
     </p>
-    <a
-      mat-raised-button
-      (click)="logCTA()"
-      color="primary"
-      routerLink="/contacto"
-      class="btn btn-primary btn-lg mt-3"
-      >{{ "home.cta.button" | translate }}</a
-    >
+    <a mat-raised-button (click)="logCTA()" color="primary" routerLink="/contacto"
+      class="btn-hero animate__animated animate__zoomIn animate__delay-2s">{{ "home.cta.button" | translate }}</a>
   </div>
 </section>
 
-<section>
-  <div class="container services-section text-center position-relative">
-    <h1 class="section-title text-center">
-      {{ "home.title" | translate }}
-    </h1>
-    <div class="section-subtitle text-center mb-4">
-       {{ "home.description" | translate }}
-    </div>
-  </div>
-</section>
 
-<section class="services-section">
+<section class="services-section bg-light py-5">
   <div class="container">
-    <h2 class="section-title text-center">
+    <h2 class="section-title text-center mb-4">
       {{ "services.title" | translate }}
     </h2>
-    <div class="section-subtitle text-center mb-4">
+    <p class="section-subtitle text-center mb-5">
       {{ "services.description" | translate }}
-    </div>
+    </p>
 
-    <!-- Ajuste clave aquí con d-flex y justify-content-center -->
-    <div class="d-flex flex-wrap justify-content-center gap-3">
-      <!-- <div
-        *ngFor="let s of servicios"
-        class="card p-3 text-center shadow-sm service-card"
-        style="width: 280px; min-height: 220px"
-      >
-        <div class="icon mb-3">
-          <mat-icon style="font-size: 40px">{{ s.icono }}</mat-icon>
-        </div>
-        <h5 class="service-title">{{ s.nombre }}</h5>
-        <p class="service-description">{{ s.descripcion }}</p>
-      </div> -->
-      <div *ngFor="let s of servicios"
-     class="card p-4 text-center shadow-sm service-card"
-     style="width: 300px; min-height: 300px;">
-  <div class="icon mb-3">
-    <mat-icon style="font-size: 40px;">{{ s.icono }}</mat-icon>
-  </div>
-  <h5 class="service-title">{{ s.nombre }}</h5>
-  <p class="service-description">{{ s.descripcion }}</p>
-  <p class="price mt-2 fw-bold text-primary">{{ s.precio }}</p>
-  <a  mat-raised-button color="primary" class="btn btn-primary btn-sm mt-2"
-    (click)="trackCotizacion(s.eventoGA, s.link)">
-    {{ "home.cta.quote" | translate }}
-  </a>
-</div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6 col-lg-4" *ngFor="let servicio of servicios"><mat-card class="service-card h-100 shadow-sm animate__animated animate__fadeInUp" >
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{ servicio.nombre }}</mat-card-title>
+          <mat-card-subtitle>{{ servicio.precio }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{ servicio.imagen }}" alt="{{ servicio.nombre }}" />
+        <mat-card-content>
+          <p>{{ servicio.descripcion }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button color="primary" (click)="trackCotizacion(servicio.eventoGA, servicio.link)">
+            {{ "home.cta.quote" | translate }}
+          </button>
+        </mat-card-actions>
+      </mat-card></div>
+      
     </div>
+  </div>
+</section>
+
+<section class="featured-portfolio-section bg-light py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">
+      {{ "home.featuredPortfolio.title" | translate }}
+    </h2>
+    <p class="section-subtitle text-center mb-5">
+      {{ "home.featuredPortfolio.description" | translate }}
+    </p>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6 col-lg-4" *ngFor="let project of featuredPortfolio">
+        <mat-card class="portfolio-card h-100 shadow-sm animate__animated animate__fadeInUp">
+          <img mat-card-image [src]="project.imagen" alt="{{ project.titulo }}">
+          <mat-card-content>
+            <h3 class="portfolio-title">{{ project.titulo }}</h3>
+            <p class="portfolio-description">{{ project.descripcion | slice:0:100 }}...</p>
+          </mat-card-content>
+          <mat-card-actions class="d-flex justify-content-between">
+            <a mat-button color="accent" *ngIf="project.enlaceDemo" [href]="project.enlaceDemo" target="_blank">
+              {{ "home.cta.demo" | translate }}
+            </a>
+            <a mat-button color="primary" [routerLink]="'/contacto'" [queryParams]="{ proyecto: project.titulo }"
+              (click)="trackPortafolioCTA(project.titulo)">
+              {{ "home.cta.quotePortfolio" | translate }}
+            </a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <a mat-stroked-button color="primary" routerLink="/portfolio" class="btn-all-projects">
+        {{ "home.viewAllProjectsButton" | translate }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials-section py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">
+      {{ "home.testimonials.title" | translate }}
+    </h2>
+    <p class="section-subtitle text-center mb-5">
+      {{ "home.testimonials.description" | translate }}
+    </p>
+
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item" [class.active]="i === 0" *ngFor="let testimonio of testimonios; let i = index">
+          <div class="d-flex justify-content-center">
+            <mat-card class="testimonial-card shadow-sm text-center">
+              <mat-card-header class="justify-content-center mb-3">
+                <img mat-card-avatar [src]="testimonio.avatar" alt="Avatar de {{ testimonio.nombre }}"
+                  class="testimonial-avatar">
+              </mat-card-header>
+              <mat-card-content>
+                <div class="stars mb-2">
+                  <mat-icon *ngFor="let _ of [].constructor(testimonio.estrellas)">star</mat-icon>
+                </div>
+                <p class="testimonial-comment">"{{ testimonio.comentario }}"</p>
+                <h5 class="testimonial-name mt-3">{{ testimonio.nombre }}</h5>
+                <p class="testimonial-project text-muted">{{ testimonio.proyecto }}</p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="trust-section py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">
+      {{ "home.trust" | translate }}
+    </h2>
+    <div class="row align-items-center justify-content-center">
+      <div class="col-4 col-md-2 mb-4 d-flex justify-content-center" *ngFor="let logo of clientLogos">
+        <img [src]="logo.src" class="img-fluid client-logo" alt="{{ logo.alt }}" [title]="logo.alt" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section py-5 text-white text-center">
+  <div class="container">
+    <h2 class="display-5 fw-bold mb-4 animate__animated animate__fadeInUp">
+      {{ "home.cta.heading" | translate }}
+    </h2>
+    <p class="lead mb-5 animate__animated animate__fadeInUp animate__delay-1s">
+      {{ "home.cta.subtext" | translate }}
+    </p>
+    <a mat-raised-button (click)="logCTA()" color="accent" routerLink="/contacto"
+      class="btn-cta-bottom animate__animated animate__zoomIn animate__delay-2s">{{ "home.cta.button" | translate }}</a>
   </div>
 </section>
 <!-- <section class="testimonios py-5">
@@ -90,63 +176,3 @@
     </div>
   </div>
 </section> -->
-
-<section class="trust-section py-5 bg-white text-center">
-  <div class="container">
-    <h2 class="section-title mb-4">      {{ "home.trust" | translate }}
-</h2>
-    <div class="row justify-content-center align-items-center">
-      <div class="col-4 col-md-2 mb-3">
-        <img src="assets/images/logos/sep.png" class="img-fluid" alt="SEP" />
-      </div>
-      <div class="col-4 col-md-2 mb-3">
-        <img
-          src="assets/images/logos/morena.png"
-          class="img-fluid"
-          alt="Morena"
-        />
-      </div>
-      <div class="col-4 col-md-2 mb-3">
-        <img
-          src="assets/images/logos/diputados.png"
-          class="img-fluid"
-          alt="Cámara de Diputados"
-        />
-      </div>
-      <div class="col-4 col-md-2 mb-3">
-        <img src="assets/images/logos/axa.png" class="img-fluid" alt="Axa" />
-      </div>
-      <div class="col-4 col-md-2 mb-3">
-        <img src="assets/images/logos/bbva.png" class="img-fluid" alt="BBVA" />
-      </div>
-      <div class="col-4 col-md-2 mb-3">
-        <img
-          src="assets/images/logos/digipro.png"
-          class="img-fluid"
-          alt="Digipro"
-        />
-      </div>
-      <div class="col-4 col-md-2 mb-3">
-        <img
-          src="assets/images/logos/santander.png"
-          class="img-fluid"
-          alt="Santander"
-        />
-      </div>
-      <div class="col-4 col-md-2 mb-3">
-        <img
-          src="assets/images/logos/Kodit.png"
-          class="img-fluid"
-          alt="Kodit"
-        />
-      </div>
-      <div class="col-4 col-md-2 mb-3">
-        <img
-          src="assets/images/logos/invex.png"
-          class="img-fluid"
-          alt="invex"
-        />
-      </div>
-    </div>
-  </div>
-</section>

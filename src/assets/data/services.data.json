@@ -2,31 +2,55 @@
     {
         "icono": "code",
         "nombre": "Desarrollo de Software",
-        "descripcion": "Creamos aplicaciones web, móviles y de escritorio modernas, escalables y a la medida."
+        "descripcion": "Creamos aplicaciones web, móviles y de escritorio modernas, escalables y a la medida.",
+        "precio": "Desde $450 USD/hora",
+        "link":"/contacto?servicio=code",
+      "eventoGA": "cotizacion_api", 
+      "imagen": "assets/images/services/software-development.png"
     },
     {
         "icono": "cloud_queue",
         "nombre": "Soluciones en la Nube",
-        "descripcion": "Diseñamos y migramos arquitecturas cloud seguras y eficientes en AWS, Azure y GCP."
+        "descripcion": "Diseñamos y migramos arquitecturas cloud seguras y eficientes en AWS, Azure y GCP.",
+        "precio": "$400 USD/hora",
+        "link": "/contacto?servicio=ia",
+        "eventoGA": "cotizacion_ia",
+        "imagen": "assets/images/services/nube2.png"
     },
     {
         "icono": "security",
         "nombre": "Ciberseguridad",
-        "descripcion": "Implementamos medidas de protección avanzadas: firewalls, MFA, SOC, análisis de vulnerabilidades."
+        "descripcion": "Implementamos medidas de protección avanzadas: firewalls, MFA, SOC, análisis de vulnerabilidades.",
+        "precio": "$450 USD/hora",
+        "link": "/contacto?servicio=security",
+        "eventoGA": "cotizacion_segiridad",
+        "imagen":"assets/images/services/cibersecurity2.png"
     },
     {
         "icono": "memory",
         "nombre": "Inteligencia Artificial",
-        "descripcion": "Automatizamos decisiones mediante machine learning, procesamiento de lenguaje natural y visión artificial."
+        "descripcion": "Automatizamos decisiones mediante machine learning, procesamiento de lenguaje natural y visión artificial.",
+        "precio": "Desde $500 USD/hora",
+        "link": "/contacto?servicio=ia",
+        "eventoGA": "cotizacion_ia",
+        "imagen": "assets/images/services/ia.png"
     },
     {
         "icono": "integration_instructions",
         "nombre": "Integración de Sistemas",
-        "descripcion": "Conectamos plataformas internas y externas vía APIs seguras y estándares modernos."
+        "descripcion": "Conectamos plataformas internas y externas vía APIs seguras y estándares modernos.",
+        "precio": "Desde $400 USD/hora",
+        "link": "/contacto?servicio=integration",
+        "eventoGA": "cotizacion_integration",
+        "imagen":"assets/images/services/integracion-sys2.png"
     },
     {
         "icono": "support_agent",
         "nombre": "Soporte y Mantenimiento",
-        "descripcion": "Brindamos soporte técnico, correctivo y evolutivo con SLA definidos y monitoreo proactivo."
+        "descripcion": "Brindamos soporte técnico, correctivo y evolutivo con SLA definidos y monitoreo proactivo.",
+        "precio": "Desde $300 USD/hora",
+        "link": "/contacto?servicio=support",
+        "eventoGA": "cotizacion_support",
+        "imagen":"assets/images/services/support.png"
     }
 ]

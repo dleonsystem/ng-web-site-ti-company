@@ -20,7 +20,46 @@
       "subtext": "Let's talk about your project and how we can help you solve it quickly.",
       "quote": "Request a quote",
       "quotePortfolio": "Request something similar",
-      "demo": "Demo"
+      "demo": "Demo",
+      "exploreServices": "Explorar Servicios"
+    },
+    "benefits": {
+      "title": "Por qué elegirnos",
+      "description": "Nuestros pilares para tu éxito digital.",
+      "speed": {
+        "title": "Rapidez y Eficiencia",
+        "text": "Desarrollamos soluciones ágiles que aceleran tus procesos y optimizan recursos."
+      },
+      "security": {
+        "title": "Seguridad Garantizada",
+        "text": "Protegemos tus datos y sistemas con las últimas innovaciones en ciberseguridad."
+      },
+      "scale": {
+        "title": "Escalabilidad Adaptativa",
+        "text": "Nuestras soluciones crecen contigo, adaptándose a las demandas de tu negocio."
+      }
+    },
+    "differentiators": {
+      "title": "Lo que nos hace diferentes",
+      "description": "Ventajas competitivas que nos distinguen en el mercado.",
+      "expertTeam": {
+        "title": "Equipo de Expertos Senior",
+        "text": "Contamos con ingenieros y arquitectos con amplia experiencia en proyectos complejos y tecnologías de vanguardia."
+      },
+      "agileMethodology": {
+        "title": "Metodología Ágil y Flexible",
+        "text": "Nos adaptamos a tus necesidades y cambios, garantizando entregas rápidas y de alto valor."
+      }
+    },
+    "featuredPortfolio": {
+      "title": "Featured Projects",
+      "description": "Explore some of our most impactful solutions we've built for our clients."
+    },
+    "allServicesButton": "View all services",
+    "viewAllProjectsButton": "View all projects",
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "description": "Success stories from those who have trusted us with their digital transformation."
     }
   },
   "services": {
@@ -55,20 +94,20 @@
     "contactButton": "Contact Us",
     "values": {
       "team": {
-      "title": "Multidisciplinary Team",
-      "text": "Expert professionals in software engineering, AI, cybersecurity, and DevOps."
+        "title": "Multidisciplinary Team",
+        "text": "Expert professionals in software engineering, AI, cybersecurity, and DevOps."
       },
       "innovation": {
-      "title": "Continuous Innovation",
-      "text": "We stay at the forefront of technology to offer effective and efficient solutions."
+        "title": "Continuous Innovation",
+        "text": "We stay at the forefront of technology to offer effective and efficient solutions."
       },
       "quality": {
-      "title": "Quality and Security",
-      "text": "We implement international standards to ensure the security and quality of our products such as CMMI, ISO 27001, and best practices."
+        "title": "Quality and Security",
+        "text": "We implement international standards to ensure the security and quality of our products such as CMMI, ISO 27001, and best practices."
       },
       "customerFocus": {
-      "title": "Customer Focus",
-      "text": "We work closely with our clients to understand their needs and provide customized solutions."
+        "title": "Customer Focus",
+        "text": "We work closely with our clients to understand their needs and provide customized solutions."
       }
     },
     "profile": {
@@ -134,7 +173,7 @@
   "blog": {
     "title": "Our Blog"
   },
-   "portfolio": {
+  "portfolio": {
     "title": "Project Portfolio",
     "description": "Explore our project portfolio and discover how we have helped our clients achieve their goals with our technology solutions. Our portfolio showcases our commitment to delivering results and driving innovation.",
     "filters": {
