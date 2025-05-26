@@ -269,6 +269,54 @@ img {
     }
   }
 
+.btn-raised-primary {
+    border: 2px solid $primary-color;
+    color: white;
+    background-color: $primary-color;
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+     &:hover {
+      background-color: $primary-color;
+      color: white;
+    }
+}
+
+.btn-raised-secondary {
+    border: 2px solid $secondary-color;
+    color: white;
+    background-color: $secondary-color;
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $secondary-color;
+      color: white;
+    }
+}
+
+.btn-raised-acent {
+    border: 2px solid $text-dark;
+    color: white;
+    background-color: $text-dark;
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+
+    &:hover {
+      background-color: $text-dark;
+      color: white;
+    }
+}
+
   .btn-all-projects {
     padding: 0.8rem 2rem;
     font-size: 1.1rem;
@@ -277,6 +325,7 @@ img {
     transition: all 0.3s ease;
     border: 2px solid $primary-color;
     color: $primary-color;
+    
 
     &:hover {
       background-color: $primary-color;
