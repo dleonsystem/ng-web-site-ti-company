@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute } from '@angular/router';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-contact',
@@ -18,8 +19,9 @@ export class ContactComponent {
   isSubmitting = false; // Control del botón
   formEnviado = false; // Para mostrar mensaje de éxito
 
-  constructor(private snackBar: MatSnackBar, private route: ActivatedRoute) {}
+  constructor(private readonly snackBar: MatSnackBar, private readonly route: ActivatedRoute, private readonly seoService: SeoService) {}
    ngOnInit(): void {
+     this.seoService.setContactPage();
     // Captura parámetro ?proyecto de la URL si existe
     this.contacto = {
       nombre: '',
@@ -29,12 +31,28 @@ export class ContactComponent {
     };
   }
 
+  // Validación de email mejorada
+  private validarEmail(email: string): boolean {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
   enviarFormulario(): void {
-    // Validación básica manual
+    // Sanitizar datos
+    this.contacto.nombre = this.contacto.nombre.trim();
+    this.contacto.correo = this.contacto.correo.trim().toLowerCase();
+    this.contacto.mensaje = this.contacto.mensaje.trim();
+    
+    // Validación mejorada
     if (!this.contacto.nombre || this.contacto.nombre.length < 3 ||
-        !this.contacto.correo || !this.contacto.mensaje || this.contacto.mensaje.length < 10) {
+        !this.contacto.correo || !this.validarEmail(this.contacto.correo) ||
+        !this.contacto.mensaje || this.contacto.mensaje.length < 10) {
+      this.snackBar.open('Por favor, completa todos los campos correctamente', 'Cerrar', {
+        duration: 4000
+      });
       return;
     }
+
     if (this.isSubmitting) return;
 
     this.isSubmitting = true;
@@ -42,23 +60,32 @@ export class ContactComponent {
     const templateParams = {
       name: this.contacto.nombre,
       email: this.contacto.correo,
-      title: this.contacto.mensaje
+      title: this.contacto.mensaje,
+      proyecto: this.contacto.proyecto || 'No especificado'
     };
 
     emailjs.send(
-      'service_v52x7rt',      // Reemplaza con tu service_id de EmailJS
-      'template_mid129c',     // Reemplaza con tu template_id de EmailJS
+      'service_v52x7rt',
+      'template_mid129c',
       templateParams,
-      environment.emailJsPublicKey // Reemplaza con tu public_key de EmailJS
+      environment.emailJsPublicKey
     ).then(() => {
-            this.formEnviado = true;
+      this.formEnviado = true;
       this.snackBar.open('Mensaje enviado correctamente ✅', 'Cerrar', {
         duration: 4000
       });
-      this.contacto = { nombre: '', correo: '', mensaje: '' };
+      this.contacto = { nombre: '', correo: '', mensaje: '', proyecto: '' };
     }).catch((error) => {
       console.error('❌ Error al enviar el mensaje:', error);
-      this.snackBar.open('Error al enviar el mensaje ❌', 'Cerrar', {
+      
+      let errorMessage = 'Error al enviar el mensaje ❌';
+      if (error.status === 400) {
+        errorMessage = 'Datos del formulario incorrectos';
+      } else if (error.status === 429) {
+        errorMessage = 'Demasiados intentos. Intenta más tarde';
+      }
+      
+      this.snackBar.open(errorMessage, 'Cerrar', {
         duration: 4000
       });
     }).finally(() => {

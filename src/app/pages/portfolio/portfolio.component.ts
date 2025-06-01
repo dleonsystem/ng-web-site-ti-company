@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -10,8 +11,9 @@ export class PortfolioComponent implements OnInit {
   proyectos: any[] = [];
 
   constructor(
-    private portfolioService: PortfolioService,
-    private translate: TranslateService // Inyectar TranslateService
+    private readonly portfolioService: PortfolioService,
+    private readonly translate: TranslateService, // Inyectar TranslateService
+    private readonly seoService: SeoService
   ) { }
 
   filtroActivo: string = 'all'; // Initialize with the key 'all' for "Todos"
@@ -32,6 +34,7 @@ export class PortfolioComponent implements OnInit {
   }
 
   ngOnInit(): void {
+        this.seoService.setPortfolioPage();
     this.portfolioService.obtenerProyectos().subscribe(data => {
       this.todosLosProyectos = data;
       this.proyectosVisibles = this.todosLosProyectos;

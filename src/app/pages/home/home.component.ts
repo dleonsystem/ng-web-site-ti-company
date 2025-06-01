@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ServiciosService, Servicio } from 'src/app/services/servicio.service'; // Importa Servicio
 import { PortfolioService } from 'src/app/services/portfolio.service'; // Asegúrate de importar PortfolioService
 import { forkJoin } from 'rxjs'; // Para cargar múltiples servicios
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-home',
@@ -38,10 +39,12 @@ export class HomeComponent implements OnInit {
   constructor(
     private router: Router,
     private serviciosService: ServiciosService, // Inyecta el servicio de servicios
-    private portfolioService: PortfolioService // Inyecta el servicio de portafolio
+    private portfolioService: PortfolioService, // Inyecta el servicio de portafolio
+    private seoService: SeoService
   ) {}
 
   ngOnInit(): void {
+    this.seoService.setHomePage();
   this.serviciosService.obtenerServicios().subscribe(data => {
       this.servicios = data; // Cargar los servicios desde el JSON
     });

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CasosExitoService } from '../../services/casos-exito.service';
 import { CasoExito } from '../../models/caso-exito.model';
 import { TranslateService } from '@ngx-translate/core';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-casos-exito',
@@ -20,9 +21,10 @@ export class CasosExitoComponent implements OnInit {
   sectorSeleccionado: string = 'Todos';
 
 
-  constructor(private casosService: CasosExitoService, private translate: TranslateService) { }
+  constructor(private casosService: CasosExitoService, private translate: TranslateService, private seoService: SeoService) { }
 
   ngOnInit(): void {
+        this.seoService.setCasosExitoPage();
     this.casosService.obtenerCasos().subscribe(data => {
       this.casos = data;
     });

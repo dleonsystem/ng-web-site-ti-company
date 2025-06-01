@@ -12,7 +12,7 @@ export class BlogDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private blogService: BlogService
+    private blogService: BlogService,
   ) {}
 
   ngOnInit(): void {

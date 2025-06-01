@@ -9,6 +9,7 @@ import {
 } from '@angular/animations';
 import { BlogService } from 'src/app/services/blog.service';
 import { Post } from 'src/app/models/post.model';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-blog',
@@ -30,9 +31,10 @@ import { Post } from 'src/app/models/post.model';
 export class BlogComponent implements OnInit {
   posts: Post[] = [];
 
-  constructor(private blogService: BlogService) {}
+  constructor(private blogService: BlogService, private seoService: SeoService) {}
 
   ngOnInit(): void {
+        this.seoService.setBlogPage();
     this.blogService.getPosts().subscribe(data => this.posts = data);
   }
 }
