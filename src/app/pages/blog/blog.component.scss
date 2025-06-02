@@ -1,14 +1,13 @@
-// src/app/pages/blog/blog.component.scss
-
-// Variables para colores y tipografía (consistentes con home.component.scss)
-$primary-color: #0077b6; // Un azul institucional
-$secondary-color: #00b4d8; // Un azul más claro
+// Variables consistentes con aviso-privacidad.component.scss
+$primary-color: #0077b6;
+$secondary-color: #00b4d8;
 $text-dark: #002147;
 $text-light: #f8f9fa;
+$accent-color: #0dcaf0;
 $shadow-light: rgba(0, 0, 0, 0.1);
-$shadow-dark: rgba(0, 0, 0, 0.3);
+$shadow-medium: rgba(0, 0, 0, 0.15);
 
-// Mixins (consistentes con home.component.scss)
+// Mixins reutilizados
 @mixin section-padding {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -18,245 +17,243 @@ $shadow-dark: rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0.75rem 2rem $shadow-light;
+    box-shadow: 0 0.75rem 2rem $shadow-medium;
   }
 }
 
-:host {
-  display: block;
-}
-
-// Estilos para la sección principal del blog
-.container {
-  @include section-padding;
-
-  h1 {
-    font-weight: 700;
-    color: $text-dark;
-    margin-bottom: 2rem;
-    padding-bottom: 0.5rem;
-    position: relative;
-    display: inline-block;
-
-    &::after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 3px;
-      background-color: $secondary-color;
-      margin: 0.5rem auto 0;
-      border-radius: 5px;
-    }
-  }
-}
-
-// Sección principal del blog
 .blog-section {
   @include section-padding;
-  background-color: #f9fafb;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
 
+  // Header consistente con privacy notice
   .blog-header {
     margin-bottom: 3rem;
+
     .section-title {
       font-weight: 700;
       color: $text-dark;
+      font-size: 3rem;
       margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
       position: relative;
       display: inline-block;
 
       &::after {
-        content: "";
+        content: '';
         display: block;
-        width: 60px;
-        height: 3px;
-        background-color: $secondary-color;
-        margin: 0.5rem auto 0;
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, $primary-color, $accent-color);
+        margin: 1rem auto 0;
         border-radius: 5px;
+        animation: slideIn 1s ease-out;
       }
     }
-  }
-}
 
-.section-subtitle {
-  font-size: 1.2rem;
-  color: #555;
-  max-width: 800px;
-  margin: 0 auto 2rem auto;
-  line-height: 1.6;
-}
-
-// Estilos para las tarjetas de blog (consistentes con portfolio-card)
-.blog-card {
-  border-radius: 15px;
-  overflow: hidden;
-  background-color: white;
-  border: 1px solid #e0e0e0;
-  @include card-hover-effect;
-  text-decoration: none !important;
-
-  .card-img-top {
-    height: 200px;
-    object-fit: cover;
-    width: 100%;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-  }
-
-  .card-body {
-    padding: 1.5rem;
-
-    .card-title {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: $text-dark;
-      margin-bottom: 0.75rem;
-      line-height: 1.3;
-    }
-
-    .card-text {
-      font-size: 0.95rem;
-      color: #777;
+    .section-subtitle {
+      font-size: 1.3rem;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto;
       line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-
-    small {
-      font-size: 0.85rem;
-      color: $primary-color;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      font-weight: 300;
     }
   }
 
-  // Efecto hover para los enlaces
-  a {
-    text-decoration: none !important;
-    color: inherit;
-    display: block;
-    height: 100%;
+  // Contenido principal
+  .blog-content {
+    .blog-post-section {
+      margin-bottom: 2rem;
+    }
 
-    &:hover {
+    .blog-card {
+      border-radius: 15px;
+      overflow: hidden;
+      background-color: white;
+      border: 1px solid #e0e0e0;
+      @include card-hover-effect;
+      box-shadow: 0 4px 15px $shadow-light;
       text-decoration: none !important;
-      color: inherit;
 
-      .card-title {
-        color: $primary-color;
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
       }
 
-      .read-more {
-        color: $secondary-color;
+      .card-body {
+        padding: 2rem;
 
-        &::after {
-          transform: translateX(5px);
+        .card-title {
+          font-size: 1.4rem;
+          font-weight: 600;
+          color: $text-dark;
+          margin-bottom: 0.75rem;
+          line-height: 1.3;
+        }
+
+        .card-text {
+          font-size: 1rem;
+          color: #444;
+          line-height: 1.7;
+          margin: 0 0 1rem 0;
+          text-align: justify;
+        }
+
+        .read-more {
+          font-size: 0.85rem;
+          color: $primary-color;
+          font-weight: 500;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          position: relative;
+
+          &::after {
+            content: " →";
+            transition: transform 0.3s ease;
+          }
+        }
+      }
+
+      // Efecto hover para los enlaces
+      a {
+        text-decoration: none !important;
+        color: inherit;
+        display: block;
+        height: 100%;
+
+        &:hover {
+          text-decoration: none !important;
+          color: inherit;
+
+          .card-title {
+            color: $primary-color;
+          }
+
+          .read-more {
+            color: $secondary-color;
+
+            &::after {
+              transform: translateX(5px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Mensaje cuando no hay posts
+  .no-posts-message {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    box-shadow: 0 4px 15px $shadow-light;
+    @include card-hover-effect;
+
+    .no-posts-icon {
+      background-color: $primary-color;
+      color: white;
+      font-size: 24px;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba($primary-color, 0.3);
+      margin: 0 auto 1rem auto;
+    }
+
+    .text-muted {
+      font-size: 1.1rem;
+      color: #444;
+      margin: 0;
+      line-height: 1.7;
+    }
+  }
+
+  // Animaciones
+  @keyframes slideIn {
+    from {
+      width: 0;
+      opacity: 0;
+    }
+    to {
+      width: 80px;
+      opacity: 1;
+    }
+  }
+
+  // Responsive Design
+  @media (max-width: 768px) {
+    .blog-header {
+      .section-title {
+        font-size: 2.2rem;
+      }
+
+      .section-subtitle {
+        font-size: 1.1rem;
+      }
+    }
+
+    .blog-card {
+      .card-body {
+        padding: 1.5rem;
+
+        .card-title {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .blog-header {
+      margin-bottom: 2rem;
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+    }
+
+    .blog-card {
+      margin-bottom: 1.5rem;
+
+      .card-body {
+        padding: 1.25rem;
+
+        .card-title {
+          font-size: 1.1rem;
         }
       }
     }
   }
 }
 
-// Chips para categorías/tags (si se implementan)
-mat-chip-list {
-  margin-bottom: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+// Estilos adicionales para mejorar la accesibilidad
+.blog-card:focus-within {
+  outline: 2px solid $accent-color;
+  outline-offset: 2px;
 }
 
-mat-chip {
-  margin-right: 6px;
-  margin-bottom: 6px;
-  background-color: $primary-color;
-  color: white;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
+// Mejoras para el contraste de texto
+.card-text strong {
+  color: $text-dark;
+  font-weight: 600;
+}
+
+// Links dentro del contenido del blog
+.card-text a {
+  color: $primary-color;
+  text-decoration: underline;
+  transition: color 0.3s ease;
 
   &:hover {
-    background-color: darken($primary-color, 10%);
-    transform: translateY(-2px);
-  }
-}
-
-// Mensaje cuando no hay posts
-.no-posts-message {
-  text-align: center;
-  padding: 3rem 2rem;
-  background-color: white;
-  border-radius: 15px;
-  border: 1px solid #e0e0e0;
-  margin-top: 2rem;
-
-  .no-posts-icon {
-    font-size: 4rem;
-    height: 4rem;
-    width: 4rem;
-    color: #ccc;
-    margin-bottom: 1rem;
-  }
-
-  .text-muted {
-    font-size: 1.1rem;
-    color: #777;
-    margin: 0;
-  }
-}
-
-// Estilos para el texto "Leer más"
-.read-more {
-  font-size: 0.85rem;
-  color: $primary-color;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  position: relative;
-
-  &::after {
-    content: " →";
-    transition: transform 0.3s ease;
-  }
-}
-
-// Responsive design
-@media (max-width: 768px) {
-  .container {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-    }
-  }
-
-  .card {
-    .card-body {
-      padding: 1.25rem;
-
-      .card-title {
-        font-size: 1.25rem;
-      }
-
-      .card-text {
-        font-size: 0.9rem;
-      }
-    }
-  }
-}
-
-@media (max-width: 576px) {
-  .container {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-
-    h1 {
-      font-size: 2rem;
-    }
-  }
-
-  .col-md-4 {
-    margin-bottom: 2rem;
+    color: darken($primary-color, 15%);
+    text-decoration: none;
   }
 }

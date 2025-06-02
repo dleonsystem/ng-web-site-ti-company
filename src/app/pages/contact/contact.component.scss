@@ -3,17 +3,41 @@
     padding: 3rem 2rem;
     border-top: 3px solid #00b4d8;
   
+    // Título principal estandarizado siguiendo el patrón de styles.scss
     h2 {
+      // Aplicar la clase .section-title del styles.scss
       text-align: center;
-      color: #023047;
+      color: #002147; // $primary-color
       font-weight: 700;
+      font-size: 2.2rem; // Tamaño consistente con h2.section-title
+      margin-bottom: 2rem;
+      padding-bottom: 0.5rem;
+      position: relative;
+
+      // Subrayado consistente usando pseudo-elemento
+      &::after {
+        content: '';
+        display: block;
+        width: 70px;
+        height: 4px;
+        background-color: #0dcaf0; // $accent-color
+        border-radius: 5px;
+        margin: 0.75rem auto 0;
+        animation: slideIn 1s ease-out;
+      }
     }
   
+    // Descripción/subtítulo estandarizado
     p {
       text-align: center;
-      color: #555;
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
+      color: #555; // $text-color-light
+      margin-bottom: 2.5rem; // Consistente con .section-subtitle
+      font-size: 1.2rem; // Tamaño de .section-subtitle
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+      font-weight: 300;
     }
   
     .form-group {
@@ -42,7 +66,7 @@
     }
   
     button {
-      background-color: #0077b6;
+      background-color: #0077b6; // $secondary-color
       color: #fff;
       padding: 0.75rem 2rem;
       font-weight: 600;
@@ -54,8 +78,57 @@
       }
     }
   }
+
+  // Estilos para errores de validación
   mat-error {
-  font-size: 0.85rem;
-  margin-top: 4px;
-  color: #d32f2f;
-}
+    font-size: 0.85rem;
+    margin-top: 4px;
+    color: #d32f2f;
+  }
+
+  // Animación para el subrayado del título (consistente con aviso-privacidad)
+  @keyframes slideIn {
+    from {
+      width: 0;
+      opacity: 0;
+    }
+    to {
+      width: 70px;
+      opacity: 1;
+    }
+  }
+
+  // Responsive design para títulos
+  @media (max-width: 768px) {
+    .contact-section {
+      h2 {
+        font-size: 1.8rem; // Reducir en móviles
+      }
+      
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .contact-section {
+      padding: 2rem 1rem;
+      
+      h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        
+        &::after {
+          width: 50px;
+          height: 3px;
+        }
+      }
+      
+      p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }

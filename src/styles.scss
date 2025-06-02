@@ -75,36 +75,69 @@ body {
     line-height: $line-height-base;
     color: $dark-blue; // Color de texto base
 }
-
-.section-title {
-    font-weight: 700;
-    border-bottom: 2px solid $secondary-blue; // Usar variable
-    margin-bottom: $spacing-md; // Usar variable
-    padding-bottom: $spacing-sm; // Usar variable
-    color: $dark-blue; // Usar variable
-    text-align: center;
-}
-
-.text-primary {
-  color: $dark-blue !important; // Usar variable
-  font-size: 1.8rem !important; // Considerar si debe ser una variable de tamaño de fuente
-}
-.text-secondary {
-  color: $dark-blue !important; // Usar variable
-  font-size: 1.2rem !important; // Considerar si debe ser una variable de tamaño de fuente
-}
+// Estilo base para todos los encabezados
 h1, h2, h3, h4, h5, h6 {
   color: $primary-color;
+  font-weight: 700; // Un grosor consistente
+}
+.section-title {
+  text-align: center;
+  color: $primary-color;
   font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+
+  // Subrayado consistente usando un pseudo-elemento
+  &::after {
+    content: '';
+    display: block;
+    width: 70px;      // Ancho estándar
+    height: 4px;      // Grosor estándar
+    background-color: $accent-color; // Color de acento estándar
+    border-radius: 5px;
+    margin: 0.75rem auto 0; // Centrado
+  }
 }
 
+// Ajustes semánticos y de tamaño para h1 y h2 como títulos de sección
+h1.section-title {
+  font-size: 2.8rem;
+  margin-bottom: 2.5rem; // Más espacio para el título principal de la página
+}
 
+h2.section-title {
+  font-size: 2.2rem;
+}
+
+// Títulos para subtítulos de sección
 .section-subtitle {
   font-size: 1.2rem;
   color: $text-color-light;
-  margin-bottom: 2.5rem; // Aumentar margen inferior para más espacio
+  margin: 0 auto 2.5rem auto; // Centrado y con margen inferior
   text-align: center;
+  max-width: 800px;
+  line-height: 1.6;
 }
+
+// Estilo para Títulos dentro de Tarjetas (Cards)
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: $primary-color;
+  margin-bottom: 0.75rem;
+}
+// Clases de texto primario/secundario (ajustadas para consistencia)
+.text-primary {
+  color: $primary-color !important;
+  font-size: 1.8rem !important;
+}
+.text-secondary {
+  color: $secondary-color !important;
+  font-size: 1.2rem !important;
+}
+
+
 // Estilos para tarjetas generales (mat-card, .card)
 .mat-card, .card {
   border-radius: 10px;

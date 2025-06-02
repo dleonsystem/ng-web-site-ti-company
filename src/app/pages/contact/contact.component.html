@@ -1,7 +1,10 @@
 <section class="contact-section py-5">
   <div class="container">
-    <h2 class="text-center">{{ "contact.title" | translate }}</h2>
-    <p class="text-center">{{ "contact.description" | translate }}</p>
+    <!-- Título principal con clase estandarizada -->
+    <h2 class="section-title">{{ "contact.title" | translate }}</h2>
+    
+    <!-- Subtítulo/descripción con clase estandarizada -->
+    <p class="section-subtitle">{{ "contact.description" | translate }}</p>
 
     <form #form="ngForm" (ngSubmit)="enviarFormulario()" novalidate>
       <div class="row">
@@ -58,7 +61,7 @@
               rows="4"
               [(ngModel)]="contacto.mensaje"
               required minlength="10"
-                     #mensaje="ngModel"
+              #mensaje="ngModel"
               placeholder="¿En qué podemos ayudarte?"
             ></textarea>
             <mat-error *ngIf="form.submitted && !contacto.mensaje">
@@ -71,12 +74,13 @@
       <!-- Campo oculto si llega ?proyecto -->
       <input type="hidden" name="proyecto" [(ngModel)]="contacto.proyecto">
       
-   <!-- Confirmación -->
-       <div class="text-center" *ngIf="formEnviado">
+      <!-- Confirmación -->
+      <div class="text-center" *ngIf="formEnviado">
         <div class="alert alert-success mt-3">
           {{ "contact.successMessage" | translate }}
         </div>
       </div>
+      
       <div class="text-center mt-4">
         <button
           mat-raised-button

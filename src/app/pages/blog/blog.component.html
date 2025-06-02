@@ -1,36 +1,55 @@
-<section class="blog-section bg-light py-5" [@cardAnimation]>
+<section class="blog-section" [@cardAnimation]>
   <div class="container">
-    <h1 class="section-title text-center mb-4">{{ 'blog.title' | translate }}</h1>
-    <p class="section-subtitle text-center mb-5">
-      {{ 'blog.description' | translate }}
-    </p>
+    <!-- Hero Header -->
+    <div class="blog-header text-center mb-5">
+      <h1 class="section-title mb-4">
+        {{ "blog.title" | translate }}
+      </h1>
+      <p class="section-subtitle">
+        {{ "blog.description" | translate }}
+      </p>
+    </div>
 
-    <div class="row g-4 justify-content-center">
-      <div class="col-md-6 col-lg-4" *ngFor="let post of posts">
-        <div class="card blog-card h-100 shadow-sm animate__animated animate__fadeInUp">
-          <a [routerLink]="['/blog', post.id]" class="text-decoration-none">
-            <img 
-              class="card-img-top" 
-              [src]="post.image" 
-              [alt]="post.alt ? post.alt : post.title" 
-              [title]="post.title"
-              loading="lazy" />
-            <div class="card-body">
-              <h3 class="card-title">{{ post.title }}</h3>
-              <p class="card-text">{{ post.excerpt }}</p>
-              <small class="read-more">{{ 'blog.readMore' | translate }}</small>
+    <!-- Blog Content -->
+    <div class="blog-content">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-8">
+          
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4" *ngFor="let post of posts">
+              <div class="blog-post-section">
+                <div class="blog-card h-100 animate__animated animate__fadeInUp">
+                  <a [routerLink]="['/blog', post.id]" class="text-decoration-none">
+                    <img 
+                      class="card-img-top" 
+                      [src]="post.image" 
+                      [alt]="post.alt ? post.alt : post.title" 
+                      [title]="post.title"
+                      loading="lazy" />
+                    <div class="card-body">
+                      <h3 class="card-title">{{ post.title }}</h3>
+                      <p class="card-text">{{ post.excerpt }}</p>
+                      <span class="read-more">{{ "blog.readMore" | translate }}</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
-          </a>
+          </div>
+
         </div>
       </div>
     </div>
 
     <!-- Mensaje cuando no hay posts -->
-    <div class="text-center" *ngIf="posts.length === 0">
-      <div class="no-posts-message">
-        <mat-icon class="no-posts-icon">article</mat-icon>
-        <p class="text-muted">{{ 'blog.noPosts' | translate }}</p>
+    <div class="row justify-content-center" *ngIf="posts.length === 0">
+      <div class="col-lg-10 col-xl-8">
+        <div class="no-posts-message text-center">
+          <mat-icon class="no-posts-icon">article</mat-icon>
+          <p class="text-muted">{{ "blog.noPosts" | translate }}</p>
+        </div>
       </div>
     </div>
+
   </div>
 </section>
