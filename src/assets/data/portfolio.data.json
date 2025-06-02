@@ -1,66 +1,132 @@
-[
+{
+  "es": [
     {
       "titulo": "Plataforma de Certificación en Línea",
       "descripcion": "Sistema web para emisión de certificados digitales con firma electrónica y validación por QR.",
-      "imagen": "assets/images/portfolio/certificacion-digital.png", 
-    "sector": "Government",
-        "enlaceDemo": null
+      "imagen": "assets/images/portfolio/certificacion-digital.png",
+      "sector": "Government",
+      "enlaceDemo": null
     },
     {
       "titulo": "App de Levantamiento Escolar",
       "descripcion": "Aplicación móvil para encuestas y registro de inmuebles escolares con geolocalización.",
       "imagen": "assets/images/portfolio/encuestas2.png",
-    "sector": "Education",
-        "enlaceDemo": "https://play.google.com/store/apps/details?id=com.sep.inifed&hl=es_MX"
+      "sector": "Education",
+      "enlaceDemo": "https://play.google.com/store/apps/details?id=com.sep.inifed&hl=es_MX"
     },
     {
-        "titulo": "Sistema de Matrícula Única Académica",
-        "descripcion": "Plataforma interoperable entre 32 subsistemas estatales, control de duplicados mediante CURP y UUID académico. Procesa datos de más de 5.2 millones de estudiantes.",
-        "imagen": "assets/images/portfolio/matricula-unica-2.png",
-    "sector": "Education",
-          "enlaceDemo": null
-      },
-      {
-        "titulo": "Plataforma Interna de Encuestas y Elecciones",
-        "descripcion": "Sistema de votación digital con MFA y roles por usuario. Automación de procesos internos para más de 300,000 afiliados.",
-        "imagen": "assets/images/portfolio/encuestas-elecciones.png",
-    "sector": "Government",
-          "enlaceDemo": null
-      },
-      {
-        "titulo": "Sistema de Credencialización Digital",
-        "descripcion": "Generación de credenciales digitales con QR dinámico, firma digital y validación móvil para más de 2 millones de afiliados.",
-        "imagen": "assets/images/portfolio/credenciales-morena.png",
-    "sector": "Government",
-          "enlaceDemo": "https://mi-demo.lionsystems.com.mx/credencializacion"
-      },
-      {
-        "titulo": "Sistema de Votación Legislativa",
-        "descripcion": "Registro digital de votaciones, autenticación biométrica y control de asistencia de más de 500 legisladores.",
-        "imagen": "assets/images/portfolio/votacion-legislativa.png",
-    "sector": "Government",
-          "enlaceDemo": "https://web.diputados.gob.mx/"
-      },
-      {
-        "titulo": "Sistema de Gestión de Archivos Documentales",
-        "descripcion": "Sistema de archivo digital con búsqueda, clasificación y control por perfil institucional. Usado por más de 1,000 servidores públicos.",
-        "imagen": "assets/images/portfolio/archivo-digital.png",
-    "sector": "Government",
-          "enlaceDemo": "https://happy-banach-82da55.netlify.app/"
-      },
-      {
-        "titulo": "Gestión de Eventos con Registro Automatizado",
-        "descripcion": "Registro por QR, control de asistencia y emisión automática de constancias por tipo y región en eventos legislativos.",
-        "imagen": "assets/images/portfolio/registro-eventos.png",
-    "sector": "Private",
-          "enlaceDemo": null
-      },
-      {
-        "titulo": "CRM para Sector Financiero",
-        "descripcion": "CRM nacional para BBVA y Compartamos Banco. Seguimiento a ventas, reportes ejecutivos y segmentación de clientes.",
-        "imagen": "assets/images/portfolio/crm-sales.png",
-        "sector": "Banking",
-          "enlaceDemo": null
-      }
+      "titulo": "Sistema de Matrícula Única Académica",
+      "descripcion": "Plataforma interoperable entre 32 subsistemas estatales, control de duplicados mediante CURP y UUID académico. Procesa datos de más de 5.2 millones de estudiantes.",
+      "imagen": "assets/images/portfolio/matricula-unica-2.png",
+      "sector": "Education",
+      "enlaceDemo": null
+    },
+    {
+      "titulo": "Plataforma Interna de Encuestas y Elecciones",
+      "descripcion": "Sistema de votación digital con MFA y roles por usuario. Automación de procesos internos para más de 300,000 afiliados.",
+      "imagen": "assets/images/portfolio/encuestas-elecciones.png",
+      "sector": "Government",
+      "enlaceDemo": null
+    },
+    {
+      "titulo": "Sistema de Credencialización Digital",
+      "descripcion": "Generación de credenciales digitales con QR dinámico, firma digital y validación móvil para más de 2 millones de afiliados.",
+      "imagen": "assets/images/portfolio/credenciales-morena.png",
+      "sector": "Government",
+      "enlaceDemo": "https://mi-demo.lionsystems.com.mx/credencializacion"
+    },
+    {
+      "titulo": "Sistema de Votación Legislativa",
+      "descripcion": "Registro digital de votaciones, autenticación biométrica y control de asistencia de más de 500 legisladores.",
+      "imagen": "assets/images/portfolio/votacion-legislativa.png",
+      "sector": "Government",
+      "enlaceDemo": "https://web.diputados.gob.mx/"
+    },
+    {
+      "titulo": "Sistema de Gestión de Archivos Documentales",
+      "descripcion": "Sistema de archivo digital con búsqueda, clasificación y control por perfil institucional. Usado por más de 1,000 servidores públicos.",
+      "imagen": "assets/images/portfolio/archivo-digital.png",
+      "sector": "Government",
+      "enlaceDemo": "https://happy-banach-82da55.netlify.app/"
+    },
+    {
+      "titulo": "Gestión de Eventos con Registro Automatizado",
+      "descripcion": "Registro por QR, control de asistencia y emisión automática de constancias por tipo y región en eventos legislativos.",
+      "imagen": "assets/images/portfolio/registro-eventos.png",
+      "sector": "Private",
+      "enlaceDemo": null
+    },
+    {
+      "titulo": "CRM para Sector Financiero",
+      "descripcion": "CRM nacional para BBVA y Compartamos Banco. Seguimiento a ventas, reportes ejecutivos y segmentación de clientes.",
+      "imagen": "assets/images/portfolio/crm-sales.png",
+      "sector": "Banking",
+      "enlaceDemo": null
+    }
+  ],
+  "en": [
+    {
+      "titulo": "Online Certification Platform",
+      "descripcion": "Web system for issuing digital certificates with electronic signature and QR validation.",
+      "imagen": "assets/images/portfolio/certificacion-digital.png",
+      "sector": "Government",
+      "enlaceDemo": null
+    },
+    {
+      "titulo": "School Survey App",
+      "descripcion": "Mobile application for surveys and registration of school buildings with geolocation.",
+      "imagen": "assets/images/portfolio/encuestas2.png",
+      "sector": "Education",
+      "enlaceDemo": "https://play.google.com/store/apps/details?id=com.sep.inifed&hl=es_MX"
+    },
+    {
+      "titulo": "Unique Academic Enrollment System",
+      "descripcion": "Interoperable platform among 32 state subsystems, duplicate control using CURP and academic UUID. Processes data for over 5.2 million students.",
+      "imagen": "assets/images/portfolio/matricula-unica-2.png",
+      "sector": "Education",
+      "enlaceDemo": null
+    },
+    {
+      "titulo": "Internal Survey and Election Platform",
+      "descripcion": "Digital voting system with MFA and user roles. Automation of internal processes for over 300,000 members.",
+      "imagen": "assets/images/portfolio/encuestas-elecciones.png",
+      "sector": "Government",
+      "enlaceDemo": null
+    },
+    {
+      "titulo": "Digital Credentialing System",
+      "descripcion": "Generation of digital credentials with dynamic QR, digital signature, and mobile validation for over 2 million members.",
+      "imagen": "assets/images/portfolio/credenciales-morena.png",
+      "sector": "Government",
+      "enlaceDemo": "https://mi-demo.lionsystems.com.mx/credencializacion"
+    },
+    {
+      "titulo": "Legislative Voting System",
+      "descripcion": "Digital voting record, biometric authentication, and attendance control for over 500 legislators.",
+      "imagen": "assets/images/portfolio/votacion-legislativa.png",
+      "sector": "Government",
+      "enlaceDemo": "https://web.diputados.gob.mx/"
+    },
+    {
+      "titulo": "Document Management System",
+      "descripcion": "Digital archiving system with search, classification, and control by institutional profile. Used by over 1,000 public servants.",
+      "imagen": "assets/images/portfolio/archivo-digital.png",
+      "sector": "Government",
+      "enlaceDemo": "https://happy-banach-82da55.netlify.app/"
+    },
+    {
+      "titulo": "Event Management with Automated Registration",
+      "descripcion": "QR registration, attendance control, and automatic issuance of certificates by type and region in legislative events.",
+      "imagen": "assets/images/portfolio/registro-eventos.png",
+      "sector": "Private",
+      "enlaceDemo": null
+    },
+    {
+      "titulo": "CRM for Financial Sector",
+      "descripcion": "National CRM for BBVA and Compartamos Banco. Sales tracking, executive reports, and customer segmentation.",
+      "imagen": "assets/images/portfolio/crm-sales.png",
+      "sector": "Banking",
+      "enlaceDemo": null
+    }
   ]
-  
+}

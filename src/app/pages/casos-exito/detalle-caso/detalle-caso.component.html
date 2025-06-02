@@ -1,43 +1,111 @@
-<section>
-  <br>
-  <br>
+<!-- detalle-caso.component.html - Homologado con home y casos-exito -->
+
+<section class="case-detail-section">
   <div class="container d-flex justify-content-center">
-  <mat-card class="detalle-caso-card text-center">
-    <h2 class="titulo-caso mat-title">{{ caso.nombre }}</h2>
+    <mat-card class="detalle-caso-card shadow-lg">
+      <!-- Título principal del caso -->
+      <h1 class="titulo-caso text-center">
+        {{ caso.nombre }}
+      </h1>
 
-    <div class="info-básica">
-      <p><strong>Cliente:</strong> {{ caso.cliente }}</p>
-      <p><strong>Periodo:</strong> {{ caso.periodo }}</p>
-      <p><strong>Rol:</strong> {{ caso.rol }}</p>
-    </div>
+      <!-- Información básica del proyecto -->
+      <div class="info-básica">
+        <p>
+          <strong>Cliente:</strong>
+          <span>{{ caso.cliente }}</span>
+        </p>
+        <p>
+          <strong>Período:</strong>
+          <span>{{ caso.periodo }}</span>
+        </p>
+        <p>
+          <strong>Rol:</strong>
+          <span>{{ caso.rol }}</span>
+        </p>
+      </div>
 
-    <div class="chips-bloque">
-    <p class="chips-label"><mat-icon>code</mat-icon> 
-           <strong>&nbsp;&nbsp; Tecnologías:</strong></p>
-      <mat-chip-set>
-        <mat-chip *ngFor="let tech of caso.stack" color="primary" selected>{{ tech }}</mat-chip>
-      </mat-chip-set>
-    </div>
+      <!-- Bloque de tecnologías -->
+      <div class="chips-bloque">
+        <p class="chips-label">
+          <mat-icon>code</mat-icon>
+          <strong>Tecnologías Utilizadas</strong>
+        </p>
+        <mat-chip-set aria-label="Tecnologías del proyecto">
+          <mat-chip 
+            *ngFor="let tech of caso.stack" 
+            color="primary" 
+            selected>
+            {{ tech }}
+          </mat-chip>
+        </mat-chip-set>
+      </div>
 
-    <div class="chips-bloque">
-      <p class="chips-label"><mat-icon>extension</mat-icon> <strong> &nbsp;&nbsp;Integraciones:</strong></p>
-      <mat-chip-set>
-        <mat-chip *ngFor="let int of caso.integraciones" color="accent" selected>{{ int }}</mat-chip>
-      </mat-chip-set>
-    </div>
+      <!-- Bloque de integraciones -->
+      <div class="chips-bloque">
+        <p class="chips-label">
+          <mat-icon>extension</mat-icon>
+          <strong>Integraciones y Servicios</strong>
+        </p>
+        <mat-chip-set aria-label="Integraciones del proyecto">
+          <mat-chip 
+            *ngFor="let int of caso.integraciones" 
+            color="accent" 
+            selected>
+            {{ int }}
+          </mat-chip>
+        </mat-chip-set>
+      </div>
 
-    <div class="resultados-bloque">
-      <p><mat-icon>insights</mat-icon> &nbsp;&nbsp;<strong> Resultados:</strong></p>
-      <p class="mat-body-1 texto-resultado">{{ caso.resultados }}</p>
-    </div>
+      <!-- Bloque de resultados -->
+      <div class="resultados-bloque">
+        <p>
+          <mat-icon>insights</mat-icon>
+          <strong>Resultados Obtenidos</strong>
+        </p>
+        <p class="texto-resultado">
+          {{ caso.resultados }}
+        </p>
+      </div>
 
-    <div class="text-center mt-4">
-      <button mat-raised-button color="primary" [routerLink]="['/contacto']">
-  Solicita una solución similar
-</button>
-<br>
-<br>
-    </div>
-  </mat-card>
-</div>
+      <!-- Información de usuarios impactados (si existe) -->
+      <div class="info-adicional" *ngIf="caso.usuariosImpactados">
+        <div class="stat-card">
+          <mat-icon>people</mat-icon>
+          <div class="stat-content">
+            <h3>{{ caso.usuariosImpactados }}</h3>
+            <p>Usuarios Impactados</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="text-center mt-4">
+        <button 
+          mat-raised-button 
+          color="primary" 
+          [routerLink]="['/contacto']"
+          [queryParams]="{ proyecto: caso.nombre }"
+          class="cta-button">
+          <mat-icon>contact_support</mat-icon>
+          Solicita una Solución Similar
+        </button>
+        
+        <div class="mt-3">
+          <button 
+            mat-stroked-button 
+            color="primary" 
+            [routerLink]="['/casos-exito']"
+            class="back-button">
+            <mat-icon>arrow_back</mat-icon>
+            Ver Todos los Casos
+          </button>
+        </div>
+      </div>
+
+      <!-- Firma/Badge -->
+      <div class="case-signature text-center mt-4">
+        <small class="text-muted">#LionSystems - Soluciones Tecnológicas</small>
+      </div>
+    </mat-card>
+  </div>
 </section>

@@ -1,0 +1,145 @@
+// _variables.scss - Variables globales para homologar estilos
+
+// ===== COLORES =====
+$primary-color: #0077b6;      // Azul institucional principal
+$secondary-color: #00b4d8;    // Azul más claro
+$accent-color: #0dcaf0;       // Turquesa/Cyan para acentos
+$dark-blue: #002147;          // Azul oscuro institucional
+$text-dark: #002147;          // Color de texto oscuro
+$text-light: #f8f9fa;         // Color de texto claro
+$text-muted: #555;            // Color de texto atenuado
+$text-color-light: #666;      // Color de texto ligero
+
+// Colores de fondo
+$background-light: #f5f8fa;   // Fondo claro
+$background-card: #ffffff;    // Fondo de tarjetas
+$background-section: #f9fafb; // Fondo de secciones
+
+// ===== SOMBRAS =====
+$shadow-light: rgba(0, 0, 0, 0.1);
+$shadow-medium: rgba(0, 0, 0, 0.15);
+$shadow-dark: rgba(0, 0, 0, 0.3);
+$box-shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.1);
+$box-shadow-medium: 0 4px 10px rgba(0, 0, 0, 0.15);
+$box-shadow-hover: 0 0.75rem 2rem rgba(0, 0, 0, 0.1);
+
+// ===== TIPOGRAFÍA =====
+$font-family-base: 'Roboto', sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+
+// Tamaños de fuente
+$font-size-sm: 0.9rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.2rem;
+$font-size-xl: 1.4rem;
+$font-size-xxl: 1.6rem;
+
+// Pesos de fuente
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+
+// ===== ESPACIADO =====
+$spacing-xs: 0.25rem;  // 4px
+$spacing-sm: 0.5rem;   // 8px
+$spacing-md: 1rem;     // 16px
+$spacing-lg: 1.5rem;   // 24px
+$spacing-xl: 2rem;     // 32px
+$spacing-xxl: 2.5rem;  // 40px
+$spacing-xxxl: 4rem;   // 64px
+
+// ===== BORDER RADIUS =====
+$border-radius-sm: 5px;
+$border-radius-md: 10px;
+$border-radius-lg: 15px;
+$border-radius-xl: 20px;
+$border-radius-pill: 25px;
+$border-radius-circle: 50%;
+
+// ===== TRANSICIONES =====
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// ===== BREAKPOINTS =====
+$breakpoint-xs: 576px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
+$breakpoint-xl: 1400px;
+
+// ===== MIXINS =====
+@mixin section-padding {
+  padding-top: $spacing-xxxl;
+  padding-bottom: $spacing-xxxl;
+}
+
+@mixin card-hover-effect {
+  transition: transform $transition-normal, box-shadow $transition-normal;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $box-shadow-hover;
+  }
+}
+
+@mixin button-style($bg-color, $text-color: white) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: 2px solid $bg-color;
+  padding: 0.8rem 2rem;
+  font-size: $font-size-sm;
+  border-radius: $border-radius-pill;
+  font-weight: $font-weight-medium;
+  transition: all $transition-normal;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba($bg-color, 0.4);
+  }
+}
+
+@mixin section-title {
+  font-weight: $font-weight-bold;
+  color: $text-dark;
+  margin-bottom: $spacing-md;
+  padding-bottom: $spacing-sm;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: $secondary-color;
+    margin: 0.5rem auto 0;
+    border-radius: $border-radius-sm;
+  }
+}
+
+@mixin section-subtitle {
+  font-size: $font-size-lg;
+  color: $text-color-light;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+// ===== UTILIDADES PARA ANIMACIONES =====
+@mixin fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

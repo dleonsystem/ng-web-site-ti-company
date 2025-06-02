@@ -1,25 +1,255 @@
+// services.component.scss - Homologado con home.component.scss
+@import './_variables.scss'; // Importar variables globales
+@import './_mixins.scss'; // Importar mixins globales
+// Variables consistentes (deberían estar en un archivo global _variables.scss)
+$primary-color: #0077b6; // Azul institucional
+$secondary-color: #00b4d8; // Azul más claro
+$text-dark: #002147;
+$text-light: #f8f9fa;
+$shadow-light: rgba(0, 0, 0, 0.1);
+$shadow-dark: rgba(0, 0, 0, 0.3);
+
+// Mixins consistentes
+@mixin section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@mixin card-hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.75rem 2rem $shadow-light;
+  }
+}
+
+// Sección de servicios homologada
 .services-section {
-    background-color: #f5f8fa;
-  
-    .service-card {
-      border-radius: 10px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
+  @include section-padding;
+  background-color: #f9fafb; // Consistente con home
+
+  h1 {
+    font-size: 3rem;
+    color: $text-dark;
+    font-weight: 700;
+    margin-bottom: 0;
+    line-height: 1.2;
+     position: relative;
+    display: inline-block;
+    
+    // Aplicar el mismo estilo de subrayado que home
+    &::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background-color: $secondary-color;
+      margin: 0.5rem auto 0;
+      border-radius: 5px;
+    }
+  }
+
+
+  .lead {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+  }
+  // Título de sección consistente
+  .section-title {
+    font-weight: 700;
+    color: $text-dark;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+    content: '';
+    display: block;
+    width: 60px; // Ancho del subrayado
+    height: 3px;
+    background-color: $secondary-color;
+    margin: 0.5rem auto 0;
+    border-radius: 5px;
+  }
+  }
+
+  // Subtítulo consistente
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+  }
+
+  // Tarjetas de servicio homologadas
+  .service-card {
+    border-radius: 15px; // Consistente con home (15px en lugar de 10px)
+    background-color: white;
+    border: 1px solid #e0e0e0; // Border consistente
+    @include card-hover-effect;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 2rem 1rem;
+
+    // Hover effect mejorado y consistente
+    &:hover {
+      border-color: $primary-color;
+      box-shadow: 0 0.5rem 1.5rem rgba(0, 119, 182, 0.2), 
+                  0 0.75rem 2rem rgba(0, 119, 182, 0.25);
+      transform: translateY(-5px);
+    }
+
+    // Icono consistente
+    mat-icon {
+      font-size: 3.5rem; // Consistente con home
+      height: 3.5rem;
+      width: 3.5rem;
+      color: $primary-color;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover mat-icon {
+      transform: scale(1.1); // Efecto de escala al hover
+    }
+
+    // Título del servicio
+    h5, .service-title {
+      font-size: 1.6rem; // Consistente con home
+      font-weight: 600;
+      color: $text-dark;
+      margin-bottom: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    // Descripción del servicio
+    p, .service-description {
+      font-size: 0.95rem;
+      color: #666; // Consistente con home
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    // Precio
+    .text-primary {
+      color: $primary-color !important;
+      font-size: 1.4rem !important; // Reducido desde 1.8rem para consistencia
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    // Botones consistentes
+    .btn, .mat-button {
+      padding: 0.5rem 1.5rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-radius: 25px; // Más redondeado para consistencia
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline-primary {
+      border: 2px solid $primary-color;
+      color: $primary-color;
+      background-color: transparent;
+
       &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        background-color: $primary-color;
+        color: white;
       }
-  
-      h5 {
-        color: #002147;
-        font-weight: 600;
-        margin-top: 1rem;
+    }
+
+    // Acciones de la tarjeta
+    .mt-auto {
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+
+  // Grid responsivo consistente
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .col-md-6.col-lg-4 {
+    flex: 0 0 calc(33.333% - 1rem);
+    max-width: 350px;
+
+    @media (max-width: 992px) {
+      flex: 0 0 calc(50% - 0.75rem);
+    }
+
+    @media (max-width: 768px) {
+      flex: 0 0 100%;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+// Responsive design consistente
+@media (max-width: 768px) {
+  .services-section {
+    .service-card {
+      margin-bottom: 1.5rem;
+      
+      h5, .service-title {
+        font-size: 1.4rem;
       }
-  
-      p {
-        font-size: 0.95rem;
-        color: #555;
+
+      mat-icon {
+        font-size: 3rem;
+        height: 3rem;
+        width: 3rem;
       }
     }
   }
+}
+
+// Clases de utilidad consistentes con home
+.btn-raised-primary {
+  border: 2px solid $primary-color;
+  color: white;
+  background-color: $primary-color;
+  padding: 0.8rem 2rem;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
   
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba($primary-color, 0.4);
+  }
+}
+
+.btn-raised-secondary {
+  border: 2px solid $secondary-color;
+  color: white;
+  background-color: $secondary-color;
+  padding: 0.8rem 2rem;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba($secondary-color, 0.4);
+  }
+}

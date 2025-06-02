@@ -102,12 +102,22 @@
   "successCases": {
     "title": "Casos de Éxito",
     "description": "Descubre cómo hemos ayudado a nuestros clientes a alcanzar sus objetivos con nuestras soluciones tecnológicas. Nuestras historias de éxito demuestran nuestro compromiso con la entrega de resultados e impulso a la innovación.",
+        "contact": "Contactar",
     "sectors": {
       "all": "Todos",
       "government": "Gobierno",
       "education": "Educación",
       "private": "Sector Privado",
-      "finance": "Financiero"
+      "finance": "Financiero",
+      "political": "Político"
+    },
+    "labels": {
+      "role": "Rol:",
+      "technologies": "Tecnologías:",
+      "results": "Resultados:",
+      "impactedUsers": "Usuarios Impactados:",
+      "integrations": "Integraciones:",
+      "viewDemo": "Ver demo"
     }
   },
   "services": {
@@ -120,19 +130,21 @@
       "cloud": "Infraestructura en la Nube"
     }
   },
-  "contact": {
-    "title": "Contáctanos",
-    "description": "¿Tienes una idea, proyecto o necesitas asesoría? Escríbenos.",
-    "name": "Nombre",
-    "email": "Correo electrónico",
-    "message": "Mensaje",
-    "placeholderMessage": "¿En qué podemos ayudarte?",
-    "submit": "Enviar mensaje",
-    "required": "Campo requerido",
-    "invalid": "Formato inválido o mínimo no alcanzado"
+ "blog": {
+    "title": "Blog",
+    "description": "En nuestro blog compartimos artículos, noticias y recursos sobre tecnología, ciberseguridad, inteligencia artificial y más. Nuestro objetivo es mantenerte informado sobre las últimas tendencias y mejores prácticas en el mundo digital.",
+    "readMore": "Leer más",
+    "noPosts": "No hay publicaciones disponibles",
+    "backToBlog": "Volver al blog",
+    "share": "Compartir",
+    "postNotFound": "Publicación no encontrada",
+    "postNotFoundMessage": "La publicación que buscas no existe o ha sido eliminada."
   },
-  "blog": {
-    "title": "Nuestro Blog"
+  "navigation": {
+    "home": "Inicio"
+  },
+  "common": {
+    "loading": "Cargando"
   },
   "contact": {
     "title": "Contáctanos",

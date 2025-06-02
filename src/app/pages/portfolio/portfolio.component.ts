@@ -34,11 +34,23 @@ export class PortfolioComponent implements OnInit {
   }
 
   ngOnInit(): void {
-        this.seoService.setPortfolioPage();
-    this.portfolioService.obtenerProyectos().subscribe(data => {
-      this.todosLosProyectos = data;
-      this.proyectosVisibles = this.todosLosProyectos;
-    });
+    const navegadorLang = navigator.language || (navigator as any).userLanguage; // ej. 'en-US' o 'es-MX'
+
+    const esEspanol = navegadorLang.toLowerCase().startsWith('es');
+    const idioma = esEspanol ? 'es' : 'en';
+    this.translate.use(idioma); // Establece el idioma de la app
+    this.seoService.setPortfolioPage();
+    if (this.translate.currentLang === 'es') {
+      this.portfolioService.obtenerProyectosPorIdioma('es').subscribe(data => {
+        this.todosLosProyectos = data;
+        this.proyectosVisibles = this.todosLosProyectos;
+      });
+    } else {
+      this.portfolioService.obtenerProyectosPorIdioma('en').subscribe(data => {
+        this.todosLosProyectos = data;
+        this.proyectosVisibles = this.todosLosProyectos;
+      });
+    }
 
     // You can load the translated filter names if needed for display,
     // but the filtering logic should use the keys.

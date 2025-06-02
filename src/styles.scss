@@ -87,13 +87,17 @@ body {
 
 .text-primary {
   color: $dark-blue !important; // Usar variable
-  font-size: 2.5rem !important; // Considerar si debe ser una variable de tamaño de fuente
+  font-size: 1.8rem !important; // Considerar si debe ser una variable de tamaño de fuente
 }
-
+.text-secondary {
+  color: $dark-blue !important; // Usar variable
+  font-size: 1.2rem !important; // Considerar si debe ser una variable de tamaño de fuente
+}
 h1, h2, h3, h4, h5, h6 {
   color: $primary-color;
   font-weight: 700;
 }
+
 
 .section-subtitle {
   font-size: 1.2rem;
@@ -163,8 +167,8 @@ mat-icon {
 
   &:hover {
     border-color: #0077b6; // El borde se ilumina al pasar el ratón
-      box-shadow: 0 0.75rem 2rem rgba(0, 119, 182, 0.25); // Sombra ligeramente 
-  transform: translateY(-5px); // Se eleva ligeramente
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 119, 182, 0.2), 0 0.75rem 2rem rgba(0, 119, 182, 0.25); // Sombra combinada
+    transform: translateY(-5px); // Se eleva ligeramente
   }
   mat-icon {
     font-size: 56px;
@@ -173,16 +177,8 @@ mat-icon {
     color: #0077b6; // azul institucional
     margin-bottom: 1rem;
   }
-
-  &:hover {
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 119, 182, 0.2);
-  }
 }
 
-.text-primary {
-  color: #002147 !important;
-  font-size: 2.5rem !important;
-}
 
 h1.section-title {
   font-weight: 700;
@@ -213,7 +209,6 @@ h2.section-title {
   font-weight: bold;
 }
 header {
-  background-color: #003366;
   color: #ffffff;
   padding: 10px 0;
 }

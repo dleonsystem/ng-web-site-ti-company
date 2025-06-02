@@ -1,12 +1,427 @@
+// detalle-caso.component.scss - Homologado con home y casos-exito
+
+// Variables consistentes
+$primary-color: #0077b6;
+$secondary-color: #00b4d8;
+$accent-color: #0dcaf0;
+$text-dark: #002147;
+$text-light: #f8f9fa;
+$shadow-light: rgba(0, 0, 0, 0.1);
+$shadow-dark: rgba(0, 0, 0, 0.3);
+
+// Mixins reutilizados
+@mixin section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@mixin card-hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.75rem 2rem $shadow-light;
+  }
+}
+
 :host {
   display: block;
+  @include section-padding;
+  background-color: #f9fafb; // Mismo fondo que home y casos-exito
+  min-height: 100vh;
 }
 
-mat-chip-list {
-  margin-bottom: 1rem;
+// Contenedor principal
+.container {
+  max-width: 900px; // Limitar ancho para mejor lectura
 }
 
-mat-chip {
-  margin-right: 6px;
-  margin-bottom: 6px;
+// Tarjeta principal del detalle
+.detalle-caso-card {
+  border-radius: 20px; // Más redondeado para destacar
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  padding: 3rem 2rem; // Más padding para respirar
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); // Sombra más prominente
+  max-width: 800px;
+  margin: 0 auto;
+  
+  @include card-hover-effect;
+  
+  // Título principal del caso
+  .titulo-caso {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: $text-dark;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    position: relative;
+    
+    // Subrayado decorativo como en home
+    &::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background-color: $secondary-color;
+      margin: 1rem auto 0;
+      border-radius: 5px;
+    }
+  }
+  
+  // Información básica
+  .info-básica {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid $primary-color;
+    
+    p {
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+      color: $text-dark;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      strong {
+        font-weight: 600;
+        color: $text-dark;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  
+  // Bloques de chips (tecnologías e integraciones)
+  .chips-bloque {
+    margin-bottom: 2.5rem;
+    text-align: left;
+    
+    .chips-label {
+      display: flex;
+      align-items: center;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: $text-dark;
+      
+      mat-icon {
+        color: $primary-color;
+        margin-right: 0.5rem;
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+      }
+      
+      strong {
+        font-weight: 600;
+      }
+    }
+    
+    mat-chip-set {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      
+      mat-chip {
+        border-radius: 20px;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin: 0;
+        transition: all 0.3s ease;
+        
+        // Chips de tecnologías (primary)
+        &[color="primary"] {
+          background-color: $primary-color;
+          color: white;
+          
+          &:hover {
+            background-color: darken($primary-color, 10%);
+            transform: translateY(-2px);
+          }
+        }
+        
+        // Chips de integraciones (accent)
+        &[color="accent"] {
+          background-color: $accent-color;
+          color: $text-dark;
+          
+          &:hover {
+            background-color: darken($accent-color, 10%);
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  }
+  
+  // Bloque de resultados
+  .resultados-bloque {
+    background-color: #f0f8ff;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid $secondary-color;
+    text-align: left;
+    
+    p:first-child {
+      display: flex;
+      align-items: center;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: $text-dark;
+      font-weight: 600;
+      
+      mat-icon {
+        color: $secondary-color;
+        margin-right: 0.5rem;
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+      }
+    }
+    
+    .texto-resultado {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #444;
+      margin: 0;
+      text-align: justify;
+    }
+  }
+  
+  // Botones de acción
+  .cta-button {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 30px;
+    background-color: $primary-color;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba($primary-color, 0.3);
+    margin-bottom: 1rem;
+    
+    mat-icon {
+      margin-right: 0.5rem;
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
+    }
+    
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba($primary-color, 0.4);
+    }
+  }
+  
+  .back-button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 25px;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    transition: all 0.3s ease;
+    
+    mat-icon {
+      margin-right: 0.5rem;
+      font-size: 18px;
+      width: 18px;
+      height: 18px;
+    }
+    
+    &:hover {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+  
+  // Información adicional (estadísticas)
+  .info-adicional {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    
+    .stat-card {
+      display: flex;
+      align-items: center;
+      background-color: #e8f4fd;
+      border-radius: 15px;
+      padding: 1.5rem;
+      border-left: 4px solid $accent-color;
+      
+      mat-icon {
+        color: $primary-color;
+        font-size: 2rem;
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+      }
+      
+      .stat-content {
+        text-align: left;
+        
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: $text-dark;
+          margin: 0;
+          line-height: 1;
+        }
+        
+        p {
+          margin: 0;
+          color: #666;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+  
+  // Firma del caso
+  .case-signature {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+    margin-top: 2rem;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  :host {
+    padding: 2rem 0;
+  }
+  
+  .detalle-caso-card {
+    margin: 1rem;
+    padding: 2rem 1.5rem;
+    
+    .titulo-caso {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .chips-bloque {
+      margin-bottom: 2rem;
+      
+      mat-chip-set {
+        justify-content: flex-start;
+        
+        mat-chip {
+          padding: 0.4rem 0.8rem;
+          font-size: 0.8rem;
+        }
+      }
+    }
+    
+    .info-básica,
+    .resultados-bloque {
+      padding: 1.5rem;
+    }
+    
+    .cta-button {
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      
+      mat-icon {
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+    
+    .back-button {
+      padding: 0.6rem 1.5rem;
+      font-size: 0.9rem;
+      
+      mat-icon {
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
+      }
+    }
+    
+    .info-adicional .stat-card {
+      padding: 1rem;
+      
+      mat-icon {
+        font-size: 1.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      
+      .stat-content h3 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .detalle-caso-card {
+    margin: 0.5rem;
+    padding: 1.5rem 1rem;
+    
+    .titulo-caso {
+      font-size: 1.5rem;
+    }
+    
+    .chips-label {
+      font-size: 1rem;
+      
+      mat-icon {
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    
+    mat-chip {
+      padding: 0.3rem 0.6rem;
+      font-size: 0.75rem;
+    }
+  }
+}
+
+// Animaciones adicionales
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.detalle-caso-card {
+  animation: fadeInUp 0.6s ease-out;
+  
+  .chips-bloque,
+  .info-básica,
+  .resultados-bloque {
+    animation: fadeInUp 0.8s ease-out;
+    animation-fill-mode: both;
+  }
+  
+  .info-básica {
+    animation-delay: 0.1s;
+  }
+  
+  .chips-bloque:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  
+  .chips-bloque:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  
+  .resultados-bloque {
+    animation-delay: 0.4s;
+  }
 }

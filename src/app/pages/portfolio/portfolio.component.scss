@@ -1,31 +1,226 @@
+// Variables para mantener consistencia con home
+$primary-color: #0077b6;
+$secondary-color: #00b4d8;
+$text-dark: #002147;
+$text-light: #f8f9fa;
+$shadow-light: rgba(0, 0, 0, 0.1);
+$shadow-dark: rgba(0, 0, 0, 0.3);
+
+// Mixin para efectos de hover
+@mixin card-hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.75rem 2rem $shadow-light;
+  }
+}
+
+// Sección principal del portafolio
 .portfolio-section {
-    background-color: #f9fafb;
-  
-    .card {
-      border-radius: 1rem;
-  
-      img {
-        object-fit: cover;
-        height: 180px;
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
-      }
-  
-      .tech-list {
-        span {
-          font-size: 0.75rem;
+  background-color: #f9fafb;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  .section-title {
+    font-weight: 700;
+    color: $text-dark;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: $secondary-color;
+      margin: 0.5rem auto 0;
+      border-radius: 5px;
+    }
+  }
+
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+  }
+
+  // Filtros de portafolio
+  .filtro-portafolio {
+    .filter-btn {
+      padding: 0.6rem 1.5rem;
+      font-size: 0.9rem;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+
+      &.mat-raised-button {
+        &[color="primary"] {
+          background-color: $primary-color;
+          color: white;
+          border-color: $primary-color;
+        }
+
+        &[color="default"] {
+          background-color: white;
+          color: $primary-color;
+          border-color: $primary-color;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+          &:hover {
+            background-color: $primary-color;
+            color: white;
+          }
         }
       }
     }
   }
-  
-  .btn-outline-primary {
-  border-radius: 20px;
-  font-weight: 500;
-  transition: all 0.3s ease;
 
-  &:hover {
-    background-color: #0d6efd;
-    color: #fff;
+  // Tarjetas de proyecto
+  .portfolio-card {
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    @include card-hover-effect;
+
+    img {
+      height: 220px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .portfolio-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: $text-dark;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .portfolio-description {
+      font-size: 0.9rem;
+      color: #777;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    mat-card-content {
+      padding: 1.5rem;
+    }
+
+    mat-card-actions {
+      padding: 0 1.5rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+
+      .mat-raised-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        border-radius: 20px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        flex: 1;
+        min-width: 120px;
+      }
+    }
+  }
+
+  // Estilos para botones de acción
+  .btn-raised-primary {
+    background-color: $primary-color !important;
+    color: white !important;
+    border: 2px solid $primary-color;
+
+    &:hover {
+      background-color: darken($primary-color, 10%) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba($primary-color, 0.4);
+    }
+  }
+
+  .btn-raised-accent {
+    background-color: $text-dark !important;
+    color: white !important;
+    border: 2px solid $text-dark;
+
+    &:hover {
+      background-color: lighten($text-dark, 10%) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba($text-dark, 0.4);
+    }
+  }
+
+  // Responsive
+  @media (max-width: 768px) {
+    .filtro-portafolio {
+      justify-content: center;
+      
+      .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+      }
+    }
+
+    .portfolio-card {
+      mat-card-actions {
+        flex-direction: column;
+        
+        .mat-raised-button {
+          width: 100%;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+    }
+
+    .portfolio-card {
+      img {
+        height: 200px;
+      }
+
+      .portfolio-title {
+        font-size: 1.2rem;
+      }
+
+      .portfolio-description {
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
+
+// Animaciones adicionales
+.animate__animated.animate__fadeInUp {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+
+// Asegurar que las tarjetas tengan la misma altura
+.row.g-4 {
+  .col-md-6, .col-lg-4 {
+    display: flex;
+    
+    .portfolio-card {
+      width: 100%;
+    }
   }
 }

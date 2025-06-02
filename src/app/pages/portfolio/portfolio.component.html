@@ -1,15 +1,19 @@
-<div class="container py-5">
-  <h2 class="text-center mb-4">{{ "portfolio.title" | translate }}</h2>
-  <p class="lead text-center text-muted mb-5">
-    {{ "portfolio.description" | translate }}
-  </p>
+<section class="portfolio-section bg-light py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">
+      {{ "portfolio.title" | translate }}
+    </h2>
+    <p class="section-subtitle text-center mb-5">
+      {{ "portfolio.description" | translate }}
+    </p>
 
-  <div class="row">
-    <div class="filtro-portafolio d-flex flex-wrap gap-2 mb-3">
+    <!-- Filtros -->
+    <div class="filtro-portafolio d-flex flex-wrap justify-content-center gap-3 mb-5">
       <button
         mat-raised-button
         [color]="filtroActivo === 'all' ? 'primary' : 'default'"
         (click)="filtrar('all')"
+        class="filter-btn"
       >
         {{ "portfolio.filters.all" | translate }}
       </button>
@@ -19,44 +23,32 @@
         *ngFor="let key of filtrosKeys.slice(1)"
         [color]="filtroActivo === key ? 'primary' : 'default'"
         (click)="filtrar(key)"
+        class="filter-btn"
       >
         {{ 'portfolio.filters.' + key | translate }}
       </button>
     </div>
 
-    <div class="col-md-4 mb-4" *ngFor="let proyecto of proyectosVisibles">
-      <div class="card h-100">
-        <img
-          [src]="proyecto.imagen"
-          class="card-img-top"
-          alt="{{ proyecto.titulo }}"
-        />
-        <div class="card-body">
-          <h5 class="card-title">{{ proyecto.titulo }}</h5>
-          <p class="card-text">{{ proyecto.descripcion }}</p>
-          <a
-            mat-raised-button
-            color="secundary"
-            *ngIf="proyecto.enlaceDemo"
-            class="btn btn-outline-success btn-sm"
-            href="{{ proyecto.enlaceDemo }}"
-            target="_blank"
-          >
-            {{ "home.cta.demo" | translate }}
-          </a>
-
-          <a
-            mat-raised-button
-            color="primary"
-            class="btn btn-outline-primary btn-sm mt-2"
-            [routerLink]="'/contacto'"
-            [queryParams]="{ proyecto: proyecto.titulo }"
-            (click)="trackPortafolioCTA(proyecto.titulo)"
-          >
-            {{ "home.cta.quotePortfolio" | translate }}
-          </a>
-        </div>
+    <!-- Proyectos -->
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6 col-lg-4" *ngFor="let proyecto of proyectosVisibles">
+        <mat-card class="portfolio-card h-100 shadow-sm animate__animated animate__fadeInUp">
+          <img mat-card-image [src]="proyecto.imagen" alt="{{ proyecto.titulo }}">
+          <mat-card-content>
+            <h3 class="portfolio-title">{{ proyecto.titulo }}</h3>
+            <p class="portfolio-description">{{ proyecto.descripcion }}</p>
+          </mat-card-content>
+          <mat-card-actions class="d-flex justify-content-between">
+            <a mat-raised-button color="accent" class="btn-raised-accent" *ngIf="proyecto.enlaceDemo" [href]="proyecto.enlaceDemo" target="_blank">
+              {{ "home.cta.demo" | translate }}
+            </a>
+            <a mat-raised-button color="primary" class="btn-raised-primary" [routerLink]="'/contacto'" [queryParams]="{ proyecto: proyecto.titulo }"
+              (click)="trackPortafolioCTA(proyecto.titulo)">
+              {{ "home.cta.quotePortfolio" | translate }}
+            </a>
+          </mat-card-actions>
+        </mat-card>
       </div>
     </div>
   </div>
-</div>
+</section>

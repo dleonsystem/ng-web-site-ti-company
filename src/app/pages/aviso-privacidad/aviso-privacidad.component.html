@@ -1,50 +1,141 @@
-<section class="container py-5 aviso-privacidad">
-  <h1 class="display-6 fw-bold texto-primario mb-4">
-    {{ "privacyNotice.title" | translate }}
-  </h1>
+<section class="privacy-notice-section py-5">
+  <div class="container">
+    <!-- Hero Header -->
+    <div class="privacy-header text-center mb-5">
+      <h1 class="section-title mb-4">
+        {{ "privacyNotice.title" | translate }}
+      </h1>
+      <p class="section-subtitle">
+        {{ "privacyNotice.intro" | translate }}
+      </p>
+    </div>
 
-  <p class="text-muted">
-    {{ "privacyNotice.intro" | translate }}
-  </p>
+    <!-- Privacy Content -->
+    <div class="privacy-content">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-8">
+          
+          <!-- Section 1 -->
+          <div class="privacy-section mb-5">
+            <mat-card class="privacy-card animate__animated animate__fadeInUp">
+              <mat-card-header>
+                <mat-icon mat-card-avatar class="privacy-icon">info</mat-icon>
+                <mat-card-title class="privacy-section-title">
+                  {{ "privacyNotice.section1.title" | translate }}
+                </mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p class="privacy-text">
+                  {{ "privacyNotice.section1.text" | translate }}
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </div>
 
-  <h5 class="mt-4 fw-semibold texto-informativo">
-    {{ "privacyNotice.section1.title" | translate }}
-  </h5>
-  <p class="text-muted">
-    {{ "privacyNotice.section1.text" | translate }}
-  </p>
+          <!-- Section 2 -->
+          <div class="privacy-section mb-5">
+            <mat-card class="privacy-card animate__animated animate__fadeInUp animate__delay-1s">
+              <mat-card-header>
+                <mat-icon mat-card-avatar class="privacy-icon">assignment</mat-icon>
+                <mat-card-title class="privacy-section-title">
+                  {{ "privacyNotice.section2.title" | translate }}
+                </mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <ul class="privacy-list">
+                  <li class="privacy-list-item">
+                    <mat-icon class="list-icon">check_circle</mat-icon>
+                    {{ "privacyNotice.section2.purpose1" | translate }}
+                  </li>
+                  <li class="privacy-list-item">
+                    <mat-icon class="list-icon">check_circle</mat-icon>
+                    {{ "privacyNotice.section2.purpose2" | translate }}
+                  </li>
+                  <li class="privacy-list-item">
+                    <mat-icon class="list-icon">check_circle</mat-icon>
+                    {{ "privacyNotice.section2.purpose3" | translate }}
+                  </li>
+                </ul>
+              </mat-card-content>
+            </mat-card>
+          </div>
 
-  <h5 class="mt-4 fw-semibold texto-informativo">
-    {{ "privacyNotice.section2.title" | translate }}
-  </h5>
-  <ul class="text-muted">
-    <li>{{ "privacyNotice.section2.purpose1" | translate }}</li>
-    <li>{{ "privacyNotice.section2.purpose2" | translate }}</li>
-    <li>{{ "privacyNotice.section2.purpose3" | translate }}</li>
-  </ul>
+          <!-- Section 3 -->
+          <div class="privacy-section mb-5">
+            <mat-card class="privacy-card animate__animated animate__fadeInUp animate__delay-2s">
+              <mat-card-header>
+                <mat-icon mat-card-avatar class="privacy-icon">security</mat-icon>
+                <mat-card-title class="privacy-section-title">
+                  {{ "privacyNotice.section3.title" | translate }}
+                </mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p class="privacy-text">
+                  <span [innerHTML]="'privacyNotice.section3.text' | translate"></span>
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </div>
 
-  <h5 class="mt-4 fw-semibold texto-informativo">
-    {{ "privacyNotice.section3.title" | translate }}
-  </h5>
-  <p class="text-muted">
-    <span [innerHTML]="'privacyNotice.section3.text' | translate"></span>
-  </p>
+          <!-- Section 4 -->
+          <div class="privacy-section mb-5">
+            <mat-card class="privacy-card animate__animated animate__fadeInUp animate__delay-3s">
+              <mat-card-header>
+                <mat-icon mat-card-avatar class="privacy-icon">policy</mat-icon>
+                <mat-card-title class="privacy-section-title">
+                  {{ "privacyNotice.section4.title" | translate }}
+                </mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p class="privacy-text">
+                  {{ "privacyNotice.section4.text" | translate }}
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </div>
 
-  <h5 class="mt-4 fw-semibold texto-informativo">
-    {{ "privacyNotice.section4.title" | translate }}
-  </h5>
-  <p class="text-muted">
-    {{ "privacyNotice.section4.text" | translate }}
-  </p>
+          <!-- Section 5 -->
+          <div class="privacy-section mb-5">
+            <mat-card class="privacy-card animate__animated animate__fadeInUp animate__delay-4s">
+              <mat-card-header>
+                <mat-icon mat-card-avatar class="privacy-icon">contact_mail</mat-icon>
+                <mat-card-title class="privacy-section-title">
+                  {{ "privacyNotice.section5.title" | translate }}
+                </mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p class="privacy-text">
+                  {{ "privacyNotice.section5.text" | translate }}
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </div>
 
-  <h5 class="mt-4 fw-semibold texto-informativo">
-    {{ "privacyNotice.section5.title" | translate }}
-  </h5>
-  <p class="text-muted">
-    {{ "privacyNotice.section5.text" | translate }}
-  </p>
+        </div>
+      </div>
+    </div>
 
-  <p class="small text-muted mt-5">
-    {{ "privacyNotice.footerDate" | translate }}
-  </p>
+    <!-- Footer Date -->
+    <div class="privacy-footer text-center mt-5">
+      <div class="footer-divider mb-4"></div>
+      <p class="privacy-footer-date">
+        {{ "privacyNotice.footerDate" | translate }}
+      </p>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="privacy-cta text-center mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h3 class="cta-title mb-3">¿Tienes dudas sobre nuestra política de privacidad?</h3>
+          <p class="cta-subtitle mb-4">Estamos aquí para resolver todas tus preguntas</p>
+          <a mat-raised-button color="primary" routerLink="/contacto" 
+             class="btn-privacy-contact animate__animated animate__pulse animate__infinite">
+            Contáctanos
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>

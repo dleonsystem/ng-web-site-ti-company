@@ -65,6 +65,7 @@
   "services": {
     "title": "Our Services",
     "description": "At Lion Systems, we offer a wide range of services to meet your needs. Our team of experts is ready to help you with everything from custom software development to cloud solutions, artificial intelligence, and cybersecurity. We are committed to providing you with the best solutions to drive your business forward.",
+      "contact": "Contact",
     "list": {
       "software": "Desarrollo de Software a la Medida",
       "ai": "Soluciones de Inteligencia Artificial",
@@ -80,7 +81,16 @@
       "government": "Government",
       "education": "Education",
       "private": "Private Sector",
-      "finance": "Financial"
+      "finance": "Financial",
+      "political": "Political"
+    },
+    "labels": {
+      "role": "Role:",
+      "technologies": "Technologies:",
+      "results": "Results:",
+      "impactedUsers": "Impacted Users:",
+      "integrations": "Integrations:",
+      "viewDemo": "View demo"
     }
   },
   "about": {
@@ -171,7 +181,20 @@
     "footerDate": "Last updated: May 24, 2025"
   },
   "blog": {
-    "title": "Our Blog"
+    "title": "Blog",
+    "description": "Stay updated with the latest news, trends, and insights in technology, cybersecurity, artificial intelligence, and more. Our blog features articles written by industry experts to help you stay informed and make better decisions for your business.",
+    "readMore": "Read more",
+    "noPosts": "No posts available",
+    "backToBlog": "Back to blog",
+    "share": "Share",
+    "postNotFound": "Post not found",
+    "postNotFoundMessage": "The post you are looking for does not exist or has been deleted."
+  },
+  "navigation": {
+    "home": "Home"
+  },
+  "common": {
+    "loading": "Loading"
   },
   "portfolio": {
     "title": "Project Portfolio",

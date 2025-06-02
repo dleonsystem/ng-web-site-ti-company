@@ -1,16 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
+import { Servicio } from '../models/service.model';
 
-export interface Servicio {
-  nombre: string;
-  descripcion: string;
-  icono: string;
-  link: string;
-  eventoGA: string;
-  precio: string;
-  imagen: string;
+interface ServiciosData {
+  es: Servicio[];
+  en: Servicio[];
 }
+
 
 @Injectable({
   providedIn: 'root'
@@ -18,9 +15,15 @@ export interface Servicio {
 export class ServiciosService {
   private url = 'assets/data/services.data.json';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  obtenerServicios(): Observable<Servicio[]> {
-    return this.http.get<Servicio[]>(this.url);
+  obtenerServicios(idioma: 'es' | 'en' = 'es'): Observable<Servicio[]> {
+    return this.http.get<ServiciosData>(this.url).pipe(
+      map(data => data[idioma])
+    );
+  }
+  // Método alternativo para obtener todos los datos si necesitas acceso completo
+  obtenerTodosLosServicios(): Observable<ServiciosData> {
+    return this.http.get<ServiciosData>(this.url);
   }
 }

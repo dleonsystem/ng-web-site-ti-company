@@ -1,4 +1,5 @@
-[
+{
+  "es": [
     {
       "id": 1,
       "title": "Inteligencia Artificial en Ciberseguridad",
@@ -23,4 +24,31 @@
       "content": "El software a la medida es la clave para digitalizar tus procesos con precisión. A diferencia de las soluciones genéricas, desarrollamos plataformas específicas que se alinean con tu modelo operativo. Esto significa mayor eficiencia, automatización de tareas repetitivas, mejor experiencia del usuario y escalabilidad garantizada.\n\nEn Lion Systems hemos creado soluciones a la medida para instituciones educativas, financieras, gubernamentales y del sector salud. Utilizamos tecnologías modernas como Angular, Node.js, PostgreSQL y GraphQL para garantizar sistemas robustos, seguros y sostenibles.\n\n**¿Tienes una idea o proceso que quieres digitalizar?** Escríbenos y te ayudamos a convertirla en una solución funcional desde el diseño hasta el despliegue.",
       "alt": "Imagen sobre cómo personalizar tus soluciones para escalar con agilidad"
     }
+  ],
+  "en": [
+    {
+      "id": 1,
+      "title": "Artificial Intelligence in Cybersecurity",
+      "image": "assets/images/blog/detail-ai-cybersecurity.png",
+      "excerpt": "How AI is revolutionizing digital defense.",
+      "content": "Artificial intelligence (AI) has transformed the way organizations protect themselves against threats. Thanks to automated detection algorithms, behavior analysis, and continuous learning, AI can identify attack patterns even before they happen. At Lion Systems, we integrate AI solutions for real-time monitoring, incident response, and predictive analysis. This allows our clients to anticipate risks and drastically reduce reaction time.\n\nAmong the tools we implement are anomaly detection systems, smart authentication, AI-based malware analysis, and cyber intelligence platforms.\n\n**Do you want to strengthen your company's security with artificial intelligence?** Contact us for a free AI-based cybersecurity assessment.",
+      "alt": "Image showing how artificial intelligence strengthens digital security."
+    },
+    {
+      "id": 2,
+      "title": "Cloud Migration",
+      "image": "assets/images/blog/detail-cloud-migration.png",
+      "excerpt": "Why you should consider moving your business to the cloud.",
+      "content": "Migrating to the cloud is no longer an option, it's a necessity for companies seeking scalability, security, and efficiency. At Lion Systems, we help you carry out a safe and seamless migration tailored to your needs. Our approach covers everything from the initial assessment, hybrid or public cloud architecture, to implementation and maintenance.\n\nWe offer solutions in AWS, Azure, and Google Cloud with DevOps practices to ensure agile and secure deployments. We help you reduce operational costs, improve response times, and enable remote work with complete security.\n\n**Are you ready to take your business to the cloud?** Schedule a personalized consultation with our team of experts.",
+      "alt": "Image showing a practical guide to safely move your infrastructure."
+    },
+    {
+      "id": 3,
+      "title": "Custom Software",
+      "image": "assets/images/blog/detail-custom-software.png",
+      "excerpt": "Solutions designed specifically for your processes.",
+      "content": "Custom software is the key to digitizing your processes with precision. Unlike generic solutions, we develop specific platforms that align with your operating model. This means greater efficiency, automation of repetitive tasks, better user experience, and guaranteed scalability.\n\nAt Lion Systems, we have created custom solutions for educational, financial, government, and healthcare institutions. We use modern technologies such as Angular, Node.js, PostgreSQL, and GraphQL to ensure robust, secure, and sustainable systems.\n\n**Do you have an idea or process you want to digitize?** Write to us and we will help you turn it into a functional solution from design to deployment.",
+      "alt": "Image showing how to customize your solutions to scale with agility"
+    }
   ]
+}

@@ -1,21 +1,82 @@
-<section class="services-section py-5">
-    <div class="container">
-      <h2 class="section-title text-center">{{ 'services.title' | translate }}</h2>
-      <p class="lead text-center text-muted mb-5">
-        {{ 'services.description' | translate }}      </p>
-  
-      <div class="row">
-        <div class="col-md-6 col-lg-4 mb-4" *ngFor="let s of servicios">
-          <div class="card h-100 p-4 shadow-sm service-card">
-            <div class="text-center mb-3">
-              <mat-icon>{{ s.icono }}</mat-icon>
+<!-- services.component.html - Homologado con estructura de home -->
 
+<section class="services-section bg-light py-5">
+  <div class="container">
+    <!-- Título y descripción consistentes con home -->
+      <header class="mb-4">
+    <h1 class="section-title display-5 fw-bold mb-4">
+      {{ 'services.title' | translate }}
+    </h1></header>
+    <!-- Subtítulo descriptivo -->
+    <p class="section-subtitle text-center mb-5">
+      {{ 'services.description' | translate }}
+    </p>
+
+    <!-- Grid de servicios con estructura consistente -->
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6 col-lg-4" *ngFor="let s of servicios">
+        
+        <!-- Opción 1: Usando mat-card (consistente con home) -->
+        <mat-card class="service-card h-100 shadow-sm animate__animated animate__fadeInUp">
+          <mat-card-header class="text-center">
+            <div class="icon-container">
+              <mat-icon>{{ s.icono }}</mat-icon>
             </div>
-            <h5 class="text-center">{{ s.nombre }}</h5>
-            <p class="text-muted">{{ s.descripcion }}</p>
+            <mat-card-title class="service-title">{{ s.nombre }}</mat-card-title>
+            <mat-card-subtitle class="text-primary">{{ s.precio }}</mat-card-subtitle>
+          </mat-card-header>
+          
+          <!-- Imagen del servicio (si existe) -->
+          <img mat-card-image *ngIf="s.imagen" [src]="s.imagen" [alt]="s.nombre" />
+          
+          <mat-card-content>
+            <p class="service-description">{{ s.descripcion }}</p>
+          </mat-card-content>
+          
+          <mat-card-actions class="d-flex justify-content-center">
+            <a mat-raised-button 
+               color="primary" 
+               class="btn-raised-primary"
+               [href]="s.link"
+               (click)="trackServiceCTA(s.nombre)">
+              {{ 'services.contact' | translate }}
+            </a>
+          </mat-card-actions>
+        </mat-card>
+
+        <!-- Opción 2: Estructura Bootstrap (original mejorada) -->
+        <!-- 
+        <div class="card h-100 service-card shadow-sm animate__animated animate__fadeInUp">
+          <div class="card-body d-flex flex-column text-center">
+            <div class="icon-container mb-3">
+              <mat-icon>{{ s.icono }}</mat-icon>
+            </div>
+            
+            <h5 class="service-title">{{ s.nombre }}</h5>
+            <p class="service-description flex-grow-1">{{ s.descripcion }}</p>
+            
+            <div class="mt-auto">
+              <p class="text-primary fw-bold mb-3">{{ s.precio }}</p>
+              <a [href]="s.link" 
+                 class="btn btn-outline-primary btn-raised-primary"
+                 (click)="trackServiceCTA(s.nombre)">
+                {{ 'services.contact' | translate }}
+              </a>
+            </div>
           </div>
         </div>
+        -->
       </div>
     </div>
-  </section>
-  
+
+    <!-- Botón para ver todos los servicios (consistente con home) -->
+    <div class="text-center mt-5">
+      <a mat-stroked-button 
+         color="primary" 
+         routerLink="/contacto" 
+         class="btn-all-services">
+        {{ 'services.viewAll' | translate }}
+      </a>
+    </div>
+  </div>
+</section>

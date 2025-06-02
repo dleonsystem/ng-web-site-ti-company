@@ -1,28 +1,340 @@
-.aviso-privacidad {
-    h5 {
-      color: #0dcaf0;
-    }
-  
-    ul {
-      padding-left: 1.5rem;
-      li {
-        margin-bottom: 0.5rem;
+// Variables consistentes con home.component.scss
+$primary-color: #0077b6;
+$secondary-color: #00b4d8;
+$text-dark: #002147;
+$text-light: #f8f9fa;
+$accent-color: #0dcaf0;
+$shadow-light: rgba(0, 0, 0, 0.1);
+$shadow-medium: rgba(0, 0, 0, 0.15);
+
+// Mixins reutilizados
+@mixin section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@mixin card-hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.75rem 2rem $shadow-medium;
+  }
+}
+
+.privacy-notice-section {
+  @include section-padding;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+
+  // Header consistente con home
+  .privacy-header {
+    margin-bottom: 3rem;
+
+    .section-title {
+      font-weight: 700;
+      color: $text-dark;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, $primary-color, $accent-color);
+        margin: 1rem auto 0;
+        border-radius: 5px;
+        animation: slideIn 1s ease-out;
       }
     }
-  
-    p, li {
-      font-size: 0.95rem;
-    }
-    .texto-informativo {
-      color: #002147;
-        font-size: 1.2rem;
-      font-weight: 400;
-        margin-bottom: 1rem;
-        line-height: 1.5;
 
-    }
-    .texto-primario {
-        color: #002147  ;
+    .section-subtitle {
+      font-size: 1.3rem;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+      font-weight: 300;
     }
   }
-  
+
+  // Contenido principal
+  .privacy-content {
+    .privacy-section {
+      margin-bottom: 2rem;
+    }
+
+    .privacy-card {
+      border-radius: 15px;
+      overflow: hidden;
+      background-color: white;
+      border: 1px solid #e0e0e0;
+      @include card-hover-effect;
+      box-shadow: 0 4px 15px $shadow-light;
+
+      mat-card-header {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 1.5rem;
+        border-bottom: 1px solid #eee;
+
+        .privacy-icon {
+          background-color: $primary-color;
+          color: white;
+          font-size: 24px;
+          width: 48px;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 12px;
+          box-shadow: 0 4px 12px rgba($primary-color, 0.3);
+        }
+
+        .privacy-section-title {
+          color: $text-dark;
+          font-size: 1.4rem;
+          font-weight: 600;
+          margin: 0;
+          line-height: 1.3;
+        }
+      }
+
+      mat-card-content {
+        padding: 2rem;
+
+        .privacy-text {
+          font-size: 1rem;
+          color: #444;
+          line-height: 1.7;
+          margin: 0;
+          text-align: justify;
+        }
+
+        .privacy-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          .privacy-list-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.6;
+
+            .list-icon {
+              color: $accent-color;
+              margin-right: 0.75rem;
+              margin-top: 0.1rem;
+              font-size: 20px;
+              flex-shrink: 0;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Footer section
+  .privacy-footer {
+    .footer-divider {
+      width: 100px;
+      height: 2px;
+      background: linear-gradient(90deg, $primary-color, $accent-color);
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+
+    .privacy-footer-date {
+      font-size: 0.9rem;
+      color: #777;
+      font-style: italic;
+      margin: 0;
+    }
+  }
+
+  // CTA Section consistente con home
+  .privacy-cta {
+    background: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 15%) 100%);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 10px 30px rgba($primary-color, 0.3);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: shimmer 3s ease-in-out infinite;
+    }
+
+    .cta-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .cta-subtitle {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-privacy-contact {
+      padding: 0.9rem 2.5rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 50px;
+      background-color: white;
+      color: $primary-color;
+      border: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      position: relative;
+      z-index: 1;
+
+      &:hover {
+        background-color: #f0f0f0;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      }
+    }
+  }
+
+  // Animaciones
+  @keyframes slideIn {
+    from {
+      width: 0;
+      opacity: 0;
+    }
+    to {
+      width: 80px;
+      opacity: 1;
+    }
+  }
+
+  @keyframes shimmer {
+    0%, 100% {
+      transform: rotate(0deg);
+      opacity: 0.3;
+    }
+    50% {
+      transform: rotate(180deg);
+      opacity: 0.1;
+    }
+  }
+
+  // Responsive Design
+  @media (max-width: 768px) {
+    .privacy-header {
+      .section-title {
+        font-size: 2.2rem;
+      }
+
+      .section-subtitle {
+        font-size: 1.1rem;
+      }
+    }
+
+    .privacy-card {
+      mat-card-header {
+        padding: 1rem;
+
+        .privacy-section-title {
+          font-size: 1.2rem;
+        }
+      }
+
+      mat-card-content {
+        padding: 1.5rem;
+      }
+    }
+
+    .privacy-cta {
+      padding: 2rem 1rem;
+
+      .cta-title {
+        font-size: 1.5rem;
+      }
+
+      .cta-subtitle {
+        font-size: 1rem;
+      }
+
+      .btn-privacy-contact {
+        padding: 0.8rem 2rem;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .privacy-header {
+      margin-bottom: 2rem;
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+    }
+
+    .privacy-card {
+      margin-bottom: 1.5rem;
+
+      mat-card-header {
+        .privacy-icon {
+          width: 40px;
+          height: 40px;
+          font-size: 20px;
+        }
+
+        .privacy-section-title {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
+
+// Estilos adicionales para mejorar la accesibilidad
+.privacy-card:focus-within {
+  outline: 2px solid $accent-color;
+  outline-offset: 2px;
+}
+
+// Mejoras para el contraste de texto
+.privacy-text strong,
+.privacy-list-item strong {
+  color: $text-dark;
+  font-weight: 600;
+}
+
+// Links dentro del contenido de privacidad
+.privacy-text a,
+.privacy-list-item a {
+  color: $primary-color;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: darken($primary-color, 15%);
+    text-decoration: none;
+  }
+}
