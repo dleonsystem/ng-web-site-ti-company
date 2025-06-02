@@ -32,7 +32,7 @@ $shadow-dark: rgba(0, 0, 0, 0.3);
   display: inline-block; // Asegura que el border-bottom solo abarque el texto
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     width: 60px; // Ancho del subrayado
     height: 3px;
@@ -162,7 +162,7 @@ $shadow-dark: rgba(0, 0, 0, 0.3);
     border: 1px solid #e0e0e0;
     @include card-hover-effect;
     overflow: hidden;
-img {
+    img {
       height: 200px;
       object-fit: cover;
       width: 100%;
@@ -196,15 +196,14 @@ img {
       padding: 1rem;
       border-top: 1px solid #eee;
       display: flex;
-       justify-content: space-between;
+      justify-content: space-between;
       .mat-button {
         padding: 0.5rem 1.5rem;
-         font-size: 0.9rem;
+        font-size: 0.9rem;
         font-weight: 500;
         border-radius: 25px;
       }
     }
-   
   }
 
   .btn-all-services {
@@ -222,7 +221,38 @@ img {
     }
   }
 }
+.btn-raised-primary,
+.mdc-button.mdc-button--raised.mat-mdc-raised-button.mat-primary.mat-mdc-button-base {
+  border: 2px solid $primary-color !important;
+  color: white !important;
+  background-color: $primary-color !important;
+  padding: 0.8rem 2rem !important;
+  font-size: 0.9rem !important;
+  border-radius: 30px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
 
+  &:hover {
+    background-color: $primary-color !important;
+    color: white !important;
+  }
+}
+
+  mat-raised-button {
+    border: 2px solid $primary-color ;
+    color: white;
+    background-color: $primary-color;
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
 // Sección de Portafolio Destacado
 .featured-portfolio-section {
   @include section-padding;
@@ -266,10 +296,11 @@ img {
         border-radius: 20px;
         font-weight: 500;
       }
+     
     }
   }
 
-.btn-raised-primary {
+  .btn-raised-primary {
     border: 2px solid $primary-color;
     color: white;
     background-color: $primary-color;
@@ -278,13 +309,13 @@ img {
     border-radius: 30px;
     font-weight: 500;
     transition: all 0.3s ease;
-     &:hover {
+    &:hover {
       background-color: $primary-color;
       color: white;
     }
-}
+  }
 
-.btn-raised-secondary {
+  .btn-raised-secondary {
     border: 2px solid $secondary-color;
     color: white;
     background-color: $secondary-color;
@@ -298,9 +329,9 @@ img {
       background-color: $secondary-color;
       color: white;
     }
-}
+  }
 
-.btn-raised-acent {
+  .btn-raised-acent {
     border: 2px solid $text-dark;
     color: white;
     background-color: $text-dark;
@@ -310,12 +341,11 @@ img {
     font-weight: 500;
     transition: all 0.3s ease;
 
-
     &:hover {
       background-color: $text-dark;
       color: white;
     }
-}
+  }
 
   .btn-all-projects {
     padding: 0.8rem 2rem;
@@ -325,7 +355,6 @@ img {
     transition: all 0.3s ease;
     border: 2px solid $primary-color;
     color: $primary-color;
-    
 
     &:hover {
       background-color: $primary-color;
@@ -393,19 +422,18 @@ img {
     background-image: none; // Remover imagen por defecto de Bootstrap
     font-size: 2rem; // Tamaño del icono
     &::before {
-      content: '\e408'; // Icono de Material Design para flecha izquierda
-      font-family: 'Material Icons';
+      content: "\e408"; // Icono de Material Design para flecha izquierda
+      font-family: "Material Icons";
       color: $primary-color;
     }
   }
 
   .carousel-control-next-icon {
     &::before {
-      content: '\e409'; // Icono de Material Design para flecha derecha
+      content: "\e409"; // Icono de Material Design para flecha derecha
     }
   }
 }
-
 
 // Sección de Confianza / Clientes
 .trust-section {
@@ -430,7 +458,11 @@ img {
 .cta-section {
   @include section-padding;
   background-color: $primary-color; // Un color de fondo más sólido para el CTA
-  background-image: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 15%) 100%); // Degradado
+  background-image: linear-gradient(
+    135deg,
+    $primary-color 0%,
+    darken($primary-color, 15%) 100%
+  ); // Degradado
   color: white;
   text-align: center;
   position: relative;

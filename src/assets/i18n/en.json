@@ -66,6 +66,7 @@
     "title": "Our Services",
     "description": "At Lion Systems, we offer a wide range of services to meet your needs. Our team of experts is ready to help you with everything from custom software development to cloud solutions, artificial intelligence, and cybersecurity. We are committed to providing you with the best solutions to drive your business forward.",
       "contact": "Contact",
+      "viewAll": "View all services",
     "list": {
       "software": "Desarrollo de Software a la Medida",
       "ai": "Soluciones de Inteligencia Artificial",
