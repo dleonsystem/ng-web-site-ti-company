@@ -1,0 +1,1312 @@
+{
+  "es": {
+    "categorias": [
+      {
+        "id": "code",
+        "icono": "code",
+        "nombre": "Desarrollo de Software",
+        "descripcion": "Desarrollo de aplicaciones web, móviles y de escritorio con tecnologías modernas",
+        "precioBase": "Desde $45 USD/hora",
+        "link": "/contacto?servicio=code",
+        "eventoGA": "cotizacion_api",
+        "imagen": "assets/images/services/software-development.png",
+        "servicios": [
+          {
+            "id": "auth-system",
+            "nombre": "Sistema de Autenticación con JWT, reCAPTCHA y MFA",
+            "descripcion": "Sistema completo de autenticación segura con tokens JWT, protección reCAPTCHA y autenticación multifactor",
+            "paquetes": [
+              {
+                "tipo": "Basic",
+                "precio": 140,
+                "precioMXN": 2380,
+                "duracion": "3 días",
+                "caracteristicas": [
+                  "Autenticación JWT básica",
+                  "Integración reCAPTCHA",
+                  "Sistema de login/registro",
+                  "Validación de tokens"
+                ]
+              },
+              {
+                "tipo": "Standard",
+                "precio": 220,
+                "precioMXN": 3740,
+                "duracion": "4 días",
+                "caracteristicas": [
+                  "Todo lo del paquete Basic",
+                  "Autenticación multifactor (MFA)",
+                  "Recuperación de contraseña",
+                  "Sesiones persistentes"
+                ]
+              },
+              {
+                "tipo": "Premium",
+                "precio": 350,
+                "precioMXN": 5950,
+                "duracion": "6 días",
+                "caracteristicas": [
+                  "Todo lo del paquete Standard",
+                  "OAuth integración",
+                  "Roles y permisos avanzados",
+                  "Auditoría de seguridad",
+                  "Dashboard de administración"
+                ]
+              }
+            ],
+            "plataformas": ["Upwork"]
+          },
+          {
+            "id": "dashboard-graphql",
+            "nombre": "Dashboard con GraphQL + React + Exportación PDF",
+            "descripcion": "Dashboard interactivo con GraphQL, React y capacidad de exportar reportes en PDF",
+            "paquetes": [
+              {
+                "tipo": "Basic",
+                "precio": 180,
+                "precioMXN": 3060,
+                "duracion": "4 días",
+                "caracteristicas": [
+                  "Dashboard básico con React",
+                  "Consultas GraphQL simples",
+                  "Exportación PDF básica",
+                  "Gráficos estadísticos"
+                ]
+              },
+              {
+                "tipo": "Standard",
+                "precio": 300,
+                "precioMXN": 5100,
+                "duracion": "6 días",
+                "caracteristicas": [
+                  "Todo lo del paquete Basic",
+                  "Filtros avanzados",
+                  "Múltiples formatos de exportación",
+                  "Dashboard responsive",
+                  "Notificaciones en tiempo real"
+                ]
+              },
+              {
+                "tipo": "Premium",
+                "precio": 500,
+                "precioMXN": 8500,
+                "duracion": "8 días",
+                "caracteristicas": [
+                  "Todo lo del paquete Standard",
+                  "Dashboard personalizable",
+                  "Reportes automatizados",
+                  "Integración con múltiples fuentes",
+                  "Analytics avanzados"
+                ]
+              }
+            ],
+            "plataformas": ["Upwork"]
+          },
+          {
+            "id": "offline-mobile-form",
+            "nombre": "Formulario Móvil Offline-First",
+            "descripcion": "Aplicación móvil con capacidad de trabajo sin conexión y sincronización automática",
+            "paquetes": [
+              {
+                "tipo": "Standard",
+                "precio": 250,
+                "precioMXN": 4250,
+                "duracion": "6 días",
+                "caracteristicas": [
+                  "Formularios offline",
+                  "Sincronización automática",
+                  "Almacenamiento local",
+                  "Validación en tiempo real",
+                  "Interfaz móvil optimizada"
+                ]
+              }
+            ],
+            "plataformas": ["Upwork"]
+          },
+          {
+            "id": "graphql-api-setup",
+            "nombre": "Configuración y Optimización de API GraphQL",
+            "descripcion": "Setup completo y optimización de APIs GraphQL para máximo rendimiento",
+            "paquetes": [
+              {
+                "tipo": "Basic",
+                "precio": 120,
+                "precioMXN": 2040,
+                "duracion": "3 días",
+                "caracteristicas": [
+                  "Configuración básica GraphQL",
+                  "Esquemas simples",
+                  "Resolvers básicos",
+                  "Documentación API"
+                ]
+              },
+              {
+                "tipo": "Standard",
+                "precio": 180,
+                "precioMXN": 3060,
+                "duracion": "4 días",
+                "caracteristicas": [
+                  "Todo lo del paquete Basic",
+                  "Optimización de consultas",
+                  "Cache implementado",
+                  "Validación de esquemas",
+                  "Testing automatizado"
+                ]
+              },
+              {
+                "tipo": "Premium",
+                "precio": 320,
+                "precioMXN": 5440,
+                "duracion": "6 días",
+                "caracteristicas": [
+                  "Todo lo del paquete Standard",
+                  "Subscripciones en tiempo real",
+                  "Optimización avanzada",
+                  "Monitoreo de performance",
+                  "Escalabilidad empresarial"
+                ]
+              }
+            ],
+            "plataformas": ["Upwork"]
+          },
+          {
+            "id": "secure-api-node",
+            "nombre": "API Segura con Node.js, PostgreSQL y GraphQL",
+            "descripcion": "API robusta y segura utilizando Node.js, PostgreSQL y GraphQL",
+            "paquetes": [
+              {
+                "tipo": "Basic",
+                "precio": 90,
+                "precioMXN": 1530,
+                "duracion": "3 días",
+                "caracteristicas": [
+                  "API REST/GraphQL básica",
+                  "Conexión PostgreSQL",
+                  "Autenticación básica",
+                  "Endpoints CRUD"
+                ]
+              },
+              {
+                "tipo": "Standard",
+                "precio": 150,
+                "precioMXN": 2550,
+                "duracion": "4 días",
+                "caracteristicas": [
+                  "Todo lo del paquete Basic",
+                  "Middleware de seguridad",
+                  "Validación de datos",
+                  "Rate limiting",
+                  "Logging estructurado"
+                ]
+              },
+              {
+                "tipo": "Premium",
+                "precio": 250,
+                "precioMXN": 4250,
+                "duracion": "5 días",
+                "caracteristicas": [
+                  "Todo lo del paquete Standard",
+                  "Encriptación avanzada",
+                  "Auditoría completa",
+                  "Backup automatizado",
+                  "Monitoreo en tiempo real"
+                ]
+              }
+            ],
+            "plataformas": ["Upwork"]
+          },
+          {
+            "id": "postgresql-optimization",
+            "nombre": "Optimización de PostgreSQL",
+            "descripción": "Optimización completa de bases de datos PostgreSQL para máximo rendimiento",
+            "paquetes": [
+              {
+                "tipo": "Standard",
+                "precio": 165,
+                "precioMXN": 2805,
+                "duracion": "4 días",
+                "caracteristicas": [
+                  "Análisis de performance",
+                  "Optimización de consultas",
+                  "Indexación inteligente",
+                  "Configuración de parámetros",
+                  "Monitoreo de rendimiento"
+                ]
+              }
+            ],
+            "plataformas": ["Upwork"]
+          },
+          {
+            "id": "fix-bugs-angular-node",
+            "nombre": "Corrección de Errores Angular/Node",
+            "descripcion": "Servicios especializados en corrección de bugs y optimización de aplicaciones Angular y Node.js",
+            "paquetes": [
+              {
+                "tipo": "Basic",
+                "precio": 100,
+                "precioMXN": 1700,
+                "duracion": "3 días",
+                "caracteristicas": [
+                  "Identificación de bugs",
+                  "Corrección de errores básicos",
+                  "Testing unitario",
+                  "Documentación de cambios"
+                ]
+              }
+            ],
+            "plataformas": ["Fiverr"]
+          },
+          {
+            "id": "fullstack-development",
+            "nombre": "Desarrollo Full Stack",
+            "descripcion": "Desarrollo completo de aplicaciones web con frontend y backend",
+            "paquetes": [
+              {
+                "tipo": "Basic",
+                "precio": 100,
+                "precioMXN": 1700,
+                "duracion": "3 días",
+                "caracteristicas": [
+                  "Aplicación web básica",
+                  "Frontend responsivo",
+                  "Backend simple",
+                  "Base de datos básica"
+                ]
+              },
+              {
+                "tipo": "Standard",
+                "precio": 250,
+                "precioMXN": 4250,
+                "duracion": "6 días",
+                "caracteristicas": [
+                  "Todo lo del paquete Basic",
+                  "Autenticación de usuarios",
+                  "API REST completa",
+                  "Dashboard administrativo",
+                  "Optimización SEO"
+                ]
+              },
+              {
+                "tipo": "Premium",
+                "precio": 450,
+                "precioMXN": 7650,
+                "duracion": "10 días",
+                "caracteristicas": [
+                  "Todo lo del paquete Standard",
+                  "Arquitectura escalable",
+                  "Integración con terceros",
+                  "Testing automatizado",
+                  "Deploy y CI/CD"
+                ]
+              }
+            ],
+            "plataformas": ["Fiverr"]
+          }
+        ]
+      },
+      {
+        "id": "cloud_queue",
+        "icono": "cloud_queue",
+        "nombre": "Infraestructura en la Nube",
+        "descripcion": "Consultoría y configuración de infraestructura cloud en AWS, Azure y Google Cloud Platform",
+        "precioBase": "$40 USD/hora",
+        "link": "/contacto?servicio=ia",
+        "eventoGA": "cotizacion_ia",
+        "imagen": "assets/images/services/nube2.png",
+        "servicios": [
+          {
+            "id": "cloud-consulting",
+            "nombre": "Consultoría de Infraestructura Cloud",
+            "descripcion": "Asesoría especializada en migración y optimización de infraestructura cloud",
+            "paquetes": [
+              {
+                "tipo": "Por hora",
+                "precio": 40,
+                "precioMXN": 680,
+                "duracion": "1 hora",
+                "caracteristicas": [
+                  "Análisis de infraestructura actual",
+                  "Recomendaciones de mejora",
+                  "Estrategia de migración",
+                  "Optimización de costos"
+                ]
+              }
+            ],
+            "plataformas": ["Web"]
+          }
+        ]
+      },
+      {
+        "id": "security",
+        "icono": "security",
+        "nombre": "Ciberseguridad",
+        "descripcion": "Servicios de seguridad informática, firewalls, MFA y SOC",
+        "precioBase": "$45 USD/hora",
+        "link": "/contacto?servicio=security",
+        "eventoGA": "cotizacion_segiridad",
+        "imagen": "assets/images/services/cibersecurity2.png",
+        "servicios": [
+          {
+            "id": "security-consulting",
+            "nombre": "Consultoría de Ciberseguridad",
+            "descripcion": "Asesoría especializada en seguridad informática y protección de datos",
+            "paquetes": [
+              {
+                "tipo": "Por hora",
+                "precio": 45,
+                "precioMXN": 765,
+                "duracion": "1 hora",
+                "caracteristicas": [
+                  "Auditoría de seguridad",
+                  "Análisis de vulnerabilidades",
+                  "Implementación de controles",
+                  "Capacitación en seguridad"
+                ]
+              }
+            ],
+            "plataformas": ["Web"]
+          },
+          {
+            "id": "backend-security-optimization",
+            "nombre": "Optimización Backend y Seguridad",
+            "descripcion": "Optimización y fortalecimiento de la seguridad en aplicaciones backend",
+            "paquetes": [
+              {
+                "tipo": "Premium",
+                "precio": 500,
+                "precioMXN": 8500,
+                "duracion": "6 días",
+                "caracteristicas": [
+                  "Auditoría completa de seguridad",
+                  "Optimización de rendimiento",
+                  "Implementación de mejores prácticas",
+                  "Monitoreo continuo",
+                  "Documentación de seguridad"
+                ]
+              }
+            ],
+            "plataformas": ["Fiverr"]
+          }
+        ]
+      },
+      {
+        "id": "memory",
+        "icono": "memory",
+        "nombre": "Inteligencia Artificial",
+        "descripcion": "Consultoría en ML, NLP y Computer Vision",
+        "precioBase": "Desde $50 USD/hora",
+        "link": "/contacto?servicio=ia",
+        "eventoGA": "cotizacion_ia",
+        "imagen": "assets/images/services/ia.png",
+        "servicios": [
+          {
+            "id": "ai-consulting",
+            "nombre": "Consultoría en Inteligencia Artificial",
+            "descripcion": "Asesoría especializada en implementación de soluciones de IA y machine learning",
+            "paquetes": [
+              {
+                "tipo": "Por hora",
+                "precio": 50,
+                "precioMXN": 850,
+                "duracion": "1 hora",
+                "caracteristicas": [
+                  "Análisis de casos de uso",
+                  "Selección de algoritmos",
+                  "Estrategia de implementación",
+                  "Evaluación de factibilidad"
+                ]
+              }
+            ],
+            "plataformas": ["Web"]
+          }
+        ]
+      },
+      {
+        "id": "integration_instructions",
+        "icono": "integration_instructions",
+        "nombre": "Integración de Sistemas",
+        "descripcion": "Integración de APIs y conectividad entre sistemas",
+        "precioBase": "Desde $40 USD/hora",
+        "link": "/contacto?servicio=integration",
+        "eventoGA": "cotizacion_integration",
+        "imagen": "assets/images/services/integracion-sys2.png",
+        "servicios": [
+          {
+            "id": "systems-integration",
+            "nombre": "Integración de Sistemas",
+            "descripcion": "Conectividad y sincronización entre diferentes sistemas y plataformas",
+            "paquetes": [
+              {
+                "tipo": "Por hora",
+                "precio": 40,
+                "precioMXN": 680,
+                "duracion": "1 hora",
+                "caracteristicas": [
+                  "APIs de integración",
+                  "Sincronización de datos",
+                  "Middleware de conectividad",
+                  "Testing de integración"
+                ]
+              }
+            ],
+            "plataformas": ["Web"]
+          },
+          {
+            "id": "cross-platform-app",
+            "nombre": "Aplicación Cross-Platform (Ionic)",
+            "descripcion": "Desarrollo de aplicaciones móviles multiplataforma usando Ionic",
+            "paquetes": [
+              {
+                "tipo": "Standard",
+                "precio": 750,
+                "precioMXN": 12750,
+                "duracion": "10 días",
+                "caracteristicas": [
+                  "App iOS y Android",
+                  "Interfaz nativa",
+                  "Funcionalidad offline",
+                  "Testing en dispositivos"
+                ]
+              },
+              {
+                "tipo": "Premium",
+                "precio": 1200,
+                "precioMXN": 20400,
+                "duracion": "14 días",
+                "caracteristicas": [
+                  "Todo lo del paquete Standard",
+                  "Funcionalidades avanzadas",
+                  "Integración con APIs",
+                  "Deploy a tiendas",
+                  "Soporte post-lanzamiento"
+                ]
+              }
+            ],
+            "plataformas": ["Fiverr"]
+          },
+          {
+            "id": "fix-nodejs-graphql",
+            "nombre": "Corrección de API Node.js con GraphQL",
+            "descripcion": "Servicios especializados en debugging y optimización de APIs Node.js con GraphQL",
+            "paquetes": [
+              {
+                "tipo": "Basic",
+                "precio": 120,
+                "precioMXN": 2040,
+                "duracion": "3 días",
+                "caracteristicas": [
+                  "Identificación de problemas",
+                  "Debug de API",
+                  "Optimización básica",
+                  "Testing de endpoints"
+                ]
+              },
+              {
+                "tipo": "Standard",
+                "precio": 200,
+                "precioMXN": 3400,
+                "duracion": "5 días",
+                "caracteristicas": [
+                  "Todo lo del paquete Basic",
+                  "Refactoring de código",
+                  "Mejoras de performance",
+                  "Documentación actualizada"
+                ]
+              },
+              {
+                "tipo": "Premium",
+                "precio": 320,
+                "precioMXN": 5440,
+                "duracion": "8 días",
+                "caracteristicas": [
+                  "Todo lo del paquete Standard",
+                  "Arquitectura mejorada",
+                  "Implementación de mejores prácticas",
+                  "Monitoreo y alertas",
+                  "Capacitación del equipo"
+                ]
+              }
+            ],
+            "plataformas": ["Fiverr"]
+          }
+        ]
+      },
+      {
+        "id": "support_agent",
+        "icono": "support_agent",
+        "nombre": "Soporte y Mantenimiento",
+        "descripcion": "Soporte técnico 24/7 y servicios de mantenimiento con SLA",
+        "precioBase": "Desde $30 USD/hora",
+        "link": "/contacto?servicio=support",
+        "eventoGA": "cotizacion_support",
+        "imagen": "assets/images/services/support.png",
+        "servicios": [
+          {
+            "id": "support-maintenance",
+            "nombre": "Soporte y Mantenimiento",
+            "descripcion": "Servicios de soporte técnico continuo y mantenimiento preventivo",
+            "paquetes": [
+              {
+                "tipo": "Por hora",
+                "precio": 30,
+                "precioMXN": 510,
+                "duracion": "1 hora",
+                "caracteristicas": [
+                  "Soporte técnico remoto",
+                  "Mantenimiento preventivo",
+                  "Actualizaciones de sistema",
+                  "Monitoreo básico"
+                ]
+              }
+            ],
+            "plataformas": ["Web"]
+          },
+          {
+            "id": "development-consultation",
+            "nombre": "Consultoría de Desarrollo e IT",
+            "descripcion": "Consultoría especializada en desarrollo y tecnologías de información",
+            "paquetes": [
+              {
+                "tipo": "30 min",
+                "precio": 35,
+                "precioMXN": 595,
+                "duracion": "30 minutos",
+                "caracteristicas": [
+                  "Consultoría técnica rápida",
+                  "Recomendaciones de arquitectura",
+                  "Revisión de código",
+                  "Orientación tecnológica"
+                ]
+              }
+            ],
+            "plataformas": ["Upwork"]
+          },
+          {
+            "id": "api-architecture-consulting",
+            "nombre": "Consultoría de Arquitectura API",
+            "descripcion": "Asesoría especializada en diseño y arquitectura de APIs",
+            "paquetes": [
+              {
+                "tipo": "Consultoría",
+                "precio": 80,
+                "precioMXN": 1360,
+                "duracion": "1 hora",
+                "caracteristicas": [
+                  "Diseño de arquitectura API",
+                  "Mejores prácticas",
+                  "Documentación técnica",
+                  "Estrategia de versionado"
+                ]
+              }
+            ],
+            "plataformas": ["Upwork"]
+          },
+          {
+            "id": "fullstack-hourly-development",
+            "nombre": "Desarrollo Full Stack por Hora",
+            "descripcion": "Servicios de desarrollo full stack facturados por hora",
+            "paquetes": [
+              {
+                "tipo": "Por hora",
+                "precio": 27,
+                "precioMXN": 459,
+                "duracion": "1 hora",
+                "caracteristicas": [
+                  "Desarrollo frontend/backend",
+                  "Corrección de bugs",
+                  "Implementación de features",
+                  "Code review"
+                ]
+              }
+            ],
+            "plataformas": ["Workana"]
+          }
+        ]
+      }
+    ],
+    "serviciosEspeciales": [
+      {
+        "id": "jwt-recaptcha-auth-fiverr",
+        "nombre": "Autenticación JWT + reCAPTCHA (Fiverr)",
+        "descripcion": "Sistema de autenticación segura con JWT y reCAPTCHA específicamente para Fiverr",
+        "precio": 250,
+        "precioMXN": 4250,
+        "duracion": "5 días",
+        "plataformas": ["Fiverr"],
+        "eventoGA": "click_jwt_recaptcha_fiverr"
+      },
+      {
+        "id": "basic-graphql-api-fiverr",
+        "nombre": "API GraphQL Básica (Fiverr)",
+        "descripcion": "Implementación de API GraphQL básica para proyectos en Fiverr",
+        "precio": 250,
+        "precioMXN": 4250,
+        "duracion": "5 días",
+        "plataformas": ["Fiverr"],
+        "eventoGA": "click_graphql_basic_fiverr"
+      }
+    ],
+    "bundles": [
+      {
+        "id": "app-offline-auth-bundle",
+        "nombre": "Bundle: App Offline + Autenticación JWT",
+        "descripcion": "Paquete combinado que incluye aplicación offline y sistema de autenticación JWT completo",
+        "precio": 400,
+        "precioMXN": 6800,
+        "duracion": "8 días",
+        "incluye": [
+          "Aplicación móvil offline-first",
+          "Sistema de autenticación JWT",
+          "Sincronización automática",
+          "Seguridad reCAPTCHA"
+        ],
+        "plataformas": ["Upwork"],
+        "eventoGA": "click_bundle_offline_auth"
+      }
+    ],
+    "proyectosPersonalizados": [
+      {
+        "id": "custom-web-saas",
+        "nombre": "Servicio Personalizado Web SaaS",
+        "descripcion": "Desarrollo completo de aplicación SaaS personalizada según requerimientos específicos",
+        "precio": 700,
+        "precioMXN": 11900,
+        "duracion": "12 días",
+        "plataformas": ["Upwork"],
+        "eventoGA": "click_custom_web_saas"
+      },
+      {
+        "id": "technical-proposal-milestone",
+        "nombre": "Propuesta Técnica por Milestone",
+        "descripcion": "Desarrollo de propuesta técnica detallada y cotización por milestone para proyectos complejos",
+        "precio": 0,
+        "precioMXN": 0,
+        "duracion": "Por definir",
+        "plataformas": ["Upwork"],
+        "eventoGA": "click_technical_proposal"
+      }
+    ]
+  },
+  "en": {
+    "categorias": [
+      {
+        "id": "code",
+        "icono": "code",
+        "nombre": "Software Development",
+        "descripcion": "Custom software development services including web applications, mobile apps, and desktop solutions with modern technologies",
+        "precioBase": "From $45 USD/hour",
+        "link": "https://wa.me/525512345678?text=Hello%2C%20I%27m%20interested%20in%20Software%20Development%20services",
+        "eventoGA": "click_software_development",
+        "imagen": "/images/software-development.jpg",
+        "servicios": [
+          {
+            "id": "auth-system",
+            "nombre": "Authentication System with JWT, reCAPTCHA & MFA",
+            "descripcion": "Complete authentication system with JSON Web Tokens, reCAPTCHA integration and Multi-Factor Authentication for maximum security",
+            "paquetes": [
+              {
+                "tipo": "Basic",
+                "precio": 140,
+                "precioMXN": 2380,
+                "duracion": "3 days",
+                "caracteristicas": [
+                  "JWT Authentication",
+                  "Basic reCAPTCHA",
+                  "Simple MFA setup",
+                  "User registration/login"
+                ]
+              },
+              {
+                "tipo": "Standard",
+                "precio": 220,
+                "precioMXN": 3740,
+                "duracion": "4 days",
+                "caracteristicas": [
+                  "JWT Authentication",
+                  "Advanced reCAPTCHA",
+                  "MFA with SMS/Email",
+                  "Password recovery",
+                  "Role-based access"
+                ]
+              },
+              {
+                "tipo": "Premium",
+                "precio": 350,
+                "precioMXN": 5950,
+                "duracion": "6 days",
+                "caracteristicas": [
+                  "JWT Authentication",
+                  "Advanced reCAPTCHA",
+                  "MFA with multiple methods",
+                  "Complete user management",
+                  "Advanced security features",
+                  "API documentation"
+                ]
+              }
+            ],
+            "plataformas": ["Upwork"]
+          },
+          {
+            "id": "dashboard-graphql",
+            "nombre": "Dashboard with GraphQL + React + PDF Export",
+            "descripcion": "Modern dashboard with GraphQL integration, React components and PDF export functionality",
+            "paquetes": [
+              {
+                "tipo": "Basic",
+                "precio": 180,
+                "precioMXN": 3060,
+                "duracion": "4 days",
+                "caracteristicas": [
+                  "Basic React dashboard",
+                  "GraphQL integration",
+                  "Simple PDF export",
+                  "Responsive design"
+                ]
+              },
+              {
+                "tipo": "Standard",
+                "precio": 300,
+                "precioMXN": 5100,
+                "duracion": "6 days",
+                "caracteristicas": [
+                  "Advanced React dashboard",
+                  "GraphQL with subscriptions",
+                  "Advanced PDF export",
+                  "Charts and analytics",
+                  "User permissions"
+                ]
+              },
+              {
+                "tipo": "Premium",
+                "precio": 500,
+                "precioMXN": 8500,
+                "duracion": "8 days",
+                "caracteristicas": [
+                  "Full-featured dashboard",
+                  "Real-time GraphQL",
+                  "Custom PDF templates",
+                  "Advanced analytics",
+                  "Multi-tenant support",
+                  "API integration"
+                ]
+              }
+            ],
+            "plataformas": ["Upwork"]
+          },
+          {
+            "id": "offline-mobile-form",
+            "nombre": "Offline-First Mobile Form",
+            "descripcion": "Mobile form application with offline-first architecture and data synchronization",
+            "paquetes": [
+              {
+                "tipo": "Standard",
+                "precio": 250,
+                "precioMXN": 4250,
+                "duracion": "6 days",
+                "caracteristicas": [
+                  "Offline data storage",
+                  "Automatic sync",
+                  "Mobile-optimized UI",
+                  "Form validation",
+                  "Cross-platform compatibility"
+                ]
+              }
+            ],
+            "plataformas": ["Upwork"]
+          },
+          {
+            "id": "graphql-api-setup",
+            "nombre": "GraphQL API Setup & Optimization",
+            "descripcion": "Complete GraphQL API setup with performance optimization and best practices",
+            "paquetes": [
+              {
+                "tipo": "Basic",
+                "precio": 120,
+                "precioMXN": 2040,
+                "duracion": "3 days",
+                "caracteristicas": [
+                  "Basic GraphQL schema",
+                  "CRUD operations",
+                  "Simple resolvers",
+                  "Basic documentation"
+                ]
+              },
+              {
+                "tipo": "Standard",
+                "precio": 180,
+                "precioMXN": 3060,
+                "duracion": "4 days",
+                "caracteristicas": [
+                  "Advanced GraphQL schema",
+                  "Optimized resolvers",
+                  "Query optimization",
+                  "Comprehensive documentation",
+                  "Error handling"
+                ]
+              },
+              {
+                "tipo": "Premium",
+                "precio": 320,
+                "precioMXN": 5440,
+                "duracion": "6 days",
+                "caracteristicas": [
+                  "Enterprise GraphQL setup",
+                  "Performance monitoring",
+                  "Advanced caching",
+                  "Security implementation",
+                  "Testing suite",
+                  "Deployment guide"
+                ]
+              }
+            ],
+            "plataformas": ["Upwork"]
+          },
+          {
+            "id": "secure-api-nodejs",
+            "nombre": "Secure API with Node.js, PostgreSQL & GraphQL",
+            "descripcion": "Secure REST/GraphQL API built with Node.js and PostgreSQL with enterprise-grade security",
+            "paquetes": [
+              {
+                "tipo": "Basic",
+                "precio": 90,
+                "precioMXN": 1530,
+                "duracion": "3 days",
+                "caracteristicas": [
+                  "Basic Node.js API",
+                  "PostgreSQL integration",
+                  "Basic GraphQL",
+                  "Simple authentication"
+                ]
+              },
+              {
+                "tipo": "Standard",
+                "precio": 150,
+                "precioMXN": 2550,
+                "duracion": "4 days",
+                "caracteristicas": [
+                  "Secure Node.js API",
+                  "Optimized PostgreSQL",
+                  "Advanced GraphQL",
+                  "JWT authentication",
+                  "Input validation"
+                ]
+              },
+              {
+                "tipo": "Premium",
+                "precio": 250,
+                "precioMXN": 4250,
+                "duracion": "5 days",
+                "caracteristicas": [
+                  "Enterprise-grade API",
+                  "Database optimization",
+                  "Full GraphQL implementation",
+                  "Advanced security",
+                  "Monitoring and logging",
+                  "API documentation"
+                ]
+              }
+            ],
+            "plataformas": ["Upwork"]
+          },
+          {
+            "id": "postgresql-optimization",
+            "nombre": "PostgreSQL Optimization",
+            "descripcion": "Database performance optimization and query tuning for PostgreSQL",
+            "paquetes": [
+              {
+                "tipo": "Standard",
+                "precio": 165,
+                "precioMXN": 2805,
+                "duracion": "4 days",
+                "caracteristicas": [
+                  "Performance analysis",
+                  "Query optimization",
+                  "Index optimization",
+                  "Configuration tuning",
+                  "Monitoring setup"
+                ]
+              }
+            ],
+            "plataformas": ["Upwork"]
+          },
+          {
+            "id": "cross-platform-ionic",
+            "nombre": "Cross-Platform App (Ionic)",
+            "descripcion": "Cross-platform mobile application development using Ionic framework",
+            "paquetes": [
+              {
+                "tipo": "Standard",
+                "precio": 750,
+                "precioMXN": 12750,
+                "duracion": "10 days",
+                "caracteristicas": [
+                  "Ionic framework",
+                  "Cross-platform compatibility",
+                  "Native features",
+                  "UI/UX design",
+                  "App store deployment"
+                ]
+              },
+              {
+                "tipo": "Premium",
+                "precio": 1200,
+                "precioMXN": 20400,
+                "duracion": "14 days",
+                "caracteristicas": [
+                  "Advanced Ionic app",
+                  "Custom plugins",
+                  "Advanced animations",
+                  "Offline capabilities",
+                  "Push notifications",
+                  "Analytics integration"
+                ]
+              }
+            ],
+            "plataformas": ["Fiverr"]
+          },
+          {
+            "id": "fullstack-development",
+            "nombre": "Full Stack Development",
+            "descripcion": "Complete full stack development services from frontend to backend",
+            "paquetes": [
+              {
+                "tipo": "Basic",
+                "precio": 100,
+                "precioMXN": 1700,
+                "duracion": "3 days",
+                "caracteristicas": [
+                  "Basic frontend",
+                  "Simple backend",
+                  "Database integration",
+                  "Basic functionality"
+                ]
+              },
+              {
+                "tipo": "Standard",
+                "precio": 250,
+                "precioMXN": 4250,
+                "duracion": "6 days",
+                "caracteristicas": [
+                  "Modern frontend",
+                  "Robust backend",
+                  "Database optimization",
+                  "Advanced features",
+                  "API integration"
+                ]
+              },
+              {
+                "tipo": "Premium",
+                "precio": 450,
+                "precioMXN": 7650,
+                "duracion": "10 days",
+                "caracteristicas": [
+                  "Enterprise frontend",
+                  "Scalable backend",
+                  "Advanced database",
+                  "Complex functionality",
+                  "Full API suite",
+                  "Testing and deployment"
+                ]
+              }
+            ],
+            "plataformas": ["Fiverr"]
+          }
+        ]
+      },
+      {
+        "id": "cloud_queue",
+        "icono": "cloud_queue",
+        "nombre": "Cloud Infrastructure",
+        "descripcion": "Cloud infrastructure consulting and implementation services for AWS, Azure, and Google Cloud Platform",
+        "precioBase": "$40 USD/hour",
+        "link": "https://wa.me/525512345678?text=Hello%2C%20I%27m%20interested%20in%20Cloud%20Infrastructure%20services",
+        "eventoGA": "click_cloud_infrastructure",
+        "imagen": "/images/cloud-infrastructure.jpg",
+        "servicios": [
+          {
+            "id": "cloud-consulting",
+            "nombre": "Cloud Infrastructure Consulting",
+            "descripcion": "Expert consulting for cloud migration, architecture design, and optimization",
+            "paquetes": [
+              {
+                "tipo": "Per hour",
+                "precio": 40,
+                "precioMXN": 680,
+                "duracion": "1 hour",
+                "caracteristicas": [
+                  "Cloud strategy",
+                  "Architecture review",
+                  "Migration planning",
+                  "Cost optimization",
+                  "Security assessment"
+                ]
+              }
+            ],
+            "plataformas": ["Web"]
+          }
+        ]
+      },
+      {
+        "id": "security",
+        "icono": "security",
+        "nombre": "Cybersecurity",
+        "descripcion": "Comprehensive cybersecurity services including firewall setup, MFA implementation, and SOC services",
+        "precioBase": "$45 USD/hour",
+        "link": "https://wa.me/525512345678?text=Hello%2C%20I%27m%20interested%20in%20Cybersecurity%20services",
+        "eventoGA": "click_cybersecurity",
+        "imagen": "/images/cybersecurity.jpg",
+        "servicios": [
+          {
+            "id": "security-consulting",
+            "nombre": "Cybersecurity Consulting",
+            "descripcion": "Comprehensive security assessment and implementation services",
+            "paquetes": [
+              {
+                "tipo": "Per hour",
+                "precio": 45,
+                "precioMXN": 765,
+                "duracion": "1 hour",
+                "caracteristicas": [
+                  "Security assessment",
+                  "Vulnerability analysis",
+                  "Firewall configuration",
+                  "MFA implementation",
+                  "Security policies"
+                ]
+              }
+            ],
+            "plataformas": ["Web"]
+          }
+        ]
+      },
+      {
+        "id": "memory",
+        "icono": "memory",
+        "nombre": "Artificial Intelligence",
+        "descripcion": "AI and machine learning consulting services including ML, NLP, and Computer Vision solutions",
+        "precioBase": "From $50 USD/hour",
+        "link": "https://wa.me/525512345678?text=Hello%2C%20I%27m%20interested%20in%20AI%20services",
+        "eventoGA": "click_ai_services",
+        "imagen": "/images/artificial-intelligence.jpg",
+        "servicios": [
+          {
+            "id": "ai-consulting",
+            "nombre": "AI & Machine Learning Consulting",
+            "descripcion": "Expert consulting in artificial intelligence, machine learning, and data science",
+            "paquetes": [
+              {
+                "tipo": "Per hour",
+                "precio": 50,
+                "precioMXN": 850,
+                "duracion": "1 hour",
+                "caracteristicas": [
+                  "ML model development",
+                  "NLP solutions",
+                  "Computer vision",
+                  "Data analysis",
+                  "AI strategy"
+                ]
+              }
+            ],
+            "plataformas": ["Web"]
+          }
+        ]
+      },
+      {
+        "id": "integration_instructions",
+        "icono": "integration_instructions",
+        "nombre": "System Integration",
+        "descripcion": "System integration services for APIs, connectivity, and enterprise system integration",
+        "precioBase": "From $40 USD/hour",
+        "link": "https://wa.me/525512345678?text=Hello%2C%20I%27m%20interested%20in%20System%20Integration%20services",
+        "eventoGA": "click_system_integration",
+        "imagen": "/images/system-integration.jpg",
+        "servicios": [
+          {
+            "id": "system-integration",
+            "nombre": "System Integration Services",
+            "descripcion": "Integration of enterprise systems, APIs, and third-party services",
+            "paquetes": [
+              {
+                "tipo": "Per hour",
+                "precio": 40,
+                "precioMXN": 680,
+                "duracion": "1 hour",
+                "caracteristicas": [
+                  "API integration",
+                  "System connectivity",
+                  "Data migration",
+                  "Workflow automation",
+                  "Legacy system integration"
+                ]
+              }
+            ],
+            "plataformas": ["Web"]
+          }
+        ]
+      },
+      {
+        "id": "support_agent",
+        "icono": "support_agent",
+        "nombre": "Support & Maintenance",
+        "descripcion": "24/7 technical support and maintenance services with SLA guarantees",
+        "precioBase": "From $30 USD/hour",
+        "link": "https://wa.me/525512345678?text=Hello%2C%20I%27m%20interested%20in%20Support%20%26%20Maintenance%20services",
+        "eventoGA": "click_support_maintenance",
+        "imagen": "/images/support-maintenance.jpg",
+        "servicios": [
+          {
+            "id": "support-maintenance",
+            "nombre": "Technical Support & Maintenance",
+            "descripcion": "Comprehensive technical support and system maintenance services",
+            "paquetes": [
+              {
+                "tipo": "Per hour",
+                "precio": 30,
+                "precioMXN": 510,
+                "duracion": "1 hour",
+                "caracteristicas": [
+                  "24/7 support",
+                  "Bug fixes",
+                  "System monitoring",
+                  "Performance optimization",
+                  "SLA guarantee"
+                ]
+              }
+            ],
+            "plataformas": ["Web"]
+          }
+        ]
+      }
+    ],
+    "serviciosEspeciales": [
+      {
+        "id": "bug-fixes-angular",
+        "nombre": "Fix bugs Angular/Node",
+        "descripcion": "Professional bug fixing services for Angular and Node.js applications",
+        "precio": 100,
+        "precioMXN": 1700,
+        "duracion": "3 days",
+        "plataformas": ["Fiverr"],
+        "eventoGA": "click_bug_fixes"
+      },
+      {
+        "id": "jwt-recaptcha-auth",
+        "nombre": "JWT + reCAPTCHA Auth",
+        "descripcion": "Authentication system with JWT tokens and reCAPTCHA integration",
+        "precio": 250,
+        "precioMXN": 4250,
+        "duracion": "5 days",
+        "plataformas": ["Fiverr"],
+        "eventoGA": "click_jwt_auth"
+      },
+      {
+        "id": "graphql-basic-api",
+        "nombre": "Basic GraphQL API",
+        "descripcion": "Basic GraphQL API implementation with standard features",
+        "precio": 250,
+        "precioMXN": 4250,
+        "duracion": "5 days",
+        "plataformas": ["Fiverr"],
+        "eventoGA": "click_graphql_basic"
+      },
+      {
+        "id": "fix-nodejs-graphql",
+        "nombre": "Fix Node.js API with GraphQL",
+        "descripcion": "Bug fixing and optimization for Node.js APIs with GraphQL",
+        "precio": 200,
+        "precioMXN": 3400,
+        "duracion": "5 days",
+        "plataformas": ["Fiverr"],
+        "eventoGA": "click_fix_nodejs"
+      },
+      {
+        "id": "backend-optimization",
+        "nombre": "Backend Optimization & Security",
+        "descripcion": "Comprehensive backend optimization and security enhancement",
+        "precio": 500,
+        "precioMXN": 8500,
+        "duracion": "6 days",
+        "plataformas": ["Fiverr"],
+        "eventoGA": "click_backend_optimization"
+      },
+      {
+        "id": "fullstack-hourly",
+        "nombre": "Full Stack Development (Hourly)",
+        "descripcion": "Hourly full stack development services",
+        "precio": 27,
+        "precioMXN": 459,
+        "duracion": "1 hour",
+        "plataformas": ["Workana"],
+        "eventoGA": "click_fullstack_hourly"
+      },
+      {
+        "id": "dev-consultation",
+        "nombre": "Development & IT Consultation",
+        "descripcion": "30-minute development and IT consultation session",
+        "precio": 35,
+        "precioMXN": 595,
+        "duracion": "30 minutes",
+        "plataformas": ["Upwork"],
+        "eventoGA": "click_dev_consultation"
+      },
+      {
+        "id": "api-architecture-consulting",
+        "nombre": "API Architecture Consulting",
+        "descripcion": "Expert consulting on API architecture and design patterns",
+        "precio": 80,
+        "precioMXN": 1360,
+        "duracion": "1 hour",
+        "plataformas": ["Upwork"],
+        "eventoGA": "click_api_consulting"
+      }
+    ],
+    "bundles": [
+      {
+        "id": "app-offline-auth-bundle",
+        "nombre": "App Offline + Auth JWT Bundle",
+        "descripcion": "Complete package including offline mobile app and JWT authentication system",
+        "precio": 400,
+        "precioMXN": 6800,
+        "duracion": "8 days",
+        "incluye": [
+          "Offline-First Mobile Form",
+          "JWT Authentication System",
+          "Integration and testing"
+        ],
+        "plataformas": ["Upwork"],
+        "eventoGA": "click_offline_auth_bundle"
+      }
+    ],
+    "proyectosPersonalizados": [
+      {
+        "id": "web-saas-custom",
+        "nombre": "Custom Web SaaS Service",
+        "descripcion": "Fully customized web-based SaaS application development",
+        "precio": 700,
+        "precioMXN": 11900,
+        "duracion": "12 days",
+        "plataformas": ["Upwork"],
+        "eventoGA": "click_custom_saas"
+      },
+      {
+        "id": "technical-proposal-milestone",
+        "nombre": "Technical Proposal per Milestone",
+        "descripcion": "Custom technical proposal and project planning service",
+        "precio": 0,
+        "precioMXN": 0,
+        "duracion": "To be defined",
+        "plataformas": ["Upwork"],
+        "eventoGA": "click_technical_proposal"
+      }
+    ]
+  },
+  "metadata": {
+    "version": "2.0",
+    "lastUpdated": "2025-06-04",
+    "totalServices": 38,
+    "platforms": ["Upwork", "Fiverr", "Workana", "Web"],
+    "currencies": ["USD", "MXN"],
+    "languages": ["es", "en"]
+  }
+}

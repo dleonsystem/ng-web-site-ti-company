@@ -23,6 +23,14 @@
       "excerpt": "Soluciones diseñadas específicamente para tus procesos.",
       "content": "El software a la medida es la clave para digitalizar tus procesos con precisión. A diferencia de las soluciones genéricas, desarrollamos plataformas específicas que se alinean con tu modelo operativo. Esto significa mayor eficiencia, automatización de tareas repetitivas, mejor experiencia del usuario y escalabilidad garantizada.\n\nEn Lion Systems hemos creado soluciones a la medida para instituciones educativas, financieras, gubernamentales y del sector salud. Utilizamos tecnologías modernas como Angular, Node.js, PostgreSQL y GraphQL para garantizar sistemas robustos, seguros y sostenibles.\n\n**¿Tienes una idea o proceso que quieres digitalizar?** Escríbenos y te ayudamos a convertirla en una solución funcional desde el diseño hasta el despliegue.",
       "alt": "Imagen sobre cómo personalizar tus soluciones para escalar con agilidad"
+    },
+    {
+      "id": 4,
+      "title": "La Revolución de la IA: Transformando el Presente y Delineando el Futuro de los Negocios y la Colaboración",
+      "image": "assets/images/blog/detail-ai-revolution.png",
+      "excerpt": "Cómo la inteligencia artificial está redefiniendo la innovación y la colaboración empresarial.",
+      "content": "La inteligencia artificial (IA) ha dejado de ser una promesa futurista para convertirse en una realidad fundamental que está remodelando la forma en que interactuamos con la tecnología y entre nosotros. De cara al 2025, el panorama tecnológico experimentará avances transformadores que revolucionarán nuestro mundo. Este cambio no solo impulsa la productividad y la eficiencia, sino que también abre nuevas vías para la innovación y la diferenciación en el mercado.\n\nLas empresas que adopten la IA podrán automatizar procesos, mejorar la toma de decisiones y fomentar la colaboración entre equipos multidisciplinarios. Además, la IA facilita la personalización de productos y servicios, permitiendo una experiencia única para cada cliente.\n\n**¿Quieres descubrir cómo la IA puede transformar tu negocio?** Contáctanos y te mostraremos las oportunidades que la inteligencia artificial puede ofrecerte.",
+      "alt": "Imagen conceptual sobre la revolución de la inteligencia artificial en los negocios."
     }
   ],
   "en": [
@@ -49,6 +57,14 @@
       "excerpt": "Solutions designed specifically for your processes.",
       "content": "Custom software is the key to digitizing your processes with precision. Unlike generic solutions, we develop specific platforms that align with your operating model. This means greater efficiency, automation of repetitive tasks, better user experience, and guaranteed scalability.\n\nAt Lion Systems, we have created custom solutions for educational, financial, government, and healthcare institutions. We use modern technologies such as Angular, Node.js, PostgreSQL, and GraphQL to ensure robust, secure, and sustainable systems.\n\n**Do you have an idea or process you want to digitize?** Write to us and we will help you turn it into a functional solution from design to deployment.",
       "alt": "Image showing how to customize your solutions to scale with agility"
+    },
+    {
+      "id": 4,
+      "title": "The AI Revolution: Transforming the Present and Shaping the Future of Business and Collaboration",
+      "image": "assets/images/blog/detail-ai-revolution.png",
+      "excerpt": "How artificial intelligence is redefining innovation and business collaboration.",
+      "content": "Artificial intelligence (AI) is no longer a futuristic promise but a fundamental reality that is reshaping how we interact with technology and each other. Looking ahead to 2025, the technological landscape will experience transformative advances that will revolutionize our world. This shift not only drives productivity and efficiency but also opens new avenues for innovation and market differentiation.\n\nCompanies embracing AI will be able to automate processes, improve decision-making, and foster collaboration among multidisciplinary teams. Additionally, AI enables the personalization of products and services, delivering a unique experience for every customer.\n\n**Do you want to discover how AI can transform your business?** Contact us and we will show you the opportunities that artificial intelligence can offer.",
+      "alt": "Conceptual image about the revolution of artificial intelligence in business."
     }
   ]
 }
