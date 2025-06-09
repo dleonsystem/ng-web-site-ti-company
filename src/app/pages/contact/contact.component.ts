@@ -5,6 +5,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute } from '@angular/router';
 import { SeoService } from 'src/app/services/seo.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
@@ -19,7 +20,7 @@ export class ContactComponent {
   isSubmitting = false; // Control del botón
   formEnviado = false; // Para mostrar mensaje de éxito
 
-  constructor(private readonly snackBar: MatSnackBar, private readonly route: ActivatedRoute, private readonly seoService: SeoService) {}
+  constructor(private readonly snackBar: MatSnackBar, private readonly route: ActivatedRoute, private readonly seoService: SeoService, private readonly translateService: TranslateService) {}
    ngOnInit(): void {
      this.seoService.setContactPage();
     // Captura parámetro ?proyecto de la URL si existe
@@ -63,10 +64,11 @@ export class ContactComponent {
       title: this.contacto.mensaje,
       proyecto: this.contacto.proyecto || 'No especificado'
     };
+const idiomaActual = this.translateService.currentLang as 'es' | 'en' || 'es';
 
     emailjs.send(
       'service_v52x7rt',
-      'template_mid129c',
+      idiomaActual=='es'?'template_xlveajg':'template_mid129c',
       templateParams,
       environment.emailJsPublicKey
     ).then(() => {
