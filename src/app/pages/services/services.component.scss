@@ -22,7 +22,11 @@ $shadow-dark: rgba(0, 0, 0, 0.3);
     box-shadow: 0 0.75rem 2rem $shadow-light;
   }
 }
-.mat-mdc-button.mat-mdc-button-base, .mat-mdc-raised-button.mat-mdc-button-base, .mat-mdc-unelevated-button.mat-mdc-button-base, .mat-mdc-outlined-button.mat-mdc-button-base, .mat-mdc-raised-button:not(:disabled) {
+.mat-mdc-button.mat-mdc-button-base,
+.mat-mdc-raised-button.mat-mdc-button-base,
+.mat-mdc-unelevated-button.mat-mdc-button-base,
+.mat-mdc-outlined-button.mat-mdc-button-base,
+.mat-mdc-raised-button:not(:disabled) {
   border: 2px solid $primary-color !important;
   color: white !important;
   background-color: $primary-color !important;
@@ -39,7 +43,7 @@ $shadow-dark: rgba(0, 0, 0, 0.3);
 }
 
 mat-raised-button {
-  border: 2px solid $primary-color ;
+  border: 2px solid $primary-color;
   color: white;
   background-color: $primary-color;
   padding: 0.8rem 2rem;
@@ -64,12 +68,12 @@ mat-raised-button {
     font-weight: 700;
     margin-bottom: 0;
     line-height: 1.2;
-     position: relative;
+    position: relative;
     display: inline-block;
-    
+
     // Aplicar el mismo estilo de subrayado que home
     &::after {
-      content: '';
+      content: "";
       display: block;
       width: 80px;
       height: 3px;
@@ -79,6 +83,12 @@ mat-raised-button {
     }
   }
 
+  .services-header {
+    text-align: center;
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .btn-raised-primary {
     border: 2px solid $primary-color;
@@ -144,23 +154,25 @@ mat-raised-button {
     display: inline-block;
 
     &::after {
-    content: '';
-    display: block;
-    width: 60px; // Ancho del subrayado
-    height: 3px;
-    background-color: $secondary-color;
-    margin: 0.5rem auto 0;
-    border-radius: 5px;
-  }
+      content: "";
+      display: block;
+      width: 60px; // Ancho del subrayado
+      height: 3px;
+      background-color: $secondary-color;
+      margin: 0.5rem auto 0;
+      border-radius: 5px;
+    }
   }
 
   // Subtítulo consistente
   .section-subtitle {
     font-size: 1.2rem;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto 2rem auto;
-    line-height: 1.6;
+  color: #555;
+  max-width: 800px;
+  margin-bottom: 2rem; // Solo mantenemos el margen inferior
+  line-height: 1.6;
+  text-align: center; // Dejarlo aquí da una doble seguridad
+
   }
 
   // Tarjetas de servicio homologadas
@@ -179,8 +191,8 @@ mat-raised-button {
     // Hover effect mejorado y consistente
     &:hover {
       border-color: $primary-color;
-      box-shadow: 0 0.5rem 1.5rem rgba(0, 119, 182, 0.2), 
-                  0 0.75rem 2rem rgba(0, 119, 182, 0.25);
+      box-shadow: 0 0.5rem 1.5rem rgba(0, 119, 182, 0.2),
+        0 0.75rem 2rem rgba(0, 119, 182, 0.25);
       transform: translateY(-5px);
     }
 
@@ -199,7 +211,8 @@ mat-raised-button {
     }
 
     // Título del servicio
-    h5, .service-title {
+    h5,
+    .service-title {
       font-size: 1.6rem; // Consistente con home
       font-weight: 600;
       color: $text-dark;
@@ -208,7 +221,8 @@ mat-raised-button {
     }
 
     // Descripción del servicio
-    p, .service-description {
+    p,
+    .service-description {
       font-size: 0.95rem;
       color: #666; // Consistente con home
       line-height: 1.5;
@@ -224,7 +238,8 @@ mat-raised-button {
     }
 
     // Botones consistentes
-    .btn, .mat-button {
+    .btn,
+    .mat-button {
       padding: 0.5rem 1.5rem;
       font-size: 0.9rem;
       font-weight: 500;
@@ -282,8 +297,9 @@ mat-raised-button {
   .services-section {
     .service-card {
       margin-bottom: 1.5rem;
-      
-      h5, .service-title {
+
+      h5,
+      .service-title {
         font-size: 1.4rem;
       }
 
@@ -306,7 +322,7 @@ mat-raised-button {
   border-radius: 30px;
   font-weight: 500;
   transition: all 0.3s ease;
-  
+
   &:hover {
     background-color: darken($primary-color, 10%);
     transform: translateY(-2px);
