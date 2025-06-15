@@ -85,7 +85,7 @@ mat-raised-button {
 
   .services-header {
     text-align: center;
-      display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -167,12 +167,11 @@ mat-raised-button {
   // Subtítulo consistente
   .section-subtitle {
     font-size: 1.2rem;
-  color: #555;
-  max-width: 800px;
-  margin-bottom: 2rem; // Solo mantenemos el margen inferior
-  line-height: 1.6;
-  text-align: center; // Dejarlo aquí da una doble seguridad
-
+    color: #555;
+    max-width: 800px;
+    margin-bottom: 2rem; // Solo mantenemos el margen inferior
+    line-height: 1.6;
+    text-align: center; // Dejarlo aquí da una doble seguridad
   }
 
   // Tarjetas de servicio homologadas
