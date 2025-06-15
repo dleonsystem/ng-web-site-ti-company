@@ -3,6 +3,104 @@
 
 @import 'variables';
 
+
+// Mixin para unificar el padding vertical de las secciones
+@mixin page-section {
+  padding-top: $spacing-section-vertical;
+  padding-bottom: $spacing-section-vertical;
+  text-align: center;
+}
+
+// Mixin para títulos de sección
+@mixin section-title {
+  font-weight: 700;
+  color: $text-dark;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, $primary-color, $secondary-color);
+    margin: 0.75rem auto 0;
+    border-radius: 5px;
+  }
+}
+
+// Mixin para subtítulos de sección
+@mixin section-subtitle {
+  font-size: 1.15rem;
+  color: $text-muted;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.7;
+}
+
+// Mixin para la base de TODAS las tarjetas
+@mixin card-base {
+  background-color: $background-card;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-md;
+  box-shadow: 0 4px 10px $shadow-light;
+  transition: transform $transition-normal, box-shadow $transition-normal;
+  display: flex;
+  flex-direction: column;
+  height: 100%; // Importante para que las tarjetas en una fila tengan la misma altura
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px $shadow-hover;
+  }
+}
+
+// Mixin para el contenido de la tarjeta
+@mixin card-content-base {
+  padding: 1.5rem;
+  text-align: left;
+  flex-grow: 1; // Permite que el contenido crezca y empuje el footer hacia abajo
+}
+
+// Mixin para los botones de acción principales
+@mixin button-raised-primary {
+  background-color: $primary-color !important;
+  color: $text-light !important;
+  border-radius: $border-radius-pill !important;
+  padding: 0.7rem 1.8rem !important;
+  font-weight: 500 !important;
+  transition: all $transition-normal !important;
+  letter-spacing: 0.5px;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba($primary-color, 0.4);
+  }
+}
+
+// Mixin para botones de filtro (como en portafolio y casos de éxito)
+@mixin filter-button {
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    border-radius: $border-radius-pill;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    font-weight: 500;
+    transition: all $transition-fast;
+
+    &:hover {
+        background-color: rgba($primary-color, 0.1);
+    }
+
+    &.active {
+        background-color: $primary-color;
+        color: white;
+    }
+}
+
 // Mixin para títulos de sección
 @mixin section-title {
   font-weight: 700;

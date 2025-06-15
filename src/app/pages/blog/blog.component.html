@@ -1,45 +1,30 @@
-<section class="blog-section" [@cardAnimation]>
+<section class="page-section" [@cardAnimation]>
   <div class="container">
     <!-- Hero Header -->
-    <div class="blog-header text-center mb-5">
-      <h1 class="section-title mb-4">
+ 
+      <h1 class="section-title">
         {{ "blog.title" | translate }}
       </h1>
       <p class="section-subtitle">
         {{ "blog.description" | translate }}
       </p>
-    </div>
-
-    <!-- Blog Content -->
-    <div class="blog-content">
-      <div class="row justify-content-center">
-        <div class="col-lg-10 col-xl-8">
+<div class="row">
+      <div class="col-lg-4 col-md-6 mb-4" *ngFor="let post of posts">
+        <mat-card class="unified-card" [routerLink]="['/blog', post.id]">
+          <img mat-card-image [src]="post.image" [alt]="post.title" class="card-img-top">
           
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4" *ngFor="let post of posts">
-              <div class="blog-post-section">
-                <div class="blog-card h-100 animate__animated animate__fadeInUp">
-                  <a [routerLink]="['/blog', post.id]" class="text-decoration-none">
-                    <img 
-                      class="card-img-top" 
-                      [src]="post.image" 
-                      [alt]="post.alt ? post.alt : post.title" 
-                      [title]="post.title"
-                      loading="lazy" />
-                    <div class="card-body">
-                      <h3 class="card-title">{{ post.title }}</h3>
-                      <p class="card-text">{{ post.excerpt }}</p>
-                      <span class="read-more">{{ "blog.readMore" | translate }}</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <mat-card-content class="unified-card-content">
+            <h5 class="card-title font-weight-bold">{{ post.title }}</h5>
+            <p class="text-muted">{{ post.excerpt }}</p>
+          </mat-card-content>
 
-        </div>
+          <mat-card-actions class="unified-card-footer">
+            <a [routerLink]="['/blog', post.id]" class="font-weight-bold text-uppercase">{{ "blog.readMore" | translate }} <i class="fas fa-arrow-right"></i></a>
+          </mat-card-actions>
+        </mat-card>
       </div>
     </div>
+  
 
     <!-- Mensaje cuando no hay posts -->
     <div class="row justify-content-center" *ngIf="posts.length === 0">

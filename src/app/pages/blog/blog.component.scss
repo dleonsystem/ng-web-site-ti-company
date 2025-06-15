@@ -1,5 +1,16 @@
 @import '../../../styles/variables';
 
+// Estilo específico para el enlace "Leer más"
+a {
+    color: $primary-color;
+    text-decoration: none;
+    transition: all $transition-fast;
+
+    &:hover {
+        color: $secondary-color;
+        letter-spacing: 0.5px;
+    }
+}
 
 // Mixins reutilizados
 @mixin section-padding {

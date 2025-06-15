@@ -1,55 +1,59 @@
 // styles.scss
 
 // Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@use "@angular/material" as mat;
-// Plus imports for other components in your app.
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat.core();
 // 1. Importar variables y mixins
 @import "styles/variables";
 @import "styles/mixins";
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$ng-web-site-ti-company-primary: mat.define-palette(mat.$indigo-palette);
-$ng-web-site-ti-company-accent: mat.define-palette(
-  mat.$pink-palette,
-  A200,
-  A100,
-  A400
-);
 
-// The warn palette is optional (defaults to red).
-$ng-web-site-ti-company-warn: mat.define-palette(mat.$red-palette);
+// 3. Clases de utilidad globales
+.page-section {
+  @include page-section;
+}
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$ng-web-site-ti-company-theme: mat.define-light-theme(
-  (
-    color: (
-      primary: $ng-web-site-ti-company-primary,
-      accent: $ng-web-site-ti-company-accent,
-      warn: $ng-web-site-ti-company-warn,
-    ),
-  )
-);
+.section-title {
+  @include section-title;
+}
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-component-themes($ng-web-site-ti-company-theme);
+.section-subtitle {
+  @include section-subtitle;
+}
 
-$primary-blue: #0077b6; // Azul institucional (ejemplo, ajustar según la paleta)
-$secondary-blue: #00b4d8;
-$dark-blue: #002147;
-$light-gray: #f5f8fa;
-$text-muted-color: #555;
+// 4. Estilos de botones unificados
+.btn-raised-primary {
+  @include button-raised-primary;
+}
 
+.filter-button-group {
+    margin-bottom: 3rem;
+    .filter-button {
+        @include filter-button;
+    }
+}
+
+// 5. Estilo de tarjeta base unificado
+.unified-card {
+  @include card-base;
+
+  .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: $border-radius-md;
+    border-top-right-radius: $border-radius-md;
+  }
+
+  .unified-card-content {
+    @include card-content-base;
+  }
+
+  .unified-card-footer {
+    padding: 0 1.5rem 1.5rem;
+    text-align: left;
+    margin-top: auto; // Empuja el footer a la parte inferior
+  }
+}
 // Tipografía
 $font-family-base: "Roboto", sans-serif; // Ya importado, solo definir variable
 $font-size-base: 1rem;
@@ -83,9 +87,7 @@ h6 {
   color: $primary-color;
   font-weight: 700; // Un grosor consistente
 }
-.section-title {
-  @include section-title; // Usamos el mixin para consistencia
-}
+
 
 // Ajustes semánticos y de tamaño para h1 y h2 como títulos de sección
 h1.section-title {
@@ -97,10 +99,6 @@ h2.section-title {
   font-size: 2.2rem;
 }
 
-// Títulos para subtítulos de sección
-.section-subtitle {
-  @include section-subtitle; // Usamos el mixin para consistencia
-}
 
 // Estilo para Títulos dentro de Tarjetas (Cards)
 .card-title {
@@ -161,9 +159,7 @@ mat-icon {
 }
 
 // 5. Estilos de botones (CLAVE PARA HOMOLOGAR)
-.btn-raised-primary {
-  @include button-style($primary-color, white);
-}
+
 
 .btn-raised-accent {
   @include button-style($text-dark, white);
@@ -228,3 +224,25 @@ footer {
     margin-bottom: 1.5rem; // Espacio entre tarjetas apiladas
   }
 }
+
+// 6. Importaciones de Angular Material (mantener al final)
+@import '@angular/material/theming';
+
+@include mat-core();
+
+$candy-app-primary: mat-palette($mat-indigo);
+$candy-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$candy-app-warn: mat-palette($mat-red);
+
+$candy-app-theme: mat-light-theme((
+  color: (
+    primary: $candy-app-primary,
+    accent: $candy-app-accent,
+    warn: $candy-app-warn,
+  )
+));
+
+@include angular-material-theme($candy-app-theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

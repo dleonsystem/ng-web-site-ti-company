@@ -15,6 +15,10 @@ $background-light: #f9fafb;   // Fondo general de secciones claras
 $background-card: #ffffff;    // Fondo de tarjetas
 $background-section: #f9fafb; // Fondo de secciones
 
+// Paleta de Estados
+$success-color: #198754;
+$danger-color: #dc3545;
+$warning-color: #ffc107;
 // ===== SOMBRAS =====
 $shadow-light: rgba(0, 0, 0, 0.1);
 $shadow-medium: rgba(0, 0, 0, 0.15);
@@ -61,8 +65,14 @@ $border-radius-xl: 20px;
 $border-radius-pill: 25px;
 $border-radius-circle: 50%;
 
+// ===== BORDES =====
+$border-color: #dee2e6;
+$border-radius-md: 15px;
+$border-radius-lg: 20px;
+$border-radius-pill: 50px;
+
 // ===== TRANSICIONES =====
-$transition-fast: 0.2s ease;
+$transition-fast: 0.2s ease-in-out;
 $transition-normal: 0.3s ease;
 $transition-slow: 0.5s ease;
 
@@ -72,6 +82,9 @@ $breakpoint-sm: 768px;
 $breakpoint-md: 992px;
 $breakpoint-lg: 1200px;
 $breakpoint-xl: 1400px;
+
+// ===== ESPACIADO =====
+$spacing-section-vertical: 5rem;
 
 // ===== MIXINS =====
 @mixin section-padding {
