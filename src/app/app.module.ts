@@ -22,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CasosExitoComponent } from './pages/casos-exito/casos-exito.component';
 import { AvisoPrivacidadComponent } from './pages/aviso-privacidad/aviso-privacidad.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
+import { GraphQLModule } from './graphql.module';
 
 // Crea el loader para cargar archivos JSON
 export function HttpLoaderFactory(http: HttpClient) {
@@ -58,7 +59,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserAnimationsModule,
     SharedModule, // ✅ Aquí debe estar
     FormsModule, 
-    MaterialModule
+    MaterialModule, GraphQLModule
   ],
   exports: [
     MaterialModule

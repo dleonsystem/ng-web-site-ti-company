@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
+import { Apollo } from 'apollo-angular';
 import { HttpClient } from '@angular/common/http';
+import { GET_ALL_PORTFOLIO } from '../graphql/graphql.queries';
 import { Observable, map } from 'rxjs';
 // Interface para definir la estructura de un proyecto
 export interface Proyecto {
@@ -22,7 +24,7 @@ export class PortfolioService {
 
   private dataUrl = 'assets/data/portfolio.data.json';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private apollo: Apollo) { }
 
   obtenerProyectos(): Observable<any[]> {
     return this.http.get<any[]>(this.dataUrl);
@@ -32,10 +34,13 @@ export class PortfolioService {
     return this.http.get<PortfolioData>(this.dataUrl);
   }
     // Método para obtener proyectos filtrados por idioma
-  obtenerProyectosPorIdioma(idioma: 'es' | 'en'): Observable<Proyecto[]> {
-    return this.http.get<PortfolioData>(this.dataUrl).pipe(
-      map(data => data[idioma] || [])
-    );
+   obtenerProyectosPorIdioma(idioma: 'es' | 'en'): Observable<Proyecto[]> {
+    return this.apollo.watchQuery<any>({
+      query: GET_ALL_PORTFOLIO,
+      variables: {
+        language: idioma,
+      },
+    }).valueChanges.pipe(map(result => result.data.portfolio));
   }
 
   // Método para obtener proyectos por idioma y sector
