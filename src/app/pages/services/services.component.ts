@@ -29,12 +29,11 @@ export class ServicesComponent implements OnInit {
     this.translateService.onLangChange.subscribe(() => {
       this.cargarServicios();
     });
-    this.serviciosService.obtenerServicios().subscribe(data => {
-      this.servicios = data;
-    });
+
   }
   private cargarServicios(): void {
     const idiomaActual = this.translateService.currentLang as 'es' | 'en' || 'es';
+    console.log('Cargando servicios para el idioma:', idiomaActual);
     this.serviciosService.obtenerServicios(idiomaActual).subscribe(data => {
       this.servicios = data;
     });

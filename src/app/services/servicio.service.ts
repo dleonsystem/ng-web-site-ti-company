@@ -20,6 +20,7 @@ export class ServiciosService {
   constructor(private apollo: Apollo, private http: HttpClient) { }
 
   obtenerServicios(idioma: 'es' | 'en' = 'es'): Observable<Servicio[]> {
+    console.log('obtenerServicios called with language:', idioma);
     return this.apollo.watchQuery<any>({
       query: GET_ALL_SERVICES,
       variables: {

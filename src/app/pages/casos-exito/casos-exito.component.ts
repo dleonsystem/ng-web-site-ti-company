@@ -44,7 +44,9 @@ export class CasosExitoComponent implements OnInit, OnDestroy {
   }
 
   private cargarCasos(): void {
-    this.casosService.obtenerCasos().subscribe(data => {
+    const idiomaActual = this.translate.currentLang as 'es' | 'en' || 'es';
+
+    this.casosService.obtenerCasosPorIdioma(idiomaActual).subscribe(data => {
       this.casos = data;
     });
   }
