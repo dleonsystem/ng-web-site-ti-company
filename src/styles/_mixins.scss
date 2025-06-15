@@ -1,7 +1,66 @@
 // _mixins.scss - Mixins y utilidades para homologar componentes
+// src/styles/_misinx.scss
 
 @import 'variables';
 
+// Mixin para títulos de sección
+@mixin section-title {
+  font-weight: 700;
+  color: $text-dark;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, $primary-color, $secondary-color);
+    margin: 0.75rem auto 0;
+    border-radius: 5px;
+  }
+}
+
+// Mixin para subtítulos
+@mixin section-subtitle {
+  font-size: 1.2rem;
+  color: $text-muted;
+  // max-width: 800px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.6;
+}
+
+// Mixin para la base de las tarjetas
+@mixin card-base {
+  border-radius: $border-radius-md;
+  background-color: $background-card;
+  border: 1px solid $border-color;
+  box-shadow: 0 4px 10px $shadow-light;
+  transition: transform $transition-normal, box-shadow $transition-normal;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px $shadow-hover;
+  }
+}
+
+// Mixin para los botones
+@mixin button-style($bg-color, $text-color) {
+  background-color: $bg-color !important;
+  color: $text-color !important;
+  border-radius: $border-radius-pill !important;
+  padding: 0.7rem 1.8rem !important;
+  font-weight: 500 !important;
+  transition: all $transition-normal !important;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba($bg-color, 0.4);
+  }
+}
 // ===== MIXINS PARA SECCIONES =====
 @mixin section-base {
   @include section-padding;

@@ -1,10 +1,4 @@
-// Variables para mantener consistencia con home
-$primary-color: #0077b6;
-$secondary-color: #00b4d8;
-$text-dark: #002147;
-$text-light: #f8f9fa;
-$shadow-light: rgba(0, 0, 0, 0.1);
-$shadow-dark: rgba(0, 0, 0, 0.3);
+@import '../../../styles/variables';
 
 // Mixin para efectos de hover
 @mixin card-hover-effect {

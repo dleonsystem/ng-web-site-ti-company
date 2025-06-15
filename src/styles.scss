@@ -1,12 +1,4 @@
 // styles.scss
-// Variables de color
-$primary-color: #002147; // Azul oscuro institucional
-$secondary-color: #0077b6; // Azul institucional
-$accent-color: #0dcaf0; // Turquesa/Cyan para acentos
-$text-color-dark: #212121;
-$text-color-light: #555;
-$background-light: #f5f8fa;
-$background-card: #ffffff;
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
@@ -17,6 +9,9 @@ $background-card: #ffffff;
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 @include mat.core();
+// 1. Importar variables y mixins
+@import "styles/variables";
+@import "styles/mixins";
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
@@ -56,7 +51,7 @@ $light-gray: #f5f8fa;
 $text-muted-color: #555;
 
 // Tipografía
-$font-family-base: 'Roboto', sans-serif; // Ya importado, solo definir variable
+$font-family-base: "Roboto", sans-serif; // Ya importado, solo definir variable
 $font-size-base: 1rem;
 $line-height-base: 1.5;
 
@@ -69,35 +64,27 @@ $spacing-lg: 2rem;
 $box-shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.1);
 $box-shadow-medium: 0 4px 10px rgba(0, 0, 0, 0.3);
 
+html,
 body {
-    font-family: $font-family-base;
-    font-size: $font-size-base;
-    line-height: $line-height-base;
-    color: $dark-blue; // Color de texto base
+  height: 100%;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $dark-blue; // Color de texto base
+  font-family: "Roboto", sans-serif;
+  background-color: $background-light;
 }
 // Estilo base para todos los encabezados
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $primary-color;
   font-weight: 700; // Un grosor consistente
 }
 .section-title {
-  text-align: center;
-  color: $primary-color;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  position: relative;
-
-  // Subrayado consistente usando un pseudo-elemento
-  &::after {
-    content: '';
-    display: block;
-    width: 70px;      // Ancho estándar
-    height: 4px;      // Grosor estándar
-    background-color: $accent-color; // Color de acento estándar
-    border-radius: 5px;
-    margin: 0.75rem auto 0; // Centrado
-  }
+  @include section-title; // Usamos el mixin para consistencia
 }
 
 // Ajustes semánticos y de tamaño para h1 y h2 como títulos de sección
@@ -112,12 +99,7 @@ h2.section-title {
 
 // Títulos para subtítulos de sección
 .section-subtitle {
-  font-size: 1.2rem;
-  color: $text-color-light;
-  margin: 0 auto 2.5rem auto; // Centrado y con margen inferior
-  text-align: center;
-  max-width: 800px;
-  line-height: 1.6;
+  @include section-subtitle; // Usamos el mixin para consistencia
 }
 
 // Estilo para Títulos dentro de Tarjetas (Cards)
@@ -137,9 +119,9 @@ h2.section-title {
   font-size: 1.2rem !important;
 }
 
-
 // Estilos para tarjetas generales (mat-card, .card)
-.mat-card, .card {
+.mat-card,
+.card {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); // Sombra unificada
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -169,78 +151,34 @@ h2.section-title {
 mat-icon {
   font-size: 48px;
 }
-.service-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  // height: 100%;
-  padding: 2rem 1rem;
-  border-radius: 1rem;
-  background-color: #ffffff;
-  transition: box-shadow 0.3s ease;
 
-  color: #0077b6; // Azul institucional
-  margin-bottom: 1rem;
-
-  .service-card h3 {
-    // Para el título del servicio
-    color: #002147; // Un azul más oscuro y corporativo
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-  }
-  .service-card p {
-    // Para la descripción del servicio
-    color: #4a4a4a; // Un gris oscuro para legibilidad
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-  border: 1px solid rgba(0, 0, 0, 0.1); // Borde sutil
-  transition: box-shadow 0.3s ease, border-color 0.3s ease; // Agrega transición para border-color
-
-  &:hover {
-    border-color: #0077b6; // El borde se ilumina al pasar el ratón
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 119, 182, 0.2), 0 0.75rem 2rem rgba(0, 119, 182, 0.25); // Sombra combinada
-    transform: translateY(-5px); // Se eleva ligeramente
-  }
-  mat-icon {
-    font-size: 56px;
-    height: 56px;
-    width: 56px;
-    color: #0077b6; // azul institucional
-    margin-bottom: 1rem;
-  }
+// 4. Estilos de tarjetas (CLAVE PARA HOMOLOGAR)
+.service-card,
+.portfolio-card,
+.success-card,
+.about-card {
+  @include card-base; // Mixin que define el aspecto base de todas las tarjetas
 }
 
-
-h1.section-title {
-  font-weight: 700;
-  border-bottom: 2px solid #0dcaf0;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  color: #002147;
-  text-align: center;
+// 5. Estilos de botones (CLAVE PARA HOMOLOGAR)
+.btn-raised-primary {
+  @include button-style($primary-color, white);
 }
 
-h2.section-title {
-  font-weight: 600;
-  border-bottom: 2px solid #0dcaf0;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  color: #002147;
-  text-align: center;
+.btn-raised-accent {
+  @include button-style($text-dark, white);
 }
+
 .snackbar-success {
-  // background-color: #198754;
   color: #fff;
   font-weight: bold;
 }
 
 .snackbar-warning {
-  // background-color: #dc3545;
   color: #fff;
   font-weight: bold;
 }
+
 header {
   color: #ffffff;
   padding: 10px 0;
@@ -285,16 +223,7 @@ footer {
   padding: 10px 0;
 }
 
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
 @media (max-width: 872px) {
-
   .service-card {
     margin-bottom: 1.5rem; // Espacio entre tarjetas apiladas
   }

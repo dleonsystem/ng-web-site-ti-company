@@ -1,13 +1,5 @@
-// detalle-caso.component.scss - Homologado con home y casos-exito
+@import '../../../../styles/variables';
 
-// Variables consistentes
-$primary-color: #0077b6;
-$secondary-color: #00b4d8;
-$accent-color: #0dcaf0;
-$text-dark: #002147;
-$text-light: #f8f9fa;
-$shadow-light: rgba(0, 0, 0, 0.1);
-$shadow-dark: rgba(0, 0, 0, 0.3);
 
 // Mixins reutilizados
 @mixin section-padding {

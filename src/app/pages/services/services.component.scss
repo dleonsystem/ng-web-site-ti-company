@@ -2,12 +2,8 @@
 // @import './_variables.scss'; // Importar variables globales
 // @import './_mixins.scss'; // Importar mixins globales
 // Variables consistentes (deberían estar en un archivo global _variables.scss)
-$primary-color: #0077b6; // Azul institucional
-$secondary-color: #00b4d8; // Azul más claro
-$text-dark: #002147;
-$text-light: #f8f9fa;
-$shadow-light: rgba(0, 0, 0, 0.1);
-$shadow-dark: rgba(0, 0, 0, 0.3);
+// Importar solo las variables, ya que los estilos base son globales
+@import 'styles/variables';
 
 // Mixins consistentes
 @mixin section-padding {
@@ -168,7 +164,6 @@ mat-raised-button {
   .section-subtitle {
     font-size: 1.2rem;
     color: #555;
-    max-width: 800px;
     margin-bottom: 2rem; // Solo mantenemos el margen inferior
     line-height: 1.6;
     text-align: center; // Dejarlo aquí da una doble seguridad
@@ -176,17 +171,23 @@ mat-raised-button {
 
   // Tarjetas de servicio homologadas
   .service-card {
-    border-radius: 15px; // Consistente con home (15px en lugar de 10px)
-    background-color: white;
-    border: 1px solid #e0e0e0; // Border consistente
+    
     @include card-hover-effect;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    padding: 2rem 1rem;
+   
+    text-align: center; // Mantenemos el icono centrado
 
+
+    mat-card-content {
+      text-align: left; // CORRECCIÓN: Alineamos el texto a la izquierda
+    }
+    
+    .service-title, h5 { // Aseguramos que el título esté centrado
+      text-align: center;
+    }
+
+    .service-description, p { // La descripción la alineamos a la izquierda
+      text-align: left;
+    }
     // Hover effect mejorado y consistente
     &:hover {
       border-color: $primary-color;

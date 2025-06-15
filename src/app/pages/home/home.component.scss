@@ -1,12 +1,7 @@
 // src/app/pages/home/home.component.scss
 
-// Variables para colores y tipografía (opcional, si no usas un archivo _variables.scss global)
-$primary-color: #0077b6; // Un azul institucional
-$secondary-color: #00b4d8; // Un azul más claro
-$text-dark: #002147;
-$text-light: #f8f9fa;
-$shadow-light: rgba(0, 0, 0, 0.1);
-$shadow-dark: rgba(0, 0, 0, 0.3);
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
 
 // Mixins (si tienes estilos repetitivos)
 @mixin section-padding {
@@ -61,6 +56,50 @@ $shadow-dark: rgba(0, 0, 0, 0.3);
   color: $text-light;
   text-align: center;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../../../assets/images/lion-banner-2.webp");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.4);
+    z-index: -2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(
+      0,
+      33,
+      71,
+      0.6
+    ); // Usar variable $text-dark con opacidad
+    z-index: -1;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+    p {
+      font-size: 1.5rem;
+      margin: 1rem 0 2rem;
+    }
+    .btn-raised-primary {
+      @include button-style($primary-color, white);
+    }
+  }
   .background-video {
     position: absolute;
     top: 50%;
@@ -151,6 +190,19 @@ $shadow-dark: rgba(0, 0, 0, 0.3);
   }
 }
 
+// Aplicar estilos consistentes a las tarjetas de servicio
+.service-card {
+  // Ya no se necesita el @include si la clase está en styles.scss global.
+  // Sin embargo, si quieres mantenerlo aquí por claridad, puedes hacerlo.
+  // @include card-base;
+  
+  mat-card-content {
+    text-align: left; // Corregir alineación
+  }
+  .service-description {
+     text-align: left; // Corregir alineación
+  }
+}
 // Sección de Servicios Destacados (Overview)
 .services-overview-section {
   @include section-padding;
@@ -238,21 +290,21 @@ $shadow-dark: rgba(0, 0, 0, 0.3);
   }
 }
 
-  mat-raised-button {
-    border: 2px solid $primary-color ;
-    color: white;
-    background-color: $primary-color;
-    padding: 0.8rem 2rem;
-    font-size: 0.9rem;
-    border-radius: 30px;
-    font-weight: 500;
-    transition: all 0.3s ease;
+mat-raised-button {
+  border: 2px solid $primary-color;
+  color: white;
+  background-color: $primary-color;
+  padding: 0.8rem 2rem;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
 
-    &:hover {
-      background-color: $primary-color;
-      color: white;
-    }
+  &:hover {
+    background-color: $primary-color;
+    color: white;
   }
+}
 // Sección de Portafolio Destacado
 .featured-portfolio-section {
   @include section-padding;
@@ -296,7 +348,6 @@ $shadow-dark: rgba(0, 0, 0, 0.3);
         border-radius: 20px;
         font-weight: 500;
       }
-     
     }
   }
 
@@ -423,7 +474,6 @@ $shadow-dark: rgba(0, 0, 0, 0.3);
     font-size: 2rem; // Tamaño del icono
     &::before {
       content: "\e408"; // Icono de Material Design para flecha izquierda
-      font-family: "Material Icons";
       color: $primary-color;
     }
   }
