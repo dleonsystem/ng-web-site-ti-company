@@ -1,49 +1,64 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
 .about-section {
-    background-color: #f9fafb;
-  
-    h2.section-title {
-      font-weight: 600;
-      margin-bottom: 2rem;
-      color: #002147;
-    }
-  
-    h3 {
-      color: #004085;
-      margin-top: 1.8rem;
-    }
-  
-    p {
-      font-size: 1rem;
-      color: #4a4a4a;
-    }
-  
-    img {
-      max-height: 360px;
-      object-fit: cover;
-    }
+  background-color: #f9fafb;
+
+  h2.section-title {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #002147;
   }
-  
+
+  h3 {
+    color: #004085;
+    margin-top: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #4a4a4a;
+  }
+
+  img {
+    max-height: 360px;
+    object-fit: cover;
+  }
+
   .about-card {
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    h5 {
-      color: #002147;
-      font-weight: 600;
-      margin-top: 1rem;
-    }
+    @include card-base;
+    padding: 2rem;
+    text-align: center; // Los iconos y títulos están centrados
 
     p {
-      font-size: 0.95rem;
-      color: #555;
+      text-align: left; // CORRECCIÓN: La descripción se alinea a la izquierda
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
   }
-  .sobre-mi {
+}
+
+.about-card {
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  h5 {
+    color: #002147;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+}
+.sobre-mi {
   mat-card-title {
     font-size: 1.6rem;
     font-weight: 600;

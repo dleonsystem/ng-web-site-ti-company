@@ -3,7 +3,7 @@
 // @import './_mixins.scss'; // Importar mixins globales
 // Variables consistentes (deberían estar en un archivo global _variables.scss)
 // Importar solo las variables, ya que los estilos base son globales
-@import 'styles/variables';
+@import "styles/variables";
 
 // Mixins consistentes
 @mixin section-padding {
@@ -57,6 +57,26 @@ mat-raised-button {
 .services-section {
   @include section-padding;
   background-color: #f9fafb; // Consistente con home
+
+  .service-card {
+    text-align: center; // Mantenemos el icono centrado
+
+    mat-card-content {
+      text-align: left; // CORRECCIÓN: Alineamos el texto a la izquierda
+    }
+
+    .service-title,
+    h5 {
+      // Aseguramos que el título esté centrado
+      text-align: center;
+    }
+
+    .service-description,
+    p {
+      // La descripción la alineamos a la izquierda
+      text-align: left;
+    }
+  }
 
   h1 {
     font-size: 3rem;
@@ -171,21 +191,23 @@ mat-raised-button {
 
   // Tarjetas de servicio homologadas
   .service-card {
-    
     @include card-hover-effect;
-   
-    text-align: center; // Mantenemos el icono centrado
 
+    text-align: center; // Mantenemos el icono centrado
 
     mat-card-content {
       text-align: left; // CORRECCIÓN: Alineamos el texto a la izquierda
     }
-    
-    .service-title, h5 { // Aseguramos que el título esté centrado
+
+    .service-title,
+    h5 {
+      // Aseguramos que el título esté centrado
       text-align: center;
     }
 
-    .service-description, p { // La descripción la alineamos a la izquierda
+    .service-description,
+    p {
+      // La descripción la alineamos a la izquierda
       text-align: left;
     }
     // Hover effect mejorado y consistente
