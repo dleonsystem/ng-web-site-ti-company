@@ -6,7 +6,6 @@
 @import "styles/variables";
 @import "styles/mixins";
 
-
 // 3. Clases de utilidad globales
 .page-section {
   @include page-section;
@@ -24,12 +23,14 @@
 .btn-raised-primary {
   @include button-raised-primary;
 }
-
+.btn-raised-acent {
+  @include button-raised-acent;
+}
 .filter-button-group {
-    margin-bottom: 3rem;
-    .filter-button {
-        @include filter-button;
-    }
+  margin-bottom: 3rem;
+  .filter-button {
+    @include filter-button;
+  }
 }
 
 // 5. Estilo de tarjeta base unificado
@@ -54,6 +55,108 @@
     margin-top: auto; // Empuja el footer a la parte inferior
   }
 }
+
+// 2. NUEVO: Tarjeta del Portafolio con efecto
+.portfolio-card {
+  @include card-base;
+  @include card-interactive-overlay; // Aplicamos el efecto de superposición
+  cursor: pointer;
+
+  .portfolio-card-img {
+    width: 100%;
+    height: 270px; // Un poco más altas para que luzcan
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  &:hover .portfolio-card-img {
+    transform: scale(1.05); // Efecto de zoom a la imagen
+  }
+}
+
+// 3. NUEVO: Tarjeta para Casos de Éxito (más detallada)
+.success-case-card {
+  @include card-base;
+  text-align: left;
+  padding: 2rem;
+
+  .success-case-header {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    .icon {
+      font-size: 1.5rem;
+      color: $primary-color;
+      margin-right: 1rem;
+    }
+    .title {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+    .date {
+      font-size: 0.9rem;
+      color: $text-muted;
+    }
+  }
+
+  .detail-item {
+    margin-bottom: 1rem;
+    strong {
+      display: block;
+      color: $text-dark;
+      margin-bottom: 0.25rem;
+    }
+    p {
+      color: $text-muted;
+      margin-bottom: 0;
+    }
+  }
+
+  .tag-list {
+    margin-top: 1.5rem;
+    .tag {
+      display: inline-block;
+      background-color: rgba($primary-color, 0.1);
+      color: $primary-color;
+      border-radius: $border-radius-pill;
+      padding: 0.3rem 0.8rem;
+      margin: 0.2rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+     .tag-accent {
+      display: inline-block;
+      background-color: rgba($secondary-color, 0.1);
+      color: $secondary-color;
+      border-radius: $border-radius-pill;
+      padding: 0.3rem 0.8rem;
+      margin: 0.2rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+  }
+}
+
+// 4. NUEVO: Tarjeta de solo texto (para Misión, Visión)
+.text-card {
+  @include card-base;
+  text-align: center;
+  padding: 2.5rem 2rem;
+  .icon {
+    font-size: 2.5rem;
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+  h5 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    color: $text-muted;
+  }
+}
+
 // Tipografía
 $font-family-base: "Roboto", sans-serif; // Ya importado, solo definir variable
 $font-size-base: 1rem;
@@ -73,7 +176,7 @@ body {
   height: 100%;
   font-size: $font-size-base;
   line-height: $line-height-base;
-  color: $dark-blue; // Color de texto base
+  color: $text-dark;
   font-family: "Roboto", sans-serif;
   background-color: $background-light;
 }
@@ -88,7 +191,6 @@ h6 {
   font-weight: 700; // Un grosor consistente
 }
 
-
 // Ajustes semánticos y de tamaño para h1 y h2 como títulos de sección
 h1.section-title {
   font-size: 2.8rem;
@@ -98,7 +200,6 @@ h1.section-title {
 h2.section-title {
   font-size: 2.2rem;
 }
-
 
 // Estilo para Títulos dentro de Tarjetas (Cards)
 .card-title {
@@ -159,7 +260,6 @@ mat-icon {
 }
 
 // 5. Estilos de botones (CLAVE PARA HOMOLOGAR)
-
 
 .btn-raised-accent {
   @include button-style($text-dark, white);
@@ -226,23 +326,14 @@ footer {
 }
 
 // 6. Importaciones de Angular Material (mantener al final)
+
+// --- Importaciones de Angular Material (al final) ---
 @import '@angular/material/theming';
-
 @include mat-core();
-
 $candy-app-primary: mat-palette($mat-indigo);
 $candy-app-accent: mat-palette($mat-pink, A200, A100, A400);
 $candy-app-warn: mat-palette($mat-red);
-
-$candy-app-theme: mat-light-theme((
-  color: (
-    primary: $candy-app-primary,
-    accent: $candy-app-accent,
-    warn: $candy-app-warn,
-  )
-));
-
+$candy-app-theme: mat-light-theme((color: (primary: $candy-app-primary, accent: $candy-app-accent, warn: $candy-app-warn)));
 @include angular-material-theme($candy-app-theme);
-
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

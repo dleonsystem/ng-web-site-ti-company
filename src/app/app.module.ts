@@ -19,7 +19,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { BlogComponent } from './pages/blog/blog.component';
 import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CasosExitoComponent } from './pages/casos-exito/casos-exito.component';
+import { SuccessCasesComponent } from './pages/casos-exito/success-cases.component';
 import { AvisoPrivacidadComponent } from './pages/aviso-privacidad/aviso-privacidad.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { GraphQLModule } from './graphql.module';
@@ -37,7 +37,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactComponent,
     BlogComponent,
     BlogDetailComponent,
-    CasosExitoComponent,
+    SuccessCasesComponent,
     AvisoPrivacidadComponent,
     PortfolioComponent,
     

@@ -1,52 +1,44 @@
-<section class="portfolio-section bg-light py-5">
+<section class="page-section">
   <div class="container">
-    <h2 class="section-title text-center mb-4">
-      {{ "portfolio.title" | translate }}
-    </h2>
-    <p class="section-subtitle text-center mb-5">
-      {{ "portfolio.description" | translate }}
-    </p>
+    <h2 class="section-title">{{ 'portfolio.title' | translate }}</h2>
+    <p class="section-subtitle">{{ 'portfolio.description' | translate }}</p>
 
     <!-- Filtros -->
-    <div class="filtro-portafolio d-flex flex-wrap justify-content-center gap-3 mb-5">
-      <button
-        mat-raised-button
-        [color]="filtroActivo === 'all' ? 'primary' : 'default'"
-        (click)="filtrar('all')"
-        class="filter-btn"
-      >
-        {{ "portfolio.filters.all" | translate }}
-      </button>
-
-      <button
-        mat-raised-button
-        *ngFor="let key of filtrosKeys.slice(1)"
-        [color]="filtroActivo === key ? 'primary' : 'default'"
-        (click)="filtrar(key)"
-        class="filter-btn"
-      >
-        {{ 'portfolio.filters.' + key | translate }}
+    <div class="filter-button-group">
+      <button class="filter-button" [class.active]="!selectedCategory" (click)="filterByCategory(null)">{{ 'portfolio.filters.all' | translate }}</button>
+      <button *ngFor="let category of categories" class="filter-button" [class.active]="selectedCategory === category" (click)="filterByCategory(category)">
+        {{ category }}
       </button>
     </div>
 
-    <!-- Proyectos -->
-    <div class="row g-4 justify-content-center">
-      <div class="col-md-6 col-lg-4" *ngFor="let proyecto of proyectosVisibles">
-        <mat-card class="portfolio-card h-100 shadow-sm animate__animated animate__fadeInUp">
-          <img mat-card-image [src]="proyecto.imagen" alt="{{ proyecto.titulo }}">
-          <mat-card-content>
-            <h3 class="portfolio-title">{{ proyecto.titulo }}</h3>
-            <p class="portfolio-description">{{ proyecto.descripcion }}</p>
+    <!-- Grid de tarjetas -->
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4" *ngFor="let project of filteredProjects">
+        <!-- Usamos la nueva clase .portfolio-card -->
+        <mat-card class="portfolio-card">
+          <img [src]="project.imagen" [alt]="project.titulo" class="portfolio-card-img">
+           <mat-card-content>
+            <h3 class="portfolio-title">{{ project.titulo }}</h3>
+            <p class="portfolio-description">{{ project.descripcion }}</p>
           </mat-card-content>
-          <mat-card-actions class="d-flex justify-content-between">
-            <a mat-raised-button color="accent" class="btn-raised-accent" *ngIf="proyecto.enlaceDemo" [href]="proyecto.enlaceDemo" target="_blank">
+             <mat-card-actions *ngIf="false" class="d-flex justify-content-between">
+            <a mat-raised-button color="accent" class="btn-raised-accent" *ngIf="project.enlaceDemo" [href]="project.enlaceDemo" target="_blank">
               {{ "home.cta.demo" | translate }}
             </a>
-            <a mat-raised-button color="primary" class="btn-raised-primary" [routerLink]="'/contacto'" [queryParams]="{ proyecto: proyecto.titulo }"
-              (click)="trackPortafolioCTA(proyecto.titulo)">
+            <a mat-raised-button color="primary" class="btn-raised-primary" [routerLink]="'/contacto'" [queryParams]="{ proyecto: project.titulo }"
+              (click)="trackPortafolioCTA(project.titulo)">
               {{ "home.cta.quotePortfolio" | translate }}
             </a>
           </mat-card-actions>
+          <!-- Contenido de la superposición -->
+          <div class="card-interactive-overlay">
+            <h4 class="font-weight-bold" style="color: white">{{ project.titulo }}</h4>
+            <p>{{ project.descripcion | slice:0:100 }}...</p>
+            <div class="mt-3">
+              <button mat-raised-button class="btn-raised-acent mr-2" *ngIf="!project.enlaceDemo">{{ 'home.cta.demo' | translate }}</button>
+              <button mat-raised-button class="btn-raised-primary" >{{ 'home.cta.quotePortfolio' | translate }}</button>
+            </div>
+          </div>
         </mat-card>
       </div>
     </div>

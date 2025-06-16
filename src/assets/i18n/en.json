@@ -86,11 +86,11 @@
       "political": "Political"
     },
     "labels": {
-      "role": "Role:",
-      "technologies": "Technologies:",
-      "results": "Results:",
-      "impactedUsers": "Impacted Users:",
-      "integrations": "Integrations:",
+      "role": "Role",
+      "technologies": "Technologies",
+      "results": "Results",
+      "impactedUsers": "Impacted Users",
+      "integrations": "Integrations",
       "viewDemo": "View demo"
     }
   },
@@ -101,6 +101,8 @@
     "missionText": "To offer cutting-edge technology solutions that drive the growth, efficiency, and security of our clients, combining innovation with experience.",
     "visionTitle": "Vision",
     "visionText": "To be recognized as global leaders in digital transformation, standing out for our adaptability, technical excellence, and commitment to our clients.",
+    "valuesTitle": "Values",
+    "valuesText": "Our values guide our actions and decisions, ensuring we always act with integrity, respect, and a focus on results.",
     "downloadCvButton": "Download CV",
     "contactButton": "Contact Us",
     "values": {

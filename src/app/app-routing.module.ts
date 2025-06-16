@@ -6,7 +6,7 @@ import { ServicesComponent } from './pages/services/services.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
-import { CasosExitoComponent } from './pages/casos-exito/casos-exito.component';
+import { SuccessCasesComponent } from './pages/casos-exito/success-cases.component';
 import { AvisoPrivacidadComponent } from './pages/aviso-privacidad/aviso-privacidad.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { DetalleCasoComponent } from './pages/casos-exito/detalle-caso/detalle-caso.component';
@@ -44,7 +44,7 @@ const routes: Routes = [
   },
   {
     path: 'casos-exito',
-    component: CasosExitoComponent,
+    component: SuccessCasesComponent,
     title: 'Casos de Éxito | Lion Systems',
   },
 { path: 'casos-exito/:clave', component: DetalleCasoComponent },

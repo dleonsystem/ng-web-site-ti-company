@@ -41,6 +41,8 @@
 }
 
 // Mixin para la base de TODAS las tarjetas
+
+// 1. Base para todas las tarjetas
 @mixin card-base {
   background-color: $background-card;
   border: 1px solid $border-color;
@@ -49,7 +51,8 @@
   transition: transform $transition-normal, box-shadow $transition-normal;
   display: flex;
   flex-direction: column;
-  height: 100%; // Importante para que las tarjetas en una fila tengan la misma altura
+  height: 100%;
+  overflow: hidden; // Importante para que los efectos no se salgan
 
   &:hover {
     transform: translateY(-8px);
@@ -57,13 +60,65 @@
   }
 }
 
-// Mixin para el contenido de la tarjeta
+// 2. Contenido de tarjeta
 @mixin card-content-base {
   padding: 1.5rem;
   text-align: left;
-  flex-grow: 1; // Permite que el contenido crezca y empuje el footer hacia abajo
+  flex-grow: 1;
 }
 
+// 3. NUEVO: Mixin para el efecto de superposición del portafolio
+@mixin card-interactive-overlay {
+  position: relative; // El contenedor debe ser relativo
+
+  .card-interactive-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 59, 100, 0.95), rgba(0, 119, 182, 0.8));
+    color: white;
+    padding: 1.5rem;
+    transform: translateY(100%);
+    transition: transform $transition-normal;
+    visibility: hidden;
+  }
+
+  &:hover .card-interactive-overlay {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+// --- Mixins de Botones (sin cambios) ---
+@mixin button-raised-primary {
+  background-color: $primary-color !important; color: $text-light !important;
+  border-radius: $border-radius-pill !important; padding: 0.7rem 1.8rem !important;
+  font-weight: 500 !important; transition: all $transition-normal !important;
+  letter-spacing: 0.5px;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba($primary-color, 0.4);
+  }
+}
+@mixin button-raised-acent {
+  background-color: $accent-color !important; color: $text-light !important;
+  border-radius: $border-radius-pill !important; padding: 0.7rem 1.8rem !important;
+  font-weight: 500 !important; transition: all $transition-normal !important;
+  letter-spacing: 0.5px;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba($accent-color, 0.4);
+  }
+}
+@mixin filter-button {
+  background-color: transparent; border: 2px solid $primary-color;
+  color: $primary-color; border-radius: $border-radius-pill;
+  padding: 0.5rem 1.5rem; margin: 0 0.5rem; font-weight: 500;
+  transition: all $transition-fast;
+  &:hover { background-color: rgba($primary-color, 0.1); }
+  &.active { background-color: $primary-color; color: white; }
+}
 // Mixin para los botones de acción principales
 @mixin button-raised-primary {
   background-color: $primary-color !important;
